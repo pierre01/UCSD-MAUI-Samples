@@ -3,33 +3,35 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32210.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiControls", "MauiControls\MauiControls.csproj", "{D8B3A585-6215-44E8-9D8E-57A9A46BA004}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiControls", "MauiControls\MauiControls.csproj", "{D8B3A585-6215-44E8-9D8E-57A9A46BA004}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiCollections", "MauiCollections\MauiCollections.csproj", "{6C795199-428D-421C-9B32-51011517C567}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiCollections", "MauiCollections\MauiCollections.csproj", "{6C795199-428D-421C-9B32-51011517C567}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiDataBinding", "MauiDataBinding\MauiDataBinding.csproj", "{6FCE7EEE-4147-44F9-8390-2408BBA77565}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiDataBinding", "MauiDataBinding\MauiDataBinding.csproj", "{6FCE7EEE-4147-44F9-8390-2408BBA77565}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiGraphics", "MauiGraphics\MauiGraphics.csproj", "{8724B5A8-D125-458E-9A66-1D755399D4A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiGraphics", "MauiGraphics\MauiGraphics.csproj", "{8724B5A8-D125-458E-9A66-1D755399D4A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiLayouts", "MauiLayouts\MauiLayouts.csproj", "{0761F457-4111-4B98-B76B-100713319195}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiLayouts", "MauiLayouts\MauiLayouts.csproj", "{0761F457-4111-4B98-B76B-100713319195}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiMvvm", "MauiMvvm\MauiMvvm.csproj", "{BA3327FB-CBAD-4FBB-A5E9-F074B519D1E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiMvvm", "MauiMvvm\MauiMvvm.csproj", "{BA3327FB-CBAD-4FBB-A5E9-F074B519D1E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiStorage", "MauiStorage\MauiStorage.csproj", "{8617FBD4-8851-4A9E-9569-425D1255CD40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiStorage", "MauiStorage\MauiStorage.csproj", "{8617FBD4-8851-4A9E-9569-425D1255CD40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiNetworking", "MauiNetworking\MauiNetworking.csproj", "{7EA63616-4823-4618-B94B-38898F27FA0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiNetworking", "MauiNetworking\MauiNetworking.csproj", "{7EA63616-4823-4618-B94B-38898F27FA0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiDevices", "MauiDevices\MauiDevices.csproj", "{6CA54AE9-A10C-455B-A06E-089C41FD867D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiDevices", "MauiDevices\MauiDevices.csproj", "{6CA54AE9-A10C-455B-A06E-089C41FD867D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiSensors", "MauiSensors\MauiSensors.csproj", "{8A95E4A8-0890-4923-BF81-1720FB540976}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiSensors", "MauiSensors\MauiSensors.csproj", "{8A95E4A8-0890-4923-BF81-1720FB540976}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiApplicationModel", "MauiApplicationModel\MauiApplicationModel.csproj", "{2FEE08A9-C845-4F6F-9267-57E8B005EED1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiApplicationModel", "MauiApplicationModel\MauiApplicationModel.csproj", "{2FEE08A9-C845-4F6F-9267-57E8B005EED1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A0F620D0-EF16-47C4-9465-32CE80D47F71}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiNavigation", "MauiNavigation\MauiNavigation.csproj", "{DEB6FB1D-5B31-4FB5-8701-08043D9ECC27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -103,6 +105,12 @@ Global
 		{2FEE08A9-C845-4F6F-9267-57E8B005EED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FEE08A9-C845-4F6F-9267-57E8B005EED1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2FEE08A9-C845-4F6F-9267-57E8B005EED1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DEB6FB1D-5B31-4FB5-8701-08043D9ECC27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEB6FB1D-5B31-4FB5-8701-08043D9ECC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEB6FB1D-5B31-4FB5-8701-08043D9ECC27}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DEB6FB1D-5B31-4FB5-8701-08043D9ECC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEB6FB1D-5B31-4FB5-8701-08043D9ECC27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEB6FB1D-5B31-4FB5-8701-08043D9ECC27}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
