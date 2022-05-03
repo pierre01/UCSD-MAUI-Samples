@@ -4,11 +4,9 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiControls"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:views ="clr-namespace:MauiControls.Views"    >
 
-    <ShellContent
-        Title="Hello, World!"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        <ShellContent  Title="Buttons" ContentTemplate="{DataTemplate views:ButtonsPage}" />
+        <ShellContent Title="Text Inputs"  ContentTemplate="{DataTemplate views:TextInput}" />
 
 </Shell>

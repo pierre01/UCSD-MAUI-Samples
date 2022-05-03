@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiControls.Views.ButtonsPage"
+             Title="ButtonsPage">
+    <StackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label Text="Button" WidthRequest="120" VerticalOptions="Center"/>
+            <Button Text="Click me" Clicked="Button_Clicked" />
+            <Label x:Name="ClickResultLabel" Text="" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label Text="Radio Buttons" WidthRequest="120" VerticalOptions="Center" />
+            <RadioButton Content="Radio Button 1 Group 1" GroupName="G1" CheckedChanged="RadioButton_CheckedChanged" IsChecked="True" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label Text="" WidthRequest="120" />
+            <RadioButton Content="Radio Button 2 Group 2" GroupName="G2" CheckedChanged="RadioButton_CheckedChanged" IsChecked="True" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label Text="" WidthRequest="120" VerticalOptions="Center" />
+            <RadioButton Content="Radio Button 3 Group 1" GroupName="G1" CheckedChanged="RadioButton_CheckedChanged" IsChecked="True" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label Text="" WidthRequest="120" />
+            <RadioButton Content="Radio Button 4 Group 2" GroupName="G2" CheckedChanged="RadioButton_CheckedChanged" IsChecked="True" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label Text="Check Box" WidthRequest="120" VerticalOptions="Center"/>
+            <CheckBox  CheckedChanged="CheckBox_Changed" />
+            <Label x:Name="CheckedResultLabel" Text="" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label Text="Switch" WidthRequest="120" VerticalOptions="Center" />
+            <Switch Toggled="Switch_Toggled" IsToggled="True" />
+            <Label x:Name="SwitchResultLabel" Text="" />
+        </HorizontalStackLayout>
+    </StackLayout>
+</ContentPage>
