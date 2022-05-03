@@ -49,6 +49,9 @@
 	  <MauiXaml Update="Views\ButtonsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\StepAndProgress.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\TextInput.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

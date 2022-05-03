@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiControls.Views.StepAndProgress"
+             Title="StepAndProgress">
+    <StackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label Text="Slider" WidthRequest="120" VerticalOptions="Center"/>
+            <Slider WidthRequest="200" ValueChanged="Slider_ValueChanged" />
+            <Label x:Name="SliderLabel" Text="" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label Text="Stepper" WidthRequest="120" VerticalOptions="Center"/>
+            <Stepper WidthRequest="200" ValueChanged="Stepper_ValueChanged" />
+            <Label x:Name="StepperLabel" Text="" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label Text="ActivityIndicator" WidthRequest="120" VerticalOptions="Center"/>
+            <ActivityIndicator WidthRequest="200"  />
+            <Label x:Name="ActivityIndicatorLabel" Text="" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label Text="ProgressBar" WidthRequest="120" VerticalOptions="Center"/>
+            <ProgressBar WidthRequest="200"  />
+            <Label x:Name="ProgressBarLabel" Text="" />
+        </HorizontalStackLayout>    
+    </StackLayout>
+</ContentPage>

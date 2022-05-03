@@ -6,7 +6,8 @@
     xmlns:local="clr-namespace:MauiControls"
     xmlns:views ="clr-namespace:MauiControls.Views"    >
 
-        <ShellContent  Title="Buttons" ContentTemplate="{DataTemplate views:ButtonsPage}" />
-        <ShellContent Title="Text Inputs"  ContentTemplate="{DataTemplate views:TextInput}" />
+        <ShellContent Title="Buttons" ContentTemplate="{DataTemplate views:ButtonsPage}" />
+        <ShellContent Title="Text Inputs" ContentTemplate="{DataTemplate views:TextInput}" />
+        <ShellContent Title="Steps, progress and range Inputs"   ContentTemplate="{DataTemplate views:StepAndProgress}" />
 
 </Shell>

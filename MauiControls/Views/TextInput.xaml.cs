@@ -6,4 +6,14 @@ public partial class TextInput : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void Entry_TextChanged(object sender, TextChangedEventArgs e)
+    {
+
+    }
+
+    private void Editor_TextChanged(object sender, TextChangedEventArgs e)
+    {
+
+    }
 }

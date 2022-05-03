@@ -4,8 +4,15 @@
              x:Class="MauiControls.Views.TextInput"
              Title="TextInput">
     <StackLayout>
-        <Label Text="Welcome to .NET MAUI!"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
+        <HorizontalStackLayout Margin="4">
+            <Label Text="Entry" WidthRequest="120" VerticalOptions="Center"/>
+            <Entry Text="Enter Text Here" TextChanged="Entry_TextChanged" WidthRequest="100" />
+            <Label x:Name="EntryLabel" Text="" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label Text="Editor" WidthRequest="120" VerticalOptions="Center"/>
+            <Editor Text="Enter Text Here" TextChanged="Editor_TextChanged" WidthRequest="100" HeightRequest="200"  />
+            <Label x:Name="EditorLabel" Text="" />
+        </HorizontalStackLayout>
     </StackLayout>
 </ContentPage>
