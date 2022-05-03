@@ -6,8 +6,8 @@ Projects are used throughout the class in this order
      - **Button**
      - Radio
      - Checkboxes 
-	 - switch
-	 - imageButton
+	 - Switch
+	 - ImageButton
    - Text Input
       - Editor
 	  - Entry
@@ -18,9 +18,8 @@ Projects are used throughout the class in this order
    - TimePicker
    - DatePicker
    - Slider
-
 - MauiLayouts
-  > **Layour and displaying controls**
+  > **Layout and display panes**
     - Grid
     - StackLayout
     	- HorizontalStackLayout
@@ -30,7 +29,7 @@ Projects are used throughout the class in this order
 	- BindableLayout
 	- ContentView
 - MauiDataBinding
-  > **This tip is indented two spaces.**
+  > **Binding data in your user interface.**
 - MauiCollections
   > **Views that display collections of items.**
     - CarouselView
@@ -40,14 +39,19 @@ Projects are used throughout the class in this order
 	- Picker
 	- TableView
 - MauiMvvm
+  > **Model,View,ViewModel Pattern in details.**
 	- MVVM Basics
 	- MVVM Library (Microsoft Toolkit)
 	- MVVM Generated
-- MAUIControls
-- a parent numbered list
-   - and this is
-   - a nested numbered list
-1. (fin)
+- MauiStyles
+   > **Customizing the look and feel of your controls and data.**
+- MauiGraphics
+   > **Customizing the look and feel of your controls and data.**
+- MauiNavigation
+   > **Customizing the look and feel of your controls and data.**
+- MauiDevices
+   > **Customizing the look and feel of your controls and data.**
+
 > [!NOTE]
 > Information the user should notice even if skimming.
 
