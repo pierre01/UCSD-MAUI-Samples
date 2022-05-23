@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="MauiLayouts.Views.AbsoluteLayoutPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiLayouts.Views"
+             BackgroundColor="White">
+	<ContentPage.Content>
+        <AbsoluteLayout Margin="20">
+            <BoxView Color="Silver"
+                 AbsoluteLayout.LayoutBounds="0, 10, 200, 5" />
+            <BoxView Color="Silver"
+                 AbsoluteLayout.LayoutBounds="0, 20, 200, 5" />
+            <BoxView Color="Silver"
+                 AbsoluteLayout.LayoutBounds="10, 0, 5, 65" />
+            <BoxView Color="Silver"
+                 AbsoluteLayout.LayoutBounds="20, 0, 5, 65" />
+            <Label Text="Stylish Header"
+               FontSize="24"
+               AbsoluteLayout.LayoutBounds="30, 25, 200, 30" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

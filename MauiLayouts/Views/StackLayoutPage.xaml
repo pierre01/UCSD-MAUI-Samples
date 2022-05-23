@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="MauiLayouts.Views.StackLayoutPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiLayouts.Views"
+             BackgroundColor="White">
+	<ContentPage.Content>
+        <StackLayout >
+            <!--by default StackLayout is vertical-->
+
+            <StackLayout Background="LightPink" Padding="5">
+                <Label Text="StackLayout" />
+                <RoundRectangle WidthRequest="20" HeightRequest="20" Fill="Red" Margin="10" />
+                <RoundRectangle WidthRequest="20" HeightRequest="20" Fill="Red" Margin="10" />
+            </StackLayout>            
+            
+            <HorizontalStackLayout  Background="LightPink" Padding="5">
+                <Label Text="HorizontalStackLayout" VerticalTextAlignment="Center" />
+                <RoundRectangle WidthRequest="20" HeightRequest="20" Fill="Red" Margin="10" />
+                <RoundRectangle WidthRequest="20" HeightRequest="20" Fill="Red" Margin="10" />
+            </HorizontalStackLayout>
+
+            <StackLayout Background="lightBlue" Orientation="Horizontal" Padding="5">
+                <Label Text="StackLayout with Orientation = Horizontal" VerticalTextAlignment="Center" />
+                <RoundRectangle WidthRequest="20" HeightRequest="20" Fill="Red" Margin="10" />
+                <RoundRectangle WidthRequest="20" HeightRequest="20" Fill="Red" Margin="10" />
+            </StackLayout>
+
+
+            <VerticalStackLayout Background="LightPink" Padding="5">
+                <Label Text="VerticalStackLayout" />
+                <RoundRectangle WidthRequest="20" HeightRequest="20" Fill="Red" Margin="10" />
+                <RoundRectangle WidthRequest="20" HeightRequest="20" Fill="Red" Margin="10" />
+            </VerticalStackLayout>
+
+            <StackLayout Background="lightBlue" Orientation="Vertical" Padding="5">
+                <Label Text="StackLayout with orientation = Vertical" />
+                <RoundRectangle WidthRequest="20" HeightRequest="20" Fill="Red" Margin="10" />
+                <RoundRectangle WidthRequest="20" HeightRequest="20" Fill="Red" Margin="10" />
+            </StackLayout>
+            
+
+
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

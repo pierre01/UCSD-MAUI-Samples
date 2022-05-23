@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="MauiLayouts.Views.StackLayout2Page"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiLayouts.Views"
+             BackgroundColor="White">
+	<ContentPage.Content>
+        <StackLayout>
+            
+            <StackLayout>
+                <Label Text="Line 1" />
+                <Label Text="Line 2" />
+            </StackLayout>
+            <!-- IS THE SAME AS -->
+            <StackLayout Orientation="Vertical">
+                <Label Text="Line 1" />
+                <Label Text="Line 2" />
+            </StackLayout>
+            <!-- IS THE SAME AS -->
+            <VerticalStackLayout>
+                <Label Text="Line 1" />
+                <Label Text="Line 2" />
+            </VerticalStackLayout>
+
+            <!-- ... -->
+
+            <HorizontalStackLayout>
+                <Label Text="Line 1" />
+                <Label Text="Line 2" />
+            </HorizontalStackLayout>
+            <!-- IS THE SAME AS (but slower)-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Line 1" />
+                <Label Text="Line 2" />
+            </StackLayout>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

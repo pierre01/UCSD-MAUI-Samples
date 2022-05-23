@@ -1,10 +1,10 @@
-﻿namespace MauiLayouts
+﻿namespace MauiLayouts;
+
+public partial class AppShell : Shell
 {
-    public partial class AppShell : Shell
+    public AppShell()
     {
-        public AppShell()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+        var di = DeviceDisplay.Current.MainDisplayInfo;
     }
 }
