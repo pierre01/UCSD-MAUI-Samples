@@ -3,15 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiControls.Views.TextInput"
              Title="TextInput">
-    <StackLayout>
+    <StackLayout >
         <HorizontalStackLayout Margin="4">
             <Label Text="Entry" WidthRequest="120" VerticalOptions="Center"/>
-            <Entry Text="Enter Text Here" TextChanged="Entry_TextChanged" WidthRequest="100" />
+            <Entry Text="Enter Text Here" TextChanged="Entry_TextChanged" WidthRequest="100" BackgroundColor="LightBlue" />
             <Label x:Name="EntryLabel" Text="" />
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
             <Label Text="Editor" WidthRequest="120" VerticalOptions="Center"/>
-            <Editor Text="Enter Text Here" TextChanged="Editor_TextChanged" WidthRequest="100" HeightRequest="200"  />
+            <Editor Text="Enter Text Here" TextChanged="Editor_TextChanged" WidthRequest="100" HeightRequest="200" BackgroundColor="LightBlue"  />
             <Label x:Name="EditorLabel" Text="" />
         </HorizontalStackLayout>
     </StackLayout>

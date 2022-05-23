@@ -6,13 +6,14 @@
     <StackLayout>
         <HorizontalStackLayout Margin="4">
             <Label Text="Slider" WidthRequest="120" VerticalOptions="Center"/>
-            <Slider WidthRequest="200" ValueChanged="Slider_ValueChanged" />
+            <Slider WidthRequest="200" Maximum="15" Minimum="5" Value="5" ValueChanged="Slider_ValueChanged"  />
+            <!--Note the order of the attributes counts (still a bug as of RC3) -->
             <Label x:Name="SliderLabel" Text="" />
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
-            <Label Text="Stepper" WidthRequest="120" VerticalOptions="Center"/>
-            <Stepper WidthRequest="200" ValueChanged="Stepper_ValueChanged" />
-            <Label x:Name="StepperLabel" Text="" />
+            <Label Text="Stepper"  WidthRequest="120" VerticalOptions="Center"/>
+            <Stepper WidthRequest="200" Value="1" Maximum="10" Minimum="1" ValueChanged="Stepper_ValueChanged" />
+            <Label x:Name="StepperLabel" Text="1"  VerticalOptions="Center"/>
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
             <Label Text="ActivityIndicator" WidthRequest="120" VerticalOptions="Center"/>
@@ -20,9 +21,11 @@
             <Label x:Name="ActivityIndicatorLabel" Text="" />
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
-            <Label Text="ProgressBar" WidthRequest="120" VerticalOptions="Center"/>
-            <ProgressBar WidthRequest="200"  />
-            <Label x:Name="ProgressBarLabel" Text="" />
+            <Label Text="ProgressBar" WidthRequest="120" VerticalOptions="Center"  />
+            <ProgressBar x:Name="ProgressBarExample" WidthRequest="200" Progress="0" />
+            <!--Progress is a value from 0 to 1 -->
+
+            <Label x:Name="ProgressBarLabel" Text="" VerticalOptions="Center" Margin="8" />
         </HorizontalStackLayout>    
     </StackLayout>
 </ContentPage>
