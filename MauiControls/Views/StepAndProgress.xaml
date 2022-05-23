@@ -7,7 +7,7 @@
         <HorizontalStackLayout Margin="4">
             <Label Text="Slider" WidthRequest="120" VerticalOptions="Center"/>
             <Slider WidthRequest="200" Maximum="15" Minimum="5" Value="5" ValueChanged="Slider_ValueChanged"  />
-            <!--Note the order of the attributes counts (still a bug as of RC3) -->
+            <!--Note the order of the attributes counts (still a bug as of RC3 - don't put minimum before maximum) -->
             <Label x:Name="SliderLabel" Text="" />
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
