@@ -1,7 +1,7 @@
 # Samples from the UCSD Class on cross platform development
 Projects are used throughout the class in this order
 - MAUIControls
-  > **This tip is indented two spaces.**
+  > **Demo of main controls including:**
    - Buttons
      - **Button**
      - Radio
@@ -19,7 +19,7 @@ Projects are used throughout the class in this order
    - DatePicker
    - Slider
 - MauiLayouts
-  > **Layout and display panes**
+  > **Demo of main layout containers including:**
     - Grid
     - StackLayout
     	- HorizontalStackLayout
@@ -46,9 +46,9 @@ Projects are used throughout the class in this order
 - MauiStyles
    > **Customizing the look and feel of your controls and data.**
 - MauiGraphics
-   > **Customizing the look and feel of your controls and data.**
+   > **Displaying and creating graphics**
 - MauiNavigation
-   > **Customizing the look and feel of your controls and data.**
+   > **Navigation and passing of parameters across views**
 - MauiDevices
    > **Customizing the look and feel of your controls and data.**
 

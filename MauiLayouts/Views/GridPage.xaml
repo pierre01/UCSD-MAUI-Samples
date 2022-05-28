@@ -1,451 +1,475 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage x:Class="MauiLayouts.Views.GridPage"
-             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:MauiLayouts.Views"
-            >
-	<ContentPage.Content>
+<ContentPage
+    x:Class="MauiLayouts.Views.GridPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiLayouts.Views">
+    <ContentPage.Content>
         <ScrollView>
-        <VerticalStackLayout>
+            <VerticalStackLayout>
 
-            <Label Text="Grid 1 proportional layout" FontSize="Large" />
-            <Grid RowSpacing="2" 
-              ColumnSpacing="2" 
-              Background="LightPink"
-              ColumnDefinitions="1*,50,2*,3*,1*"
-              Padding="{OnPlatform iOS='10,60,10,10', Default='10'}">
-                <Label Text="1*" FontAttributes="Bold" FontSize="20"  HorizontalTextAlignment="Center" />
-                <Label Text="50" FontAttributes="Bold" FontSize="20" Grid.Column="1" HorizontalTextAlignment="Center" />
-                <Label Text="2*" FontAttributes="Bold" FontSize="20" Grid.Column="2" HorizontalTextAlignment="Center" />
-                <Label Text="3*" FontAttributes="Bold" FontSize="20" Grid.Column="3" HorizontalTextAlignment="Center" />
-                <Label Text="1*" FontAttributes="Bold" FontSize="20"  Grid.Column="4" HorizontalTextAlignment="Center" />
-            </Grid>
+                <Label FontSize="Large" Text="Grid 1 proportional layout" />
+                <Grid
+                    Padding="{OnPlatform iOS='10,60,10,10',
+                                         Default='10'}"
+                    Background="LightPink"
+                    ColumnDefinitions="1*,50,2*,3*,1*"
+                    ColumnSpacing="2"
+                    RowSpacing="2">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        Text="1*" />
+                    <Label
+                        Grid.Column="1"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        Text="50" />
+                    <Label
+                        Grid.Column="2"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        Text="2*" />
+                    <Label
+                        Grid.Column="3"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        Text="3*" />
+                    <Label
+                        Grid.Column="4"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        Text="1*" />
+                </Grid>
 
-            <Grid RowSpacing="2" 
-              ColumnSpacing="2" 
-              Background="LightPink"
-              RowDefinitions="1*,50,2*,0.5*"
-              ColumnDefinitions="1*,50,2*,3*,1*"
-              HeightRequest="300"
-              Padding="{OnPlatform iOS='10,60,10,10', Default='10'}">
+                <Grid
+                    Padding="{OnPlatform iOS='10,60,10,10',
+                                         Default='10'}"
+                    Background="LightPink"
+                    ColumnDefinitions="1*,50,2*,3*,1*"
+                    ColumnSpacing="2"
+                    HeightRequest="300"
+                    RowDefinitions="1*,50,2*,0.5*"
+                    RowSpacing="2">
 
-                <!-- Row 0 -->
-                <RoundRectangle 
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-
-                     />
-                <RoundRectangle 
-                    Grid.Column="1"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Column="2"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Column="3"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Column="4"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                
-                
-                <!-- Row 1 -->
-
-                <RoundRectangle 
-                    Grid.Row="1"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="1"
-                    Grid.Column="2"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="1"
-                    Grid.Column="3"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="1"
-                    Grid.Column="4"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-
-                <!-- Row 2 -->
-
-                <RoundRectangle 
-                    Grid.Row="2"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="2"
-                    Grid.Column="1"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="2"
-                    Grid.Column="2"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="2"
-                    Grid.Column="3"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="2"
-                    Grid.Column="4"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-
-                <!-- Row 3 -->
-
-                <RoundRectangle 
-                    Grid.Row="3"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="3"
-                    Grid.Column="1"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="3"
-                    Grid.Column="2"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="3"
-                    Grid.Column="3"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="3"
-                    Grid.Column="4"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-               
-                <!-- Row SPAN -->
-
-                <RoundRectangle 
-                    Grid.Row="1"
-                    Grid.Column="3"
-                    Grid.RowSpan="3"
-                    Margin="20,4,30,4"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Blue"
-                    CornerRadius="6" />
-                <Label Text="Grid.RowSpan='3'" 
-                    HorizontalOptions="Center"
-                    VerticalTextAlignment="Center"
-                    TextColor="White"
-                    FontAttributes="Bold"
-                    Grid.RowSpan="3"
-                    Grid.Row="1"
-                    Grid.Column="3" />
-                
-            </Grid>
-
-            
-            
-            <Label Text="Grid 2 proportional layout with Auto Column" FontSize="Large" />
-            
-            <HorizontalStackLayout>
-                <Label Text="Text In Auto Column:" />
-                <Entry x:Name="Entry1" Text="Auto Enlarged" />
-            </HorizontalStackLayout>
-            
-            <HorizontalStackLayout>
-                <Label Text="Text Spanned Column:" />
-                <Entry x:Name="Entry2" Text="Auto Enlarged" />
-            </HorizontalStackLayout>    
-            
-            <Grid RowSpacing="2" 
-              ColumnSpacing="2" 
-              Background="LightPink"
-              ColumnDefinitions="1*,50,Auto,3*,1*"
-              Padding="{OnPlatform iOS='10,60,10,10', Default='10'}">
-                <Label Text="1*" FontAttributes="Bold" FontSize="20"  HorizontalTextAlignment="Center" />
-                <Label Text="50" FontAttributes="Bold" FontSize="20" Grid.Column="1" HorizontalTextAlignment="Center" />
-                <Label Text="Auto" FontAttributes="Bold" FontSize="20" Grid.Column="2" HorizontalTextAlignment="Center" />
-                <Label Text="3*" FontAttributes="Bold" FontSize="20" Grid.Column="3" HorizontalTextAlignment="Center" />
-                <Label Text="1*" FontAttributes="Bold" FontSize="20"  Grid.Column="4" HorizontalTextAlignment="Center" />
-            </Grid>
-
-            <Grid RowSpacing="2" 
-              ColumnSpacing="2" 
-              Background="LightPink"
-              RowDefinitions="1*,50,2*,0.5*"
-              ColumnDefinitions="1*,50,Auto,3*,1*"
-              HeightRequest="300"
-              Padding="{OnPlatform iOS='10,60,10,10', Default='10'}">
-
-                <RoundRectangle 
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-
-                     />
-                <RoundRectangle 
-                    Grid.Column="1"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Column="2"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
+                    <!--  Row 0  -->
+                    <RoundRectangle
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Column="1"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Column="2"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Column="3"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Column="4"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
 
 
-                <RoundRectangle 
-                    Grid.Column="3"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Column="4"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                
-                
-                <RoundRectangle 
-                    Grid.Row="1"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="1"
-                    Grid.Column="2"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="1"
-                    Grid.Column="3"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="1"
-                    Grid.Column="4"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                
-                <RoundRectangle 
-                    Grid.Row="2"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="2"
-                    Grid.Column="1"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="2"
-                    Grid.Column="2"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="2"
-                    Grid.Column="3"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="2"
-                    Grid.Column="4"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
+                    <!--  Row 1  -->
+
+                    <RoundRectangle
+                        Grid.Row="1"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="1"
+                        Grid.Column="3"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="1"
+                        Grid.Column="4"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+                    <!--  Row 2  -->
+
+                    <RoundRectangle
+                        Grid.Row="2"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="2"
+                        Grid.Column="3"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="2"
+                        Grid.Column="4"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+                    <!--  Row 3  -->
+
+                    <RoundRectangle
+                        Grid.Row="3"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="3"
+                        Grid.Column="2"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="3"
+                        Grid.Column="3"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="3"
+                        Grid.Column="4"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+                    <!--  Row SPAN  -->
+
+                    <RoundRectangle
+                        Grid.Row="1"
+                        Grid.RowSpan="3"
+                        Grid.Column="3"
+                        Margin="20,4,30,4"
+                        CornerRadius="6"
+                        Fill="Blue"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.RowSpan="3"
+                        Grid.Column="3"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        Text="Grid.RowSpan='3'"
+                        TextColor="White"
+                        VerticalTextAlignment="Center" />
+
+                </Grid>
 
 
 
+                <Label FontSize="Large" Text="Grid 2 proportional layout with Auto Column" />
+
+                <HorizontalStackLayout>
+                    <Label Text="Text In Auto Column:" />
+                    <Entry x:Name="Entry1" Text="Auto Enlarged" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Label Text="Text Spanned Column:" />
+                    <Entry x:Name="Entry2" Text="Auto Enlarged" />
+                </HorizontalStackLayout>
+
+                <Grid
+                    Padding="{OnPlatform iOS='10,60,10,10',
+                                         Default='10'}"
+                    Background="LightPink"
+                    ColumnDefinitions="1*,50,Auto,3*,1*"
+                    ColumnSpacing="2"
+                    RowSpacing="2">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        Text="1*" />
+                    <Label
+                        Grid.Column="1"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        Text="50" />
+                    <Label
+                        Grid.Column="2"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        Text="Auto" />
+                    <Label
+                        Grid.Column="3"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        Text="3*" />
+                    <Label
+                        Grid.Column="4"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        Text="1*" />
+                </Grid>
+
+                <Grid
+                    Padding="{OnPlatform iOS='10,60,10,10',
+                                         Default='10'}"
+                    Background="LightPink"
+                    ColumnDefinitions="1*,50,Auto,3*,1*"
+                    ColumnSpacing="2"
+                    HeightRequest="300"
+                    RowDefinitions="1*,50,2*,0.5*"
+                    RowSpacing="2">
+
+                    <RoundRectangle
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Column="1"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Column="2"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
 
 
-                <RoundRectangle 
-                    Grid.Row="3"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
-                <RoundRectangle 
-                    Grid.Row="3"
-                    Grid.Column="1"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
+                    <RoundRectangle
+                        Grid.Column="3"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Column="4"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
 
-                <RoundRectangle 
-                    Grid.Row="3"
-                    Grid.Column="2"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
 
-                <RoundRectangle 
-                    Grid.Row="3"
-                    Grid.Column="3"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
+                    <RoundRectangle
+                        Grid.Row="1"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="1"
+                        Grid.Column="3"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="1"
+                        Grid.Column="4"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
 
-                <RoundRectangle 
-                    Grid.Row="3"
-                    Grid.Column="4"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Red"
-                    CornerRadius="6"
-                     />
+                    <RoundRectangle
+                        Grid.Row="2"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="2"
+                        Grid.Column="3"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="2"
+                        Grid.Column="4"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
 
-                <RoundRectangle 
-                    Grid.Row="1"
-                    Grid.Column="3"
-                    Grid.RowSpan="3"
-                    Margin="20,4,30,4"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Fill="Blue"
-                    CornerRadius="6" />
 
-                <Label Text="Grid.RowSpan='3'" 
-                    HorizontalOptions="Center"
-                    VerticalTextAlignment="Center"
-                    FontAttributes="Bold"
-                    Grid.RowSpan="3"
-                    Grid.Row="1"
-                    Grid.Column="3" />
 
-                    <Label BindingContext="{x:Reference Entry2}"
-                       Text="{Binding Text}" 
-                       Grid.Column="1" 
-                       Grid.Row="1" 
-                       Grid.ColumnSpan="2" 
-                       VerticalOptions="Center" 
-                       VerticalTextAlignment="Center" 
-                       HeightRequest="20" />
 
-                    <Label BindingContext="{x:Reference Entry1}"
-                    Text="{Binding Text}" Grid.Column="2" VerticalOptions="Center" VerticalTextAlignment="Center" HeightRequest="20"  />
-            </Grid>
-        </VerticalStackLayout>
+
+                    <RoundRectangle
+                        Grid.Row="3"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <RoundRectangle
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+                    <RoundRectangle
+                        Grid.Row="3"
+                        Grid.Column="2"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+                    <RoundRectangle
+                        Grid.Row="3"
+                        Grid.Column="3"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+                    <RoundRectangle
+                        Grid.Row="3"
+                        Grid.Column="4"
+                        CornerRadius="6"
+                        Fill="Red"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+                    <RoundRectangle
+                        Grid.Row="1"
+                        Grid.RowSpan="3"
+                        Grid.Column="3"
+                        Margin="20,4,30,4"
+                        CornerRadius="6"
+                        Fill="Blue"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        ZIndex="1" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.RowSpan="3"
+                        Grid.Column="3"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        Text="Grid.RowSpan='3'"
+                        VerticalTextAlignment="Center"
+                        ZIndex="1" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        BindingContext="{x:Reference Entry2}"
+                        HeightRequest="20"
+                        Text="{Binding Text}"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+
+                    <Label
+                        Grid.Column="2"
+                        BindingContext="{x:Reference Entry1}"
+                        HeightRequest="20"
+                        Text="{Binding Text}"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                </Grid>
+            </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
