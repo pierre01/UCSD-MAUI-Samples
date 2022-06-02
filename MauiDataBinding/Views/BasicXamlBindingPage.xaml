@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiDataBinding.Views.BasicXamlBindingPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Basic XAML Binding">
+    <VerticalStackLayout>
+        
+        
+        <StackLayout Padding="10,0">
+            <Label
+                BindingContext="{x:Reference Name=slider1}"
+                FontSize="80"
+                HorizontalOptions="Center"
+                Rotation="{Binding Path=Value}"
+                Text="TEXT"
+                VerticalOptions="Center" />
+
+            <Slider
+                x:Name="slider1"
+                Maximum="360"
+                VerticalOptions="Center" />
+        </StackLayout>
+        
+        
+        
+        <StackLayout Padding="10,0">
+            <Label
+                x:Name="label2"
+                FontSize="80"
+                HorizontalOptions="Center"
+                Text="TEXT2"
+                VerticalOptions="Center" />
+
+            <Slider
+                x:Name="slider2"
+                Maximum="360"
+                VerticalOptions="Center" />
+        </StackLayout>
+        
+        
+    </VerticalStackLayout>
+</ContentPage>

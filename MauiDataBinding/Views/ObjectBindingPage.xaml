@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiDataBinding.Views.ObjectBindingPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:MauiDataBinding.Views"
+    Title="ObjectBindingPage"
+    x:DataType="model:Person">
+    <StackLayout>
+        <Label
+            FontSize="Large"
+            HorizontalOptions="Center"
+            Text="Name" />
+        <HorizontalStackLayout  HorizontalOptions="Center">
+            <Label  Text="{Binding FirstName}"  Margin="0,0,8,0" FontSize="Medium"/>
+            <Label Text="{Binding LastName}"  FontSize="Medium" />
+        </HorizontalStackLayout>
+
+        <Label
+            FontSize="Large"
+            HorizontalOptions="Center"
+            Text="Age" />
+
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label
+                Margin="0,0,8,0"
+                FontSize="Medium"
+                Text="{Binding DateOfBirth, StringFormat='Born: {0:D}'}" />
+            <Label
+                FontSize="Medium"
+                Text="{Binding Age}"
+                VerticalOptions="Center" FontAttributes="Bold" Margin="0,0,8,0"/>
+            <Label FontSize="Medium"  >Years Old</Label>
+        </HorizontalStackLayout>
+
+        <Label
+            FontSize="Large"
+            HorizontalOptions="Center"
+            Text="Gender" />
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label FontSize="Medium" Text="{Binding Gender}" />
+        </HorizontalStackLayout>
+    </StackLayout>
+</ContentPage>
