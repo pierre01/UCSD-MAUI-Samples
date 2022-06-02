@@ -18,7 +18,8 @@
                 Text="Radio Buttons"
                 VerticalOptions="Center"
                 WidthRequest="120" />
-            <RadioButton Padding="8"
+            <RadioButton
+                Padding="8"
                 BackgroundColor="LightGreen"
                 CheckedChanged="RadioButton_CheckedChanged"
                 Content="Radio Button 1 Group 1 "
