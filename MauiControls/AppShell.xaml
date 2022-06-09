@@ -4,59 +4,19 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiControls"
-    xmlns:views ="clr-namespace:MauiControls.Views"    >
-    <Shell.ItemTemplate>
-        <DataTemplate>
-            <Grid
-                x:Name="FlyoutItemLayout"
-                ColumnSpacing="0"
-                HeightRequest="38"
-                RowSpacing="0"
-                VerticalOptions="Center">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="32" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Image
-                    x:Name="FlyoutItemImage"
-                    Margin="8"
-                    HeightRequest="32"
-                    HorizontalOptions="CenterAndExpand"
-                    Source="{Binding FlyoutIcon}"
-                    VerticalOptions="Center"
-                    WidthRequest="32" />
-                <Label
-                    x:Name="FlyoutItemLabel"
-                    Grid.Column="1"
-                    Margin="8"
-                    FontAttributes="Bold"
-                    FontSize="Medium"
-                    HorizontalOptions="Start"
-                    HorizontalTextAlignment="Start"
-                    Text="{Binding Title}"
-                    VerticalOptions="Center" />
-                <VisualStateManager.VisualStateGroups>
-                    <VisualStateGroupList>
-                        <VisualStateGroup x:Name="CommonStates">
-                            <VisualState x:Name="Normal">
-                                <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="#FFFFFF" />
-                                </VisualState.Setters>
-                            </VisualState>
-                            <VisualState x:Name="Selected">
-                                <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="#F2F2F2" />
-                                </VisualState.Setters>
-                            </VisualState>
-                        </VisualStateGroup>
-                    </VisualStateGroupList>
-                </VisualStateManager.VisualStateGroups>
-            </Grid>
+    xmlns:views="clr-namespace:MauiControls.Views">
 
-        </DataTemplate>
-    </Shell.ItemTemplate>
-    <ShellContent Icon="appiconfg.png"  Title="Buttons" ContentTemplate="{DataTemplate views:ButtonsPage}" />
-    <ShellContent Icon="appiconfg.png"  Title="Text Inputs" ContentTemplate="{DataTemplate views:TextInput}" />
-    <ShellContent Icon="appiconfg.png"  Title="Steps, progress and range Inputs"   ContentTemplate="{DataTemplate views:StepAndProgress}" />
+    <ShellContent
+        Title="Buttons"
+        ContentTemplate="{DataTemplate views:ButtonsPage}"
+        Icon="appiconfg.png" />
+    <ShellContent
+        Title="Text Inputs"
+        ContentTemplate="{DataTemplate views:TextInput}"
+        Icon="appiconfg.png" />
+    <ShellContent
+        Title="Steps, progress and range Inputs"
+        ContentTemplate="{DataTemplate views:StepAndProgress}"
+        Icon="appiconfg.png" />
 
 </Shell>
