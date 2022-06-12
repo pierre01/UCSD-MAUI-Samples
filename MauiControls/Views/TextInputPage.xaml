@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiControls.Views.TextInputPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="TextInput">
+    <StackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label
+                Text="Entry"
+                VerticalOptions="Center"
+                WidthRequest="120" />
+            <Entry
+                BackgroundColor="LightBlue"
+                Text="Enter Text Here"
+                TextChanged="Entry_TextChanged"
+                WidthRequest="200" />
+            <Label x:Name="EntryLabel" Text="" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label
+                Text="Editor"
+                VerticalOptions="Center"
+                WidthRequest="120" />
+            <Editor
+                BackgroundColor="LightBlue"
+                HeightRequest="200"
+                Text="Enter Text Here"
+                TextChanged="Editor_TextChanged"
+                WidthRequest="200" />
+            <Label x:Name="EditorLabel" Text="" />
+        </HorizontalStackLayout>
+    </StackLayout>
+</ContentPage>

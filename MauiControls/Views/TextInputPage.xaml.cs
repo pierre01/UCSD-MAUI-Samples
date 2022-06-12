@@ -1,8 +1,8 @@
 namespace MauiControls.Views;
 
-public partial class TextInput : ContentPage
+public partial class TextInputPage : ContentPage
 {
-	public TextInput()
+	public TextInputPage()
 	{
 		InitializeComponent();
 	}

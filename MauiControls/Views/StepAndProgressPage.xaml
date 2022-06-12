@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiControls.Views.StepAndProgressPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="StepAndProgress">
+    <StackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label
+                Text="Slider"
+                VerticalOptions="Center"
+                WidthRequest="120" />
+            <Slider
+                Maximum="15"
+                Minimum="5"
+                ValueChanged="Slider_ValueChanged"
+                WidthRequest="200"
+                Value="5" />
+            <Label x:Name="SliderLabel" Text="" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label
+                Text="Stepper"
+                VerticalOptions="Center"
+                WidthRequest="120" />
+            <Stepper
+                Maximum="10"
+                Minimum="1"
+                ValueChanged="Stepper_ValueChanged"
+                WidthRequest="200"
+                Value="1" />
+            <Label
+                x:Name="StepperLabel"
+                Text="1"
+                VerticalOptions="Center" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label
+                Text="ActivityIndicator"
+                VerticalOptions="Center"
+                WidthRequest="120" />
+            <ActivityIndicator
+                HeightRequest="50"
+                IsRunning="True"
+                WidthRequest="200" />
+            <Label x:Name="ActivityIndicatorLabel" Text="" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label
+                Text="ProgressBar"
+                VerticalOptions="Center"
+                WidthRequest="120" />
+            <ProgressBar
+                x:Name="ProgressBarExample"
+                Progress="0"
+                WidthRequest="200" />
+            <!--  Progress is a value from 0 to 1  -->
+
+            <Label
+                x:Name="ProgressBarLabel"
+                Margin="8"
+                Text=""
+                VerticalOptions="Center" />
+        </HorizontalStackLayout>
+
+
+    </StackLayout>
+</ContentPage>

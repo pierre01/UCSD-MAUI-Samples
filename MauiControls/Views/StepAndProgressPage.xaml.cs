@@ -1,8 +1,8 @@
 namespace MauiControls.Views;
 
-public partial class StepAndProgress : ContentPage
+public partial class StepAndProgressPage : ContentPage
 {
-	public StepAndProgress()
+	public StepAndProgressPage()
 	{
 		InitializeComponent();
 	}

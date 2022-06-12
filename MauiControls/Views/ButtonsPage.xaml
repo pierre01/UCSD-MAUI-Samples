@@ -4,7 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="ButtonsPage">
-    <StackLayout>
+    <VerticalStackLayout>
         <HorizontalStackLayout Margin="4">
             <Label
                 Text="Button"
@@ -70,5 +70,5 @@
             <Switch IsToggled="True" Toggled="Switch_Toggled" />
             <Label x:Name="SwitchResultLabel" Text="" />
         </HorizontalStackLayout>
-    </StackLayout>
+    </VerticalStackLayout>
 </ContentPage>
