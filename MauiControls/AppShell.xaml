@@ -9,15 +9,17 @@
     <ShellContent
         Title="Buttons"
         ContentTemplate="{DataTemplate views:ButtonsPage}"
+        Icon="appiconfg.png"
         Route="ButtonsPage" />
     <ShellContent
         Title="Text Inputs"
         ContentTemplate="{DataTemplate views:TextInputPage}"
-         Route="TextInputPage" />
+        Icon="appiconfg.png"
+        Route="TextInputPage" />
     <ShellContent
         Title="Steps, progress and range Inputs"
         ContentTemplate="{DataTemplate views:StepAndProgressPage}"
-       
+        Icon="appiconfg.png"
         Route="StepAndProgressPage" />
- <!--Icon="appiconfg.png"--> 
+    <!--    -->
 </Shell>

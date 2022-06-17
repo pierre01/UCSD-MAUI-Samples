@@ -16,7 +16,7 @@
                 ValueChanged="Slider_ValueChanged"
                 WidthRequest="200"
                 Value="5" />
-            <Label x:Name="SliderLabel" Text="" />
+            <Label x:Name="SliderLabel" Text="" VerticalOptions="Center" />
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
             <Label

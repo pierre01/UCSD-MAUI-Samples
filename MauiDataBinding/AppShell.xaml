@@ -4,11 +4,17 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiDataBinding"
-    xmlns:views ="clr-namespace:MauiDataBinding.Views"
+    xmlns:views="clr-namespace:MauiDataBinding.Views"
     Shell.FlyoutBehavior="Flyout">
 
-    <ShellContent Icon="appiconfg.png"  Title="BasicBinding" ContentTemplate="{DataTemplate views:BasicXamlBindingPage}" />
-    <ShellContent Icon="appiconfg.png"  Title="ObjectBinding" ContentTemplate="{DataTemplate views:ObjectBindingPage}" />
+    <ShellContent
+        Title="BasicBinding"
+        ContentTemplate="{DataTemplate views:BasicXamlBindingPage}"
+        Route="BasicXamlBindingPage" />
+    <ShellContent
+        Title="ObjectBinding"
+        ContentTemplate="{DataTemplate views:ObjectBindingPage}"
+        Route="ObjectBindingPage" />
     <!--<ShellContent Icon="appiconfg.png"  Title="Text Inputs" ContentTemplate="{DataTemplate views:TextInput}" />
     <ShellContent Icon="appiconfg.png"  Title="Steps, progress and range Inputs"   ContentTemplate="{DataTemplate views:StepAndProgress}" />-->
 

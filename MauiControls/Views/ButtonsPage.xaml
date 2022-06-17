@@ -19,10 +19,9 @@
                 VerticalOptions="Center"
                 WidthRequest="120" />
             <RadioButton
-                Padding="8"
                 BackgroundColor="LightGreen"
                 CheckedChanged="RadioButton_CheckedChanged"
-                Content="Radio Button 1 Group 1 "
+                Content="  Radio Button 1 Group 1 "
                 GroupName="G1"
                 IsChecked="True" />
         </HorizontalStackLayout>
@@ -31,7 +30,7 @@
             <RadioButton
                 BackgroundColor="LightBlue"
                 CheckedChanged="RadioButton_CheckedChanged"
-                Content="Radio Button 2 Group 2 "
+                Content="  Radio Button 2 Group 2 "
                 GroupName="G2" />
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
@@ -42,7 +41,7 @@
             <RadioButton
                 BackgroundColor="LightGreen"
                 CheckedChanged="RadioButton_CheckedChanged"
-                Content="Radio Button 3 Group 1 "
+                Content="  Radio Button 3 Group 1 "
                 GroupName="G1" />
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
@@ -50,7 +49,7 @@
             <RadioButton
                 BackgroundColor="LightBlue"
                 CheckedChanged="RadioButton_CheckedChanged"
-                Content="Radio Button 4 Group 2 "
+                Content="  Radio Button 4 Group 2 "
                 GroupName="G2"
                 IsChecked="True" />
         </HorizontalStackLayout>
