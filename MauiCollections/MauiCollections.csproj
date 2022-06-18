@@ -52,4 +52,8 @@
 	  <None Remove="Resources\AppIcon\appicon.svg" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Views\" />
+	</ItemGroup>
+
 </Project>

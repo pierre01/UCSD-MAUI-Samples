@@ -2,38 +2,23 @@
 
 public partial class MainPage : ContentPage
 {
-    int count = 0;
+	int count = 0;
 
-    public MainPage()
-    {
-        InitializeComponent();
-        AppTheme currentTheme = Application.Current.RequestedTheme;
+	public MainPage()
+	{
+		InitializeComponent();
+	}
 
-        ThemeLabel.Text = $"Theme is {currentTheme}";
-        if (currentTheme == AppTheme.Dark)
-            ThemeSwitch.IsToggled = true;
-    }
+	private void OnCounterClicked(object sender, EventArgs e)
+	{
+		count++;
 
-    private void OnCounterClicked(object sender, EventArgs e)
-    {
-        count++;
-        CounterLabel.Text = $"Current count: {count}";
+		if (count == 1)
+			CounterBtn.Text = $"Clicked {count} time";
+		else
+			CounterBtn.Text = $"Clicked {count} times";
 
-        SemanticScreenReader.Announce(CounterLabel.Text);
-    }
-
-    private void ThemeChanged(object sender, ToggledEventArgs e)
-    {
-        AppTheme currentTheme = Application.Current.UserAppTheme;
-        if (currentTheme == AppTheme.Dark)
-        {
-            currentTheme = AppTheme.Light;
-        }
-        else
-        {
-            currentTheme = AppTheme.Dark;
-        }
-        Application.Current.UserAppTheme = currentTheme;
-        ThemeLabel.Text = $"Theme is {currentTheme}";
-    }
+		SemanticScreenReader.Announce(CounterBtn.Text);
+	}
 }
+

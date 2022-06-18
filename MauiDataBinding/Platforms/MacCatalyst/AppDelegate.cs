@@ -1,10 +1,9 @@
 ﻿using Foundation;
 
-namespace MauiDataBinding
+namespace MauiDataBinding;
+
+[Register("AppDelegate")]
+public class AppDelegate : MauiUIApplicationDelegate
 {
-    [Register("AppDelegate")]
-    public class AppDelegate : MauiUIApplicationDelegate
-    {
-        protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
-    }
+	protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
 }

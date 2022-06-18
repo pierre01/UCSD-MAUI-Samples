@@ -1,12 +1,11 @@
-﻿namespace MauiMvvm
-{
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
+﻿namespace MauiMvvm;
 
-            MainPage = new AppShell();
-        }
-    }
+public partial class App : Application
+{
+	public App()
+	{
+		InitializeComponent();
+
+		MainPage = new AppShell();
+	}
 }

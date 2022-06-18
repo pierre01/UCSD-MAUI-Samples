@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiGraphics.Views.ParamerterizedGraphicsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:drawable="clr-namespace:MauiGraphics.Views">
+    <VerticalStackLayout>
+        <Button Clicked="RefreshButtonClicked" Text="Refresh..." />
+        <GraphicsView x:Name="B1"
+            Drawable="{Binding Bar01}"
+            HeightRequest="40"
+            WidthRequest="400" />
+        <GraphicsView x:Name="B2"
+            Drawable="{Binding Bar02}"
+            HeightRequest="40"
+            WidthRequest="400" />
+        <GraphicsView  x:Name="B3"
+            Drawable="{Binding Bar03}"
+            HeightRequest="40"
+            WidthRequest="400" />
+        <GraphicsView  x:Name="B4"
+            Drawable="{Binding Bar04}"
+            HeightRequest="40"
+            WidthRequest="400" />
+    </VerticalStackLayout>
+</ContentPage>

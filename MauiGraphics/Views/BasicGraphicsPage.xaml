@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiGraphics.Views.BasicGraphicsPage"
+             Title="BasicGraphicsPage"
+             xmlns:drawable="clr-namespace:MauiGraphics.Views" >
+    <ContentPage.Resources>
+        <drawable:DrawableArea x:Key="drawable"  />
+        <drawable:DrawableArea x:Key="drawable2"  />
+    </ContentPage.Resources>
+    <VerticalStackLayout>
+        <Button Text="Refresh..." Clicked="RefreshButtonClicked" />
+        <GraphicsView x:Name="myGraphicsView"
+            Drawable="{StaticResource drawable}"
+                      HeightRequest="200"
+                      WidthRequest="400" />
+        <GraphicsView x:Name="myGraphicsView2"
+            Drawable="{StaticResource drawable2}"
+                      HeightRequest="200"
+                      WidthRequest="400" />
+    </VerticalStackLayout>
+</ContentPage>

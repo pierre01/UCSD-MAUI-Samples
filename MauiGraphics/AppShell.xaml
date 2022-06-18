@@ -3,12 +3,16 @@
     x:Class="MauiGraphics.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiGraphics"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:local="clr-namespace:MauiGraphics.Views"
+    Shell.FlyoutBehavior="Flyout">
 
     <ShellContent
-        Title="Hello, World!"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Home"
+        ContentTemplate="{DataTemplate local:BasicGraphicsPage}"
+        Route="BasicGraphicsPage" />
+    <ShellContent
+        Title="Param"
+        ContentTemplate="{DataTemplate local:ParamerterizedGraphicsPage}"
+        Route="ParamerterizedGraphicsPage" />
 
 </Shell>
