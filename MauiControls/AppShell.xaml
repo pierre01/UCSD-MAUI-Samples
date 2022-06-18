@@ -21,5 +21,4 @@
         ContentTemplate="{DataTemplate views:StepAndProgressPage}"
         Icon="appiconfg.png"
         Route="StepAndProgressPage" />
-    <!--    -->
 </Shell>

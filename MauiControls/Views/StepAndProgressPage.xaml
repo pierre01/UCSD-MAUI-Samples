@@ -16,7 +16,7 @@
                 ValueChanged="Slider_ValueChanged"
                 WidthRequest="200"
                 Value="5" />
-            <Label x:Name="SliderLabel" Text="" VerticalOptions="Center" />
+            <Label x:Name="SliderLabel" Text="5.00" VerticalOptions="Center" />
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
             <Label
@@ -59,7 +59,7 @@
             <Label
                 x:Name="ProgressBarLabel"
                 Margin="8"
-                Text=""
+                Text="0.00%"
                 VerticalOptions="Center" />
         </HorizontalStackLayout>
 
