@@ -45,7 +45,7 @@
         Icon="appiconfg.png" />
     <ShellContent
         Title="Stack Layout1"
-        ContentTemplate="{DataTemplate views:AbsoluteLayoutPage}"
+        ContentTemplate="{DataTemplate views:StackLayoutPage}"
         Icon="appiconfg.png" />
     <ShellContent
         Title="Stack Layout 2"
@@ -65,7 +65,7 @@
         Icon="appiconfg.png" />
     <ShellContent
         Title="Flex Layout2"
-        ContentTemplate="{DataTemplate views:FlexLayout02}"
+        ContentTemplate="{DataTemplate views:FlexLayout2Page}"
         Icon="appiconfg.png" />
 
 </Shell>
