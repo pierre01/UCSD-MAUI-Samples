@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDevices.Views.BatteryPage"
+             Title="BatteryPage">
+    <StackLayout>
+        <Label x:Name="BatteryStateLabel" Text="BatteryStateLabel"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+        <Label x:Name="BatteryLevelLabel" Text="BatteryLevelLabel"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+        <Label x:Name="BatterySaverLabel" Text="BatterySaverLabel"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+        <Label x:Name="BatteryPowerSourceLabel" Text="BatteryPowerSourceLabel"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+   </StackLayout>
+</ContentPage>
