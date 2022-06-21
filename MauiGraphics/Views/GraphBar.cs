@@ -12,19 +12,31 @@ namespace MauiGraphics.Views;
 public  class GraphBar : IDrawable
 {
     float _barValue;
+    Color _trackColor   = Color.FromArgb("#FF530c0c"); 
+    Color _borderColor  = Color.FromArgb("#FF404040");
+    Color _valueColor   = Color.FromArgb("#FFc69595");
+    //Color _valueColor = Color.FromArgb("#FF791111");
 
-    public GraphBar(float value)
+    public GraphBar(float value, Color trackColor=null, Color borderColor=null, Color valueColor=null)
     {
         _barValue=value;
+        _trackColor= trackColor == null? _trackColor:trackColor;
+        _borderColor=borderColor==null? _borderColor:borderColor;   
+        _valueColor=valueColor == null? _valueColor:valueColor;
     }
 
     public void Draw(ICanvas canvas, RectF dirtyRect)
     {
         // Drawing goes here
-        canvas.StrokeColor = Colors.Red;
-        canvas.StrokeSize = 4;
-        canvas.StrokeDashPattern = new float[] { 2, 2 };
-        canvas.DrawLine(10, 10,_barValue, 10 );
+
+        canvas.FillColor = _trackColor;
+        canvas.StrokeColor = _borderColor;
+        canvas.StrokeSize = 2;        
+        canvas.FillRoundedRectangle(2, 2, 250, 12, 4);
+
+        canvas.FillColor = _valueColor;
+        canvas.FillRoundedRectangle(2, 2, _barValue, 12, 4);
+        canvas.DrawRoundedRectangle(2, 2, 250, 12, 4);
     }
 
     public void ChangeValue(float value)

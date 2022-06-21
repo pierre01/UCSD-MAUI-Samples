@@ -4,23 +4,31 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:drawable="clr-namespace:MauiGraphics.Views">
-    <VerticalStackLayout>
-        <Button Clicked="RefreshButtonClicked" Text="Refresh..." />
-        <GraphicsView x:Name="B1"
+    <VerticalStackLayout Margin="8">
+        <Button
+            Margin="16"
+            Clicked="RefreshButtonClicked"
+            Text="Refresh..." />
+        <GraphicsView
+            x:Name="B1"
+            Margin="0,16,0,0"
             Drawable="{Binding Bar01}"
-            HeightRequest="40"
-            WidthRequest="400" />
-        <GraphicsView x:Name="B2"
+            HeightRequest="20"
+            WidthRequest="300" />
+        <GraphicsView
+            x:Name="B2"
             Drawable="{Binding Bar02}"
-            HeightRequest="40"
-            WidthRequest="400" />
-        <GraphicsView  x:Name="B3"
+            HeightRequest="20"
+            WidthRequest="300" />
+        <GraphicsView
+            x:Name="B3"
             Drawable="{Binding Bar03}"
-            HeightRequest="40"
-            WidthRequest="400" />
-        <GraphicsView  x:Name="B4"
+            HeightRequest="20"
+            WidthRequest="300" />
+        <GraphicsView
+            x:Name="B4"
             Drawable="{Binding Bar04}"
-            HeightRequest="40"
-            WidthRequest="400" />
+            HeightRequest="20"
+            WidthRequest="300" />
     </VerticalStackLayout>
 </ContentPage>

@@ -19,10 +19,10 @@ public partial class ParamerterizedGraphicsPage : ContentPage
 	private void RefreshButtonClicked(object sender, EventArgs e)
 	{
         Random rnd = new Random();
-        ((GraphBar)B1.Drawable).ChangeValue(rnd.Next(400));
-        ((GraphBar)B2.Drawable).ChangeValue(rnd.Next(400));
-        ((GraphBar)B3.Drawable).ChangeValue(rnd.Next(400));
-        ((GraphBar)B4.Drawable).ChangeValue(rnd.Next(400));
+        ((GraphBar)B1.Drawable).ChangeValue(rnd.Next(250));
+        ((GraphBar)B2.Drawable).ChangeValue(rnd.Next(250));
+        ((GraphBar)B3.Drawable).ChangeValue(rnd.Next(250));
+        ((GraphBar)B4.Drawable).ChangeValue(rnd.Next(250));
         B1.Invalidate();
         B2.Invalidate();
         B3.Invalidate();
