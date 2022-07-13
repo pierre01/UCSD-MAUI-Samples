@@ -9,15 +9,28 @@
         <drawable:DrawableArea x:Key="drawable" />
         <drawable:DrawableArea x:Key="drawable2" />
     </ContentPage.Resources>
-    <VerticalStackLayout>
+    <Grid
+        ColumnDefinitions="*,Auto,*"
+        RowDefinitions="100,*"
+        VerticalOptions="FillAndExpand">
         <Button
+            Grid.Column="1"
             Margin="16"
             Clicked="RefreshButtonClicked"
             Text="Refresh..." />
-        <GraphicsView
-            x:Name="myGraphicsView"
-            Drawable="{StaticResource drawable}"
-            HeightRequest="400"
-            WidthRequest="400" />
-    </VerticalStackLayout>
+        <Grid
+            Grid.Row="1"
+            Grid.Column="1"
+            VerticalOptions="Start">
+
+            <GraphicsView
+                x:Name="myGraphicsView"
+                Drawable="{StaticResource drawable}"
+                HeightRequest="400"
+                VerticalOptions="Start"
+                HorizontalOptions="End"
+                WidthRequest="400" />
+
+        </Grid>
+    </Grid>
 </ContentPage>

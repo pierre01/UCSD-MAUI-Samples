@@ -8,11 +8,17 @@
 
     <ShellContent
         Title="Home"
+        Icon="appiconfg.png"
         ContentTemplate="{DataTemplate local:BasicGraphicsPage}"
         Route="BasicGraphicsPage" />
     <ShellContent
         Title="Param"
+        Icon="appiconfg.png"
         ContentTemplate="{DataTemplate local:ParamerterizedGraphicsPage}"
         Route="ParamerterizedGraphicsPage" />
-
+    <ShellContent
+        Title="Clock"
+        Icon="appiconfg.png"
+        ContentTemplate="{DataTemplate local:ClockPage}"
+        Route="ClockPage" />
 </Shell>

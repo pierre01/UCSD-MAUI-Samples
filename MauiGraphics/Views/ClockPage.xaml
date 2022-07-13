@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiGraphics.Views.ClockPage"
+             xmlns:views="clr-namespace:MauiGraphics.Views"
+             Title="ClockPage">
+    <ContentPage.Resources>
+        <views:ClockFace x:Key="ClockFace01" />
+    </ContentPage.Resources>
+    <StackLayout>
+        <GraphicsView
+                x:Name="myGraphicsView"
+                Drawable="{StaticResource ClockFace01}"
+                HeightRequest="400"
+                HorizontalOptions="End"
+                VerticalOptions="Start"
+                WidthRequest="400" />
+    </StackLayout>
+</ContentPage>
