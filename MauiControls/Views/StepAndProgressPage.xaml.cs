@@ -5,7 +5,13 @@ public partial class StepAndProgressPage : ContentPage
 	public StepAndProgressPage()
 	{
 		InitializeComponent();
-	}
+        //mySlider.ValueChanged += Slider_ValueChanged;        
+        //mySlider.Maximum = 15;
+        //mySlider.Minimum = 5;
+        //mySlider.Value = 5;
+
+
+    }
 
     private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
     {
