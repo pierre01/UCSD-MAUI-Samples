@@ -30,7 +30,7 @@ internal class ClockFace : IDrawable
 
         DateTime now = DateTime.Now;
 
-        canvas.StrokeColor = Colors.White;
+        canvas.StrokeColor = Colors.OrangeRed;
 
         // Hour hand
         canvas.StrokeSize = 20;
