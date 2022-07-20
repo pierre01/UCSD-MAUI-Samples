@@ -1,14 +1,15 @@
+
+
 namespace MauiDevices.Views;
 
 public partial class DeviceDisplayPage : ContentPage
 {
     IDeviceDisplay deviceDisplay;
-    public DeviceDisplayPage(IDeviceDisplay deviceDisplay)
-	{
-		InitializeComponent();
-        this.deviceDisplay=deviceDisplay;
-        ReadDeviceDisplay(deviceDisplay.MainDisplayInfo);
-        deviceDisplay.MainDisplayInfoChanged += DeviceDisplay_MainDisplayInfoChanged;
+    public DeviceDisplayPage()
+    {
+        InitializeComponent();
+        this.NavigatedTo += AppearingHandler;
+
     }
 
     private void DeviceDisplay_MainDisplayInfoChanged(object sender, DisplayInfoChangedEventArgs e)
@@ -30,4 +31,12 @@ public partial class DeviceDisplayPage : ContentPage
     }
     private void AlwaysOnSwitch_Toggled(object sender, ToggledEventArgs e) =>
     deviceDisplay.KeepScreenOn = AlwaysOnSwitch.IsToggled;
+
+    protected void AppearingHandler(object o, EventArgs e)
+    {
+        this.deviceDisplay = DeviceDisplay.Current;
+        ReadDeviceDisplay(deviceDisplay.MainDisplayInfo);
+        deviceDisplay.MainDisplayInfoChanged += DeviceDisplay_MainDisplayInfoChanged;
+
+    }
 }

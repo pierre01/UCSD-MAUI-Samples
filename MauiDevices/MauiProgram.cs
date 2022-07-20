@@ -13,8 +13,8 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
         builder.Services.AddSingleton<IDeviceInfo>(DeviceInfo.Current);
-        builder.Services.AddSingleton<IBattery>(Battery.Default);
-        builder.Services.AddSingleton<IDeviceDisplay>(DeviceDisplay.Current);
+        //builder.Services.AddSingleton<IBattery>(Battery.Default);
+        //builder.Services.AddSingleton<IDeviceDisplay>(DeviceDisplay.Current);
         builder.Services.AddSingleton<IConnectivity>(Connectivity.Current);
         builder.Services.AddSingleton<IGeolocation>(Geolocation.Default);
         builder.Services.AddSingleton<IMap>(Map.Default);

@@ -1,12 +1,14 @@
+
+
 namespace MauiDevices.Views;
 
 public partial class BatteryPage : ContentPage
 {
     private bool _isBatteryWatched;
-	public BatteryPage(IBattery battery)
+	public BatteryPage()
 	{
 		InitializeComponent();
-        WatchBattery(battery);
+        WatchBattery(Battery.Default);
 	}
 
     //private void BatterySwitch_Toggled(object sender, ToggledEventArgs e) =>
@@ -42,6 +44,8 @@ public partial class BatteryPage : ContentPage
         };
 
         BatteryLevelLabel.Text = $"Battery is {e.ChargeLevel * 100}% charged.";
+        SetChargeModeLabel();
+        BatterySaverLabel.Text = $"Energy Saver: {Battery.Default.EnergySaverStatus}";
     }
 
     private bool _isBatteryLow = false;
@@ -60,7 +64,7 @@ public partial class BatteryPage : ContentPage
     {
         // Update the variable based on the state
         _isBatteryLow = Battery.Default.EnergySaverStatus == EnergySaverStatus.On;
-        BatterySaverLabel.Text = _isBatteryLow.ToString();
+        BatterySaverLabel.Text = $"Energy Saver: {Battery.Default.EnergySaverStatus}";// _isBatteryLow.ToString();
     }
 
     private void SetChargeModeLabel()
