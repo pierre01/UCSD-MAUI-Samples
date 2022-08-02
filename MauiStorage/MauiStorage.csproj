@@ -53,4 +53,16 @@
 	  <None Remove="Resources\Splash\splash.svg" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="Views\FilePickerPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\PreferencesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SecureStoragePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
