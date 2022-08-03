@@ -3,12 +3,20 @@
     x:Class="MauiNavigation.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiNavigation"
+    xmlns:views="clr-namespace:MauiNavigation.Views"
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Pop-ups"
+        ContentTemplate="{DataTemplate views:PopUpsPage}"
+        Route="PopUpsPage" />
+    <ShellContent
+        Title="Search Page"
+        ContentTemplate="{DataTemplate views:SearchPage}"
+        Route="SearchPage" />
+    <ShellContent
+        Title="Toasts,Snackbar and Alerts"
+        ContentTemplate="{DataTemplate views:ToastAndSnackBarPage}"
+        Route="ToastAndSnackBarPage" />
 
 </Shell>

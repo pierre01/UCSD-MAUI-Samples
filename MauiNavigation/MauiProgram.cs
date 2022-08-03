@@ -1,4 +1,6 @@
-﻿namespace MauiNavigation;
+﻿using CommunityToolkit.Maui;
+
+namespace MauiNavigation;
 
 public static class MauiProgram
 {
@@ -13,6 +15,9 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		return builder.Build();
+        // Initialise the toolkit
+        builder.UseMauiApp<App>().UseMauiCommunityToolkit();
+
+        return builder.Build();
 	}
 }
