@@ -33,7 +33,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiNavigation", "MauiNavigation\MauiNavigation.csproj", "{DEB6FB1D-5B31-4FB5-8701-08043D9ECC27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiThemes", "MauiThemes\MauiThemes.csproj", "{DA74EB0B-8391-4E5B-8D5F-F4CB4A57DBFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiThemes", "MauiThemes\MauiThemes.csproj", "{DA74EB0B-8391-4E5B-8D5F-F4CB4A57DBFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiGeoLocation", "MauiGeoLocation\MauiGeoLocation.csproj", "{79F4738C-CFDC-4A66-8671-F0CE0486809C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiDeviceOutput", "MauiDeviceOutput\MauiDeviceOutput.csproj", "{006DBA67-F881-43C2-B9E3-F3C7BF6F7FBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -119,6 +123,18 @@ Global
 		{DA74EB0B-8391-4E5B-8D5F-F4CB4A57DBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA74EB0B-8391-4E5B-8D5F-F4CB4A57DBFA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DA74EB0B-8391-4E5B-8D5F-F4CB4A57DBFA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{79F4738C-CFDC-4A66-8671-F0CE0486809C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79F4738C-CFDC-4A66-8671-F0CE0486809C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79F4738C-CFDC-4A66-8671-F0CE0486809C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{79F4738C-CFDC-4A66-8671-F0CE0486809C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79F4738C-CFDC-4A66-8671-F0CE0486809C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79F4738C-CFDC-4A66-8671-F0CE0486809C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{006DBA67-F881-43C2-B9E3-F3C7BF6F7FBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{006DBA67-F881-43C2-B9E3-F3C7BF6F7FBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{006DBA67-F881-43C2-B9E3-F3C7BF6F7FBA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{006DBA67-F881-43C2-B9E3-F3C7BF6F7FBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{006DBA67-F881-43C2-B9E3-F3C7BF6F7FBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{006DBA67-F881-43C2-B9E3-F3C7BF6F7FBA}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
