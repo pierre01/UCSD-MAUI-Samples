@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MAUICommunications.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:MAUICommunications.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+    <ShellContent
+        Title="Contacts"
+        ContentTemplate="{DataTemplate views:ContactsPage}"
+        Route="ContactsPage" />
+    <ShellContent
+        Title="Email"
+        ContentTemplate="{DataTemplate views:EmailPage}"
+        Route="EmailPage" />
+    <ShellContent
+        Title="Networking"
+        ContentTemplate="{DataTemplate views:NetworkingPage}"
+        Route="NetworkingPage" />
+    <ShellContent
+        Title="Phone Dialer"
+        ContentTemplate="{DataTemplate views:PhoneDialerPage}"
+        Route="PhoneDialerPage" />
+    <ShellContent
+        Title="Service Calls"
+        ContentTemplate="{DataTemplate views:ServiceCallPage}"
+        Route="ServiceCallPage" />
+    <ShellContent
+        Title="SMS Messaging"
+        ContentTemplate="{DataTemplate views:SMSMessagingPage}"
+        Route="SMSMessagingPage" />
+    <ShellContent
+        Title="Web Authenticator"
+        ContentTemplate="{DataTemplate views:WebAuthenticatorPage}"
+        Route="WebAuthenticatorPage" />
+
+</Shell>

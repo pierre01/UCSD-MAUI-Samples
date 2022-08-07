@@ -1,7 +1,7 @@
 # Samples from the UCSD Class on cross platform development
 Projects are used throughout the class in this order
 - MAUIControls
-  > **Demo of main controls including:**
+  > **Demo of the main MAUI controls including:**
    - Buttons
      - **Button**
      - Radio

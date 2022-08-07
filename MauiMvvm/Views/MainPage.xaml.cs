@@ -1,4 +1,4 @@
-﻿namespace MauiMvvm;
+﻿namespace MauiMvvm.Views;
 
 public partial class MainPage : ContentPage
 {
