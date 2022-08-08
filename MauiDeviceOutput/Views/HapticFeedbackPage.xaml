@@ -5,8 +5,11 @@
              Title="HapticFeedbackPage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Haptic Feedback"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Button Text="Click Feedback" Clicked="HapticShortButton_Clicked" />
+        <Button Text="Long Press Feedback" Clicked="HapticLongButton_Clicked" />
+
     </VerticalStackLayout>
 </ContentPage>

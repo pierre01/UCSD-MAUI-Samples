@@ -4,8 +4,9 @@
              x:Class="MauiDeviceOutput.Views.FlashLightPage"
              Title="FlashLightPage">
     <StackLayout>
-        <Label Text="Welcome to .NET MAUI!"
+        <Label Text="FlashLight"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
+        <Switch x:Name="FlashlightSwitch"  Toggled="FlashlightSwitch_Toggled" />
     </StackLayout>
 </ContentPage>

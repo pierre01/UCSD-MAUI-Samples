@@ -5,8 +5,10 @@
              Title="VibrationPage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Vibration"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Button Text="Start Vibrating" x:Name="VibrateStartButton" Clicked="VibrateStartButton_Clicked" />
+        <Button Text="Stop Vibrating" x:Name="VibrateStopButton" Clicked="VibrateStopButton_Clicked" />
     </VerticalStackLayout>
 </ContentPage>
