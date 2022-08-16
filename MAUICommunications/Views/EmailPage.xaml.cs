@@ -52,4 +52,9 @@ public partial class EmailPage : ContentPage
             await Email.Default.ComposeAsync(message);
         }
     }
+
+    private void EmailClicked(object sender, EventArgs e)
+    {
+
+    }
 }
