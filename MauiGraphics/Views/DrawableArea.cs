@@ -38,9 +38,5 @@ public class DrawableArea : IDrawable
         canvas.StrokeColor = Colors.Red;                  
         canvas.DrawArc(140, 140, 120, 120, 90, rnd.Next(90, 360), true, false);
         
-         
-       
-
-
     }
 }
