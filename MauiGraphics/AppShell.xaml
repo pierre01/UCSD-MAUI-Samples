@@ -16,9 +16,22 @@
         Icon="appiconfg.png"
         ContentTemplate="{DataTemplate local:ParamerterizedGraphicsPage}"
         Route="ParamerterizedGraphicsPage" />
+    
     <ShellContent
         Title="Clock"
         Icon="appiconfg.png"
         ContentTemplate="{DataTemplate local:ClockPage}"
         Route="ClockPage" />
+    
+    <ShellContent
+        Title="Barcode Reading"
+        Icon="appiconfg.png"
+        ContentTemplate="{DataTemplate local:BarCodesReadingPage}"
+        Route="BarCodesReadingPage" />
+
+    <ShellContent
+        Title="Barcode Making"
+        Icon="appiconfg.png"
+        ContentTemplate="{DataTemplate local:BarCodeMakingPage}"
+        Route="BarCodeMakingPage" />
 </Shell>
