@@ -54,16 +54,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Views\BarCodesReadingPage.xaml.cs">
-	    <DependentUpon>BarCodesReadingPage.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
 	  <MauiXaml Update="Views\BarCodeMakingPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\BarCodesReadingPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

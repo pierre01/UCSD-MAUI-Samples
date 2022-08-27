@@ -23,11 +23,7 @@
         ContentTemplate="{DataTemplate local:ClockPage}"
         Route="ClockPage" />
     
-    <ShellContent
-        Title="Barcode Reading"
-        Icon="appiconfg.png"
-        ContentTemplate="{DataTemplate local:BarCodesReadingPage}"
-        Route="BarCodesReadingPage" />
+
 
     <ShellContent
         Title="Barcode Making"
