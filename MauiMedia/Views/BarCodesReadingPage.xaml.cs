@@ -5,10 +5,10 @@ public partial class BarCodesReadingPage : ContentPage
 	public BarCodesReadingPage()
 	{
 		InitializeComponent();
-		//BarCodeReader.Options = new ZXing.Net.Maui.BarcodeReaderOptions()
-		//{
-		//	Formats = ZXing.Net.Maui.BarcodeFormats.OneDimensional
-		//}
+		BarCodeReader.Options = new ZXing.Net.Maui.BarcodeReaderOptions()
+		{
+			Formats = ZXing.Net.Maui.BarcodeFormats.All
+		};
 	}
 
 	private void CameraBarcodeReaderView_BarcodesDetected(object sender, ZXing.Net.Maui.BarcodeDetectionEventArgs e)

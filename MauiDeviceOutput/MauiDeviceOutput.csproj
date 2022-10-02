@@ -49,6 +49,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\AppIcon\appicon.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Views\FlashLightPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

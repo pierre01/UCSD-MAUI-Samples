@@ -11,4 +11,9 @@
         Icon="appiconfg.png"
         ContentTemplate="{DataTemplate local:BarCodesReadingPage}"
         Route="BarCodesReadingPage" />
+    <ShellContent
+        Title="Audio Media player"
+        Icon="appiconfg.png"
+        ContentTemplate="{DataTemplate local:SoundAndMusic}"
+        Route="SoundAndMusic" />
 </Shell>

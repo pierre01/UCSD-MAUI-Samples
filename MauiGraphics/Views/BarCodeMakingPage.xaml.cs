@@ -6,4 +6,9 @@ public partial class BarCodeMakingPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+	private void QRCodeChanged(object sender, TextChangedEventArgs e)
+	{
+		BarcodeDisplayControl.Value = e.NewTextValue;
+    }
 }
