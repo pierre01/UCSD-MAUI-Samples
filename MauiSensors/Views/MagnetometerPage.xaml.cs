@@ -5,6 +5,7 @@ public partial class MagnetometerPage : ContentPage
 	public MagnetometerPage()
 	{
 		InitializeComponent();
+        ToggleMagnetometer();
 	}
     private void ToggleMagnetometer()
     {
@@ -30,5 +31,11 @@ public partial class MagnetometerPage : ContentPage
         // Update UI Label with magnetometer state
         MagnetometerLabel.TextColor = Colors.Green;
         MagnetometerLabel.Text = $"Magnetometer: {e.Reading}";
+    }
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        ToggleMagnetometer();
+
     }
 }

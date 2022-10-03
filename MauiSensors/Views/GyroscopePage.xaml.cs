@@ -5,6 +5,7 @@ public partial class GyroscopePage : ContentPage
 	public GyroscopePage()
 	{
 		InitializeComponent();
+        ToggleGyroscope();
 	}
     private void ToggleGyroscope()
     {
@@ -30,5 +31,11 @@ public partial class GyroscopePage : ContentPage
         // Update UI Label with gyroscope state
         GyroscopeLabel.TextColor = Colors.Green;
         GyroscopeLabel.Text = $"Gyroscope: {e.Reading}";
+    }
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        ToggleGyroscope();
+
     }
 }

@@ -5,6 +5,8 @@ public partial class ShakePage : ContentPage
 	public ShakePage()
 	{
 		InitializeComponent();
+        ToggleShake();
+        
 	}
     private void ToggleShake()
     {
@@ -30,5 +32,12 @@ public partial class ShakePage : ContentPage
         // Update UI Label with a "shaked detected" notice, in a randomized color
         ShakeLabel.TextColor = new Color(Random.Shared.Next(256), Random.Shared.Next(256), Random.Shared.Next(256));
         ShakeLabel.Text = $"Shake detected";
+    }
+
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        ToggleShake();
+
     }
 }

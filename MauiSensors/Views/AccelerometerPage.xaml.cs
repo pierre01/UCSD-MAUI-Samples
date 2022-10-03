@@ -5,7 +5,7 @@ public partial class AccelerometerPage : ContentPage
 	public AccelerometerPage()
 	{
 		InitializeComponent();
-
+        ToggleAccelerometer();
 	}
     public void ToggleAccelerometer()
     {
@@ -31,5 +31,12 @@ public partial class AccelerometerPage : ContentPage
         // Update UI Label with accelerometer state
         AccelLabel.TextColor = Colors.Green;
         AccelLabel.Text = $"Accel: {e.Reading}";
+    }
+
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        ToggleAccelerometer();
+
     }
 }

@@ -5,6 +5,7 @@ public partial class BarometerPage : ContentPage
 	public BarometerPage()
 	{
 		InitializeComponent();
+        ToggleBarometer();
 	}
     public void ToggleBarometer()
     {
@@ -30,5 +31,11 @@ public partial class BarometerPage : ContentPage
         // Update UI Label with barometer state
         BarometerLabel.TextColor = Colors.Green;
         BarometerLabel.Text = $"Barometer: {e.Reading}";
+    }
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        ToggleBarometer();
+
     }
 }

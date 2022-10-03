@@ -5,6 +5,7 @@ public partial class CompassPage : ContentPage
 	public CompassPage()
 	{
 		InitializeComponent();
+        ToggleCompass();
 	}
     private void ToggleCompass()
     {
@@ -30,5 +31,11 @@ public partial class CompassPage : ContentPage
         // Update UI Label with compass state
         CompassLabel.TextColor = Colors.Green;
         CompassLabel.Text = $"Compass: {e.Reading}";
+    }
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        ToggleCompass();
+
     }
 }

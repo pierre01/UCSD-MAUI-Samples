@@ -14,4 +14,6 @@ public partial class OrientationPage : ContentPage
         
         OrientationLabel.Text = $"Orientation: {e.DisplayInfo.Orientation}";
     }
+
+
 }
