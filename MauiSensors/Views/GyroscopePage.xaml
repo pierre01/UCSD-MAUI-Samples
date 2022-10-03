@@ -4,7 +4,7 @@
              x:Class="MauiSensors.Views.GyroscopePage"
              Title="GyroscopePage">
     <VerticalStackLayout>
-        <Label 
+        <Label x:Name="GyroscopeLabel"
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />

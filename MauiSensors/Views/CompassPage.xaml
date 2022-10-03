@@ -4,7 +4,7 @@
              x:Class="MauiSensors.Views.CompassPage"
              Title="CompassPage">
     <VerticalStackLayout>
-        <Label 
+        <Label x:Name="CompassLabel"
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />

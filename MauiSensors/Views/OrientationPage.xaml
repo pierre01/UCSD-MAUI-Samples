@@ -4,7 +4,7 @@
              x:Class="MauiSensors.Views.OrientationPage"
              Title="OrientationPage">
     <VerticalStackLayout>
-        <Label 
+        <Label x:Name="OrientationLabel"
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />

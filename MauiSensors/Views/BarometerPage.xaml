@@ -4,7 +4,7 @@
              x:Class="MauiSensors.Views.BarometerPage"
              Title="BarometerPage">
     <VerticalStackLayout>
-        <Label 
+        <Label x:Name="BarometerLabel"
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
