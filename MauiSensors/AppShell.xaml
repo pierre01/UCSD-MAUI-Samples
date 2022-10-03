@@ -30,5 +30,9 @@
         Title="Orientation"
         ContentTemplate="{DataTemplate views:OrientationPage}"
         Route="OrientationPage" />
+    <ShellContent
+        Title="Shake"
+        ContentTemplate="{DataTemplate views:ShakePage}"
+        Route="ShakePage" />
 
 </Shell>
