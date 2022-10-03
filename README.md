@@ -42,7 +42,8 @@ Projects are used throughout the class in this order
   > **Model,View,ViewModel Pattern in details.**
 	- MVVM Basics
 	- MVVM Library (Microsoft Toolkit)
-	- MVVM Generated
+	- MVVM Generated with attributes
+	- Dependency injection and services
 - MauiStyles
    > **Customizing the look and feel of your controls and data.**
 - MauiGraphics
@@ -54,10 +55,11 @@ Projects are used throughout the class in this order
 	- Reading Barcodes
 - MauiNavigation
    > **Navigation and passing of parameters across views**
+	- Toast, Snackbar and Popup views
 - MauiDevices
-   > **Customizing the look and feel of your controls and data.**
+   > **Getting information from your device**
 - MauiMedia
-   > **Camera and barcode reading and misc**
+   > **Camera and barcode reading, Video, and Audio**
 
 > [!NOTE]
 > Information the user should notice even if skimming.
