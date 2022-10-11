@@ -50,6 +50,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\AppIcon\appicon.svg" />
+	  <None Remove="Resources\Images\boyicon.svg" />
 	  <None Remove="Resources\Splash\splash.svg" />
 	</ItemGroup>
 
