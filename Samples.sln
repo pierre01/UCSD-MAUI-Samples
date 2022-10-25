@@ -41,7 +41,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiDeviceOutput", "MauiDev
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAUICommunications", "MAUICommunications\MAUICommunications.csproj", "{4FD8458D-00B7-4F8A-B214-D8B145BC0DA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiMedia", "MauiMedia\MauiMedia.csproj", "{7DB30DE6-A82F-4D21-9063-03A7B360E498}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiMedia", "MauiMedia\MauiMedia.csproj", "{7DB30DE6-A82F-4D21-9063-03A7B360E498}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiAnimations", "MauiAnimations\MauiAnimations.csproj", "{2E3B3372-129F-4B5D-A4C5-6B0F82BA96E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -151,6 +153,12 @@ Global
 		{7DB30DE6-A82F-4D21-9063-03A7B360E498}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DB30DE6-A82F-4D21-9063-03A7B360E498}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7DB30DE6-A82F-4D21-9063-03A7B360E498}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2E3B3372-129F-4B5D-A4C5-6B0F82BA96E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E3B3372-129F-4B5D-A4C5-6B0F82BA96E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E3B3372-129F-4B5D-A4C5-6B0F82BA96E8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2E3B3372-129F-4B5D-A4C5-6B0F82BA96E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E3B3372-129F-4B5D-A4C5-6B0F82BA96E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E3B3372-129F-4B5D-A4C5-6B0F82BA96E8}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
