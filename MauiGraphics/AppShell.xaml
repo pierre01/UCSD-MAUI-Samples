@@ -23,6 +23,11 @@
         ContentTemplate="{DataTemplate local:ClockPage}"
         Route="ClockPage" />
     
+    <ShellContent
+        Title="Skia Clock"
+        Icon="appiconfg.png"
+        ContentTemplate="{DataTemplate local:SkiaClockPage}"
+        Route="SkiaClockPage" />
 
 
     <ShellContent

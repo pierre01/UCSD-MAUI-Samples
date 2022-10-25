@@ -8,6 +8,7 @@
         <views:ClockFace x:Key="ClockFace01" />
     </ContentPage.Resources>
     <StackLayout>
+
         <GraphicsView
                 x:Name="myGraphicsView"
                 Drawable="{StaticResource ClockFace01}"
