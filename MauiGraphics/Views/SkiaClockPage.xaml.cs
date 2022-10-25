@@ -25,7 +25,7 @@ public partial class SkiaClockPage : ContentPage
     {
         if (_clock == null)
         {
-            _clock = new PeriodicTimer(TimeSpan.FromSeconds(1));
+            _clock = new PeriodicTimer(TimeSpan.FromMilliseconds(20));
         }        
         
         base.OnAppearing();
@@ -36,6 +36,8 @@ public partial class SkiaClockPage : ContentPage
         }
 
     }
+
+    private float oldPos = 0;
     private void SKCanvasView_OnPaintSurface(object sender, SKPaintSurfaceEventArgs e)
     {
         SKImageInfo info = e.Info;
@@ -104,7 +106,12 @@ public partial class SkiaClockPage : ContentPage
 
         // Second hand
         canvas.Save();
-        canvas.RotateDegrees(6 * now.Second);
+        var newPos = (float)now.Second + now.Millisecond/1000f ;
+        if(oldPos > newPos)
+            newPos= oldPos;
+
+        canvas.RotateDegrees(6f * newPos);
+        oldPos = newPos;
         canvas.DrawLine(0, 10, 0, -80, clockSecondHandPaint);
         canvas.DrawCircle(0f, 0f,  4 , clockTicksPaint);
         canvas.Restore();
