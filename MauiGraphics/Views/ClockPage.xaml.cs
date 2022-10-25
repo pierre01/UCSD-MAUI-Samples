@@ -22,7 +22,7 @@ public partial class ClockPage : ContentPage
     {
         if (_clock == null)
         {
-            _clock = new PeriodicTimer(TimeSpan.FromSeconds(1));
+            _clock = new PeriodicTimer(TimeSpan.FromMilliseconds(100));
         }        
         
         base.OnAppearing();

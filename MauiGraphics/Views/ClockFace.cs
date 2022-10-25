@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -49,8 +50,12 @@ internal class ClockFace : IDrawable
         // Second hand
         canvas.StrokeSize = 2;
         canvas.SaveState();
-        canvas.Rotate(6 * now.Second);
+        var newPos = (float)now.Second + now.Millisecond/1000f ;
+        canvas.StrokeColor = Colors.RosyBrown;
+        canvas.Rotate(6 * newPos);
         canvas.DrawLine(0, 10, 0, -80);
+
+        canvas.FillCircle(0, 0, 4);
         canvas.RestoreState();
 
         canvas.RestoreState();
