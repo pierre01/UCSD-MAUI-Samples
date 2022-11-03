@@ -64,46 +64,9 @@
 	  </MauiSplashScreen>
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Compile Update="Views\AbsoluteLayout2Page.xaml.cs">
-	    <DependentUpon>AbsoluteLayout2Page.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\FlexLayout2Page.xaml.cs">
-	    <DependentUpon>FlexLayout2Page.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
 
-	<ItemGroup>
-	  <MauiXaml Update="Resources\Styles\Colors.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Resources\Styles\Styles.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\AbsoluteLayoutPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\AbsoluteLayout2Page.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\FlexLayout2Page.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\FlexLayoutPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\GridPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\StackLayout2Page.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\StackLayoutPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\TablePage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	</ItemGroup>
+
+
+
 
 </Project>
