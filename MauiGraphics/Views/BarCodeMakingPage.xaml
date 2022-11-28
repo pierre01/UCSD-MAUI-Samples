@@ -5,7 +5,7 @@
              x:Class="MauiGraphics.Views.BarCodeMakingPage"
              Title="Bar CodeMaking">
     <StackLayout>
-        <controls:BarcodeGeneratorView x:Name="BarcodeDisplayControl" WidthRequest="250" HeightRequest="250" Format="QrCode" Value="Please go to my Website" />
+        <controls:BarcodeGeneratorView x:Name="BarcodeDisplayControl" WidthRequest="250" HeightRequest="250" Format="QrCode"  Value="" />
         <Entry x:Name="EntryforQrCode" TextChanged="QRCodeChanged" />
     </StackLayout>
 </ContentPage>
