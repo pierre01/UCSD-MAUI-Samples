@@ -4,6 +4,8 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
+    Appearing="BarCodesReadingPage_OnAppearing"
+    Disappearing="BarCodesReadingPage_OnDisappearing"
     Title="BarCodesPage">
     <StackLayout>
         <Label
@@ -13,10 +15,7 @@
         <zxing:CameraBarcodeReaderView
             x:Name="BarCodeReader"
             WidthRequest="300"
-            HeightRequest="300"
-            IsDetecting="True"
-            IsTorchOn="False"
-            BarcodesDetected="CameraBarcodeReaderView_BarcodesDetected" />
+            HeightRequest="300"/>
         <Label
             x:Name="BarcodeResultLabel"
             Text="BarCodes!"

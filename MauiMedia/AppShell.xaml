@@ -7,13 +7,19 @@
     FlyoutBehavior="Flyout">
 
     <ShellContent
-        Title="Barcode Reading"
-        Icon="appiconfg.png"
-        ContentTemplate="{DataTemplate local:BarCodesReadingPage}"
-        Route="BarCodesReadingPage" />
-    <ShellContent
         Title="Audio Media player"
         Icon="appiconfg.png"
         ContentTemplate="{DataTemplate local:SoundAndMusic}"
         Route="SoundAndMusic" />
+    <ShellContent
+        Title="Barcode Reading"
+        Icon="appiconfg.png"
+        ContentTemplate="{DataTemplate local:BarCodesReadingPage}"
+        Route="BarCodesReadingPage" />    
+    <ShellContent
+        Title="MediaPicker Tests Page"
+        Icon="appiconfg.png"
+        ContentTemplate="{DataTemplate local:MediaPickerTestsPage}"
+        Route="MediaPickerTestsPage" />
+
 </Shell>
