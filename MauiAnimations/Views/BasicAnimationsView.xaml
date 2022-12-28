@@ -1,13 +1,112 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="MauiAnimations.Views.BasicAnimations"
+    x:Class="MauiAnimations.Views.BasicAnimationsView"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="BasicAnimations">
     <VerticalStackLayout>
         <Label
+            x:Name="PowLabel"
+            Margin="32"
+            FontSize="24"
             HorizontalOptions="Center"
-            Text="Welcome to .NET MAUI!"
+            Text="Bang!"
             VerticalOptions="Center" />
+
+        <Grid x:Name="BarrelGrid" Margin="40"
+            ColumnDefinitions="*,*,*"
+            HeightRequest="300"
+            RowDefinitions="*,*,*"
+            WidthRequest="300">
+
+            <Ellipse
+                Grid.Row="0"
+                Grid.Column="1"
+                HeightRequest="60"
+                HorizontalOptions="Center"
+                Stroke="Red"
+                Fill="Orange"
+                StrokeThickness="4"
+                VerticalOptions="Start"
+                WidthRequest="60" />
+            <Ellipse
+                Grid.Row="0"
+                Grid.Column="0"
+                HeightRequest="60"
+                HorizontalOptions="Center"
+                Stroke="Red"
+                Fill="Orange"
+                StrokeThickness="4"
+                VerticalOptions="Center"
+                WidthRequest="60" />
+            <Ellipse
+                Grid.Row="1"
+                Grid.Column="0"
+                HeightRequest="60"
+                HorizontalOptions="Start"
+                Stroke="Red"
+                Fill="Orange"
+                StrokeThickness="4"
+                VerticalOptions="Center"
+                WidthRequest="60" />
+            <Ellipse
+                Grid.Row="2"
+                Grid.Column="0"
+                HeightRequest="60"
+                HorizontalOptions="Center"
+                Stroke="Red"
+                Fill="Orange"
+                StrokeThickness="4"
+                VerticalOptions="Center"
+                WidthRequest="60" />
+            <Ellipse
+                Grid.Row="2"
+                Grid.Column="1"
+                HeightRequest="60"
+                HorizontalOptions="Center"
+                Stroke="Red"
+                Fill="Orange"
+                StrokeThickness="4"
+                VerticalOptions="End"
+                WidthRequest="60" />
+            <Ellipse
+                Grid.Row="2"
+                Grid.Column="2"
+                HeightRequest="60"
+                HorizontalOptions="Center"
+                Stroke="Red"
+                Fill="Orange"
+                StrokeThickness="4"
+                VerticalOptions="Center"
+                WidthRequest="60" />
+            <Ellipse
+                Grid.Row="1"
+                Grid.Column="2"
+                HeightRequest="60"
+                HorizontalOptions="End"
+                Stroke="Red"
+                Fill="Orange"
+                StrokeThickness="4"
+                VerticalOptions="Center"
+                WidthRequest="60" />
+
+
+            <Ellipse
+                Grid.Row="0"
+                Grid.Column="2"
+                HeightRequest="60"
+                HorizontalOptions="Center"
+                Stroke="Red"
+                Fill="Orange"
+                StrokeThickness="4"
+                VerticalOptions="Center"
+                WidthRequest="60" />
+
+        </Grid>
+        <Button
+            Margin="24"
+            Clicked="OnShoot"
+            Text="Shoot!"
+            WidthRequest="100" />    
     </VerticalStackLayout>
 </ContentPage>
