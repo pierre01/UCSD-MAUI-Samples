@@ -12,10 +12,10 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>MauiApplicationModel</ApplicationTitle>
+		<ApplicationTitle>Maui Application Model</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauiapplicationmodel</ApplicationId>
+		<ApplicationId>edu.ucsd.mauiapplicationmodel</ApplicationId>
 		<ApplicationIdGuid>5E839697-795C-4309-B3D5-63CDFFF39854</ApplicationIdGuid>
 
 		<!-- Versions -->
