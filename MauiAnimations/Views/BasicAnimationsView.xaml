@@ -4,6 +4,15 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="BasicAnimations">
+    <ContentPage.Resources>
+        <Style x:Key="BulletEllipse" TargetType="Ellipse">
+            <Setter Property="WidthRequest" Value="60" />
+            <Setter Property="HeightRequest" Value="60" />
+            <Setter Property="Fill" Value="Orange" />
+            <Setter Property="Stroke" Value="Red" />
+            <Setter Property="StrokeThickness" Value="4" />
+        </Style>
+    </ContentPage.Resources>
     <VerticalStackLayout>
         <Label
             x:Name="PowLabel"
@@ -13,7 +22,9 @@
             Text="Bang!"
             VerticalOptions="Center" />
 
-        <Grid x:Name="BarrelGrid" Margin="40"
+        <Grid
+            x:Name="BarrelGrid"
+            Margin="40"
             ColumnDefinitions="*,*,*"
             HeightRequest="300"
             RowDefinitions="*,*,*"
@@ -22,91 +33,64 @@
             <Ellipse
                 Grid.Row="0"
                 Grid.Column="1"
-                HeightRequest="60"
                 HorizontalOptions="Center"
-                Stroke="Red"
-                Fill="Orange"
-                StrokeThickness="4"
-                VerticalOptions="Start"
-                WidthRequest="60" />
+                Style="{StaticResource BulletEllipse}"
+                VerticalOptions="Start" />
             <Ellipse
                 Grid.Row="0"
                 Grid.Column="0"
-                HeightRequest="60"
                 HorizontalOptions="Center"
-                Stroke="Red"
-                Fill="Orange"
-                StrokeThickness="4"
-                VerticalOptions="Center"
-                WidthRequest="60" />
+                Style="{StaticResource BulletEllipse}"
+                VerticalOptions="Center" />
             <Ellipse
                 Grid.Row="1"
                 Grid.Column="0"
-                HeightRequest="60"
                 HorizontalOptions="Start"
-                Stroke="Red"
-                Fill="Orange"
-                StrokeThickness="4"
-                VerticalOptions="Center"
-                WidthRequest="60" />
+                Style="{StaticResource BulletEllipse}"
+                VerticalOptions="Center" />
             <Ellipse
                 Grid.Row="2"
                 Grid.Column="0"
-                HeightRequest="60"
                 HorizontalOptions="Center"
-                Stroke="Red"
-                Fill="Orange"
-                StrokeThickness="4"
-                VerticalOptions="Center"
-                WidthRequest="60" />
+                Style="{StaticResource BulletEllipse}"
+                VerticalOptions="Center" />
             <Ellipse
                 Grid.Row="2"
                 Grid.Column="1"
-                HeightRequest="60"
                 HorizontalOptions="Center"
-                Stroke="Red"
-                Fill="Orange"
-                StrokeThickness="4"
-                VerticalOptions="End"
-                WidthRequest="60" />
+                Style="{StaticResource BulletEllipse}"
+                VerticalOptions="End" />
             <Ellipse
                 Grid.Row="2"
                 Grid.Column="2"
-                HeightRequest="60"
                 HorizontalOptions="Center"
-                Stroke="Red"
-                Fill="Orange"
-                StrokeThickness="4"
-                VerticalOptions="Center"
-                WidthRequest="60" />
+                Style="{StaticResource BulletEllipse}"
+                VerticalOptions="Center" />
             <Ellipse
                 Grid.Row="1"
                 Grid.Column="2"
-                HeightRequest="60"
                 HorizontalOptions="End"
-                Stroke="Red"
-                Fill="Orange"
-                StrokeThickness="4"
-                VerticalOptions="Center"
-                WidthRequest="60" />
-
+                Style="{StaticResource BulletEllipse}"
+                VerticalOptions="Center" />
 
             <Ellipse
                 Grid.Row="0"
                 Grid.Column="2"
-                HeightRequest="60"
                 HorizontalOptions="Center"
-                Stroke="Red"
-                Fill="Orange"
-                StrokeThickness="4"
-                VerticalOptions="Center"
-                WidthRequest="60" />
+                Style="{StaticResource BulletEllipse}"
+                VerticalOptions="Center" />
 
+            <Ellipse
+                Grid.RowSpan="3"
+                Grid.ColumnSpan="3"
+                Margin="-40"
+                Stroke="gray"
+                StrokeThickness="4" />
         </Grid>
         <Button
             Margin="24"
             Clicked="OnShoot"
             Text="Shoot!"
-            WidthRequest="100" />    
+            WidthRequest="100" />
     </VerticalStackLayout>
 </ContentPage>
