@@ -20,12 +20,12 @@
             Text="...."
             VerticalOptions="Center" />
         <HorizontalStackLayout>
-            <Label Text="Latitude: " />
+            <Label Text="Latitude: " VerticalOptions="Center" />
             <Entry
                 x:Name="LatitudeEntry"
                 Placeholder="Enter Latitude"
                 Text="47.673988" />
-            <Label Text="Longitude: " />
+            <Label Text="Longitude: " VerticalOptions="Center" />
             <Entry
                 x:Name="LongitudeEntry"
                 Placeholder="Enter Longitude"

@@ -52,7 +52,7 @@ public partial class GeolocationPage : ContentPage
             Location location = await Geolocation.Default.GetLocationAsync(request, _cancelTokenSource.Token);
 
             if (location != null)
-                Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
+                ActiveLocationLabel.Text =   $"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}";
         }
         // Catch one of the following exceptions:
         //   FeatureNotSupportedException
@@ -80,10 +80,10 @@ public partial class GeolocationPage : ContentPage
     /// at a specific GPS location
     /// </summary>
     /// <returns></returns>
-    public async Task NavigateToBuilding25()
+    public async Task NavigateToUcsd()
     {
-        var location = new Location(47.645160, -122.1306032);
-        var options = new MapLaunchOptions { Name = "Microsoft Building 25" };
+        Location location = new Location(32.879296, -117.235333);
+        var options = new MapLaunchOptions { Name = "U.C.S.D" };
 
         //try
         //{
@@ -128,5 +128,20 @@ public partial class GeolocationPage : ContentPage
         {
             // No map application available to open or placemark can not be located
         }
+    }
+
+    private async  void OnGetLastCachedLocation(object sender, EventArgs e)
+    {
+        CachedLocationLabel.Text = await GetCachedLocation();
+    }
+
+    private async void OnGetLastActiveLocation(object sender, EventArgs e)
+    {
+        await GetCurrentLocation();
+    }
+
+    private async void OnNavigateToUcsd(object sender, EventArgs e)
+    {
+        await NavigateToUcsd();
     }
 }
