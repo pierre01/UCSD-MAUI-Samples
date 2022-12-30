@@ -1,12 +1,46 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiApp1.GeocodingPage"
-             Title="GeocodingPage">
+<ContentPage
+    x:Class="MauiGeoLocation.Views.GeocodingPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="GeocodingPage">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Entry
+            x:Name="AddressEntry"
+            Placeholder="Enter Address"
+            Text="Microsoft Building 25 Redmond WA USA" />
+        <Button
+            Clicked="OnGetGeolocation"
+            Text="Get GeoCoding for address"
+            WidthRequest="200" />
+        <Label
+            x:Name="GeoLocationLabel"
+            Margin="16,16,16,48"
+            HorizontalOptions="Center"
+            Text="...."
+            VerticalOptions="Center" />
+        <HorizontalStackLayout>
+            <Label Text="Latitude: " />
+            <Entry
+                x:Name="LatitudeEntry"
+                Placeholder="Enter Latitude"
+                Text="47.673988" />
+            <Label Text="Longitude: " />
+            <Entry
+                x:Name="LongitudeEntry"
+                Placeholder="Enter Longitude"
+                Text="-122.121513" />
+        </HorizontalStackLayout>
+        <Button
+            Clicked="OnGetReverseGeolocation"
+            Text="Get GeoCoding reverse location"
+            WidthRequest="200" />
+
+        <Label
+            x:Name="ReverseGeoLocationLabel"
+            Margin="16,16,16,48"
+            HorizontalOptions="Center"
+            Text="...."
+            VerticalOptions="Center" />
     </VerticalStackLayout>
 </ContentPage>

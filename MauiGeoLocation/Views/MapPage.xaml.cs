@@ -1,4 +1,6 @@
-namespace MauiApp1;
+using Microsoft.Maui.Maps;
+
+namespace MauiGeoLocation.Views;
 
 public partial class MapPage : ContentPage
 {
@@ -6,60 +8,33 @@ public partial class MapPage : ContentPage
 	{
 		InitializeComponent();
 	}
+    // AIzaSyDyXgQimRh4Z6QtXJ8WB3y0tIpeVMF-LVI
 
-    /// <summary>
-    /// The map functionality works by calling the IMap.OpenAsync method, and passing either an 
-    /// instance of the Location or Placemark type. The following example opens the installed map app 
-    /// at a specific GPS location
-    /// </summary>
-    /// <returns></returns>
-    public async Task NavigateToBuilding25()
+ 
+
+    private void HomeClicked(object sender, EventArgs e)
     {
-        var location = new Location(47.645160, -122.1306032);
-        var options = new MapLaunchOptions { Name = "Microsoft Building 25" };
+        //32.879296, -117.235333
 
-        //try
-        //{
-        //    await Map.Default.OpenAsync(location, options);
-        //}
-        //catch (Exception ex)
-        //{
-        //    // No map application available to open
-        //}
-
-        if (await Map.Default.TryOpenAsync(location, options) == false)
-        {
-            // Map failed to open
-        }
+        Location location = new Location(32.879296, -117.235333);
+        MapSpan mapSpan = new MapSpan(location, 0.01, 0.01);
+        MyMap.MoveToRegion(mapSpan);
     }
 
-    /// <summary>
-    /// When you use a Placemark to open the map, more information is required. 
-    /// The information helps the map app search for the place you're looking for. The following information is required:
-    ///   CountryName
-    ///   AdminArea
-    ///   Thoroughfare
-    ///   Locality
-    /// </summary>
-    /// <returns></returns>
-    public async Task NavigateToBuilding()
+    private void MauiClicked(object sender, EventArgs e)
     {
-        var placemark = new Placemark
-        {
-            CountryName = "United States",
-            AdminArea = "WA",
-            Thoroughfare = "Microsoft Building 25",
-            Locality = "Redmond"
-        };
-        var options = new MapLaunchOptions { Name = "Microsoft Building 25" };
+        //22.116487, -159.553929
+        Location location = new Location(22.116487, -159.553929);
+        MapSpan mapSpan = new MapSpan(location, 0.01, 0.01);
+        MyMap.MoveToRegion(mapSpan);
 
-        try
-        {
-            await Map.Default.OpenAsync(placemark, options);
-        }
-        catch (Exception ex)
-        {
-            // No map application available to open or placemark can not be located
-        }
+    }
+
+    private void MicrosoftClicked(object sender, EventArgs e)
+    {
+        //NavigateToBuilding();
+        Location location = new Location(36.9628066, -122.0194722);
+        MapSpan mapSpan = new MapSpan(location, 0.01, 0.01);
+        MyMap.MoveToRegion(mapSpan);
     }
 }

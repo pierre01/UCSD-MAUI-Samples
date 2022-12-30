@@ -14,7 +14,8 @@
                 }).ConfigureEssentials(essentials =>
                 {
                     essentials.UseMapServiceToken("Bing-Maps-API-Token");
-                }); 
+                })
+                .UseMauiMaps(); 
 
             return builder.Build();
         }

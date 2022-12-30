@@ -4,11 +4,22 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiGeoLocation"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:views="clr-namespace:MauiGeoLocation.Views"
+    Shell.FlyoutBehavior="Flyout">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Geocoding Page"
+        ContentTemplate="{DataTemplate views:GeocodingPage}"
+        Route="GeocodingPage" />
+
+    <ShellContent
+        Title="Geolocation Page"
+        ContentTemplate="{DataTemplate views:GeolocationPage}"
+        Route="GeolocationPage" />
+
+    <ShellContent
+        Title="Map Page"
+        ContentTemplate="{DataTemplate views:MapPage}"
+        Route="MapPage" />
 
 </Shell>

@@ -1,4 +1,4 @@
-namespace MauiApp1;
+namespace MauiGeoLocation.Views;
 
 public partial class GeocodingPage : ContentPage
 {
@@ -7,10 +7,8 @@ public partial class GeocodingPage : ContentPage
 		InitializeComponent();
 	}
 
-	public async Task<string>  GetGeolocationForAddress()
+	public async Task<string>  GetGeolocationForAddress(string address)
 	{
-        string address = "Microsoft Building 25 Redmond WA USA";
-
         IEnumerable<Location> locations = await Geocoding.Default.GetLocationsAsync(address);
 
         Location location = locations?.FirstOrDefault();
@@ -43,5 +41,21 @@ public partial class GeocodingPage : ContentPage
         }
 
         return "";
+    }
+
+
+
+    private async void OnGetGeolocation(object sender, EventArgs e)
+    {
+        GeoLocationLabel.Text = await GetGeolocationForAddress(AddressEntry.Text);
+
+    }
+
+    private async void OnGetReverseGeolocation(object sender, EventArgs e)
+    {
+        if (double.TryParse(LatitudeEntry.Text, out var latitude) && double.TryParse(LongitudeEntry.Text, out var longitude))
+        {
+            ReverseGeoLocationLabel.Text = await GetGeocodeReverseData(latitude, longitude);
+        }
     }
 }
