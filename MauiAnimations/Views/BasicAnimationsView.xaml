@@ -87,10 +87,20 @@
                 Stroke="gray"
                 StrokeThickness="4" />
         </Grid>
-        <Button
-            Margin="24"
-            Clicked="OnShoot"
-            Text="Shoot!"
-            WidthRequest="100" />
+        <Grid ColumnDefinitions="*,*">
+            <Button
+                x:Name="ShootButton"
+                Margin="24"
+                Clicked="OnShoot"
+                Text="Shoot!"
+                WidthRequest="100" />        
+            <Button
+                x:Name="ReloadButton"
+                Grid.Column="1"
+                Margin="24"
+                Clicked="OnReload"
+                Text="Reload!"
+                WidthRequest="100" />
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>
