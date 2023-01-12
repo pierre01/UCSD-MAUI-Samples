@@ -4,6 +4,7 @@
              x:Class="MAUICommunications.Views.ContactsPage"
              Title="ContactsPage">
     <VerticalStackLayout>
+        <Button Text="Select Contact" Clicked="SelectContactButton_Clicked"></Button>
         <Label 
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 

@@ -2,6 +2,7 @@ using Microsoft.Maui.ApplicationModel.Communication;
 
 namespace MAUICommunications.Views;
 
+
 public partial class ContactsPage : ContentPage
 {
 	public ContactsPage()
@@ -12,6 +13,7 @@ public partial class ContactsPage : ContentPage
     {
         try
         {
+            PermissionStatus status = await Permissions.RequestAsync<Permissions.ContactsRead>();
             //Fully Qualified Name is required because of IOS name conflict
             var contact = await Microsoft.Maui.ApplicationModel.Communication.Contacts.PickContactAsync();
 
@@ -37,7 +39,7 @@ public partial class ContactsPage : ContentPage
     public async IAsyncEnumerable<string> GetContactNames()
     {
         //Fully Qualified Name is required because of IOS name conflict
-       var allContacts = await Microsoft.Maui.ApplicationModel.Communication.Contacts.Default.GetAllAsync();
+       var allContacts = await Contacts.Default.GetAllAsync();
 
         // No contacts
         if (allContacts == null)
