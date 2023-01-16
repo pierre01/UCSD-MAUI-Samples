@@ -4,9 +4,10 @@
              x:Class="MauiNavigation.Views.ToastAndSnackBarPage"
              Title="ToastAndSnackBarPage">
     <VerticalStackLayout>
-        <Label 
-            Text="This Page requires the Maui Toolkit"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <!-- Toast -->
+        <Button Text="Toast" Clicked="OnDisplayToast" Margin="24"/>
+        
+        <!--Snack bar-->        
+        <Button Text="Snack bar" Clicked="OnDisplaySnackBar" Margin="24"/>
     </VerticalStackLayout>
 </ContentPage>
