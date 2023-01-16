@@ -4,19 +4,27 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:MauiNavigation.Views"
-    Shell.FlyoutBehavior="Disabled">
+    FlyoutBehavior="{OnIdiom Phone=Flyout,
+                             Desktop=Flyout}">
 
-    <ShellContent
-        Title="Pop-ups"
-        ContentTemplate="{DataTemplate views:PopUpsPage}"
-        Route="PopUpsPage" />
-    <ShellContent
-        Title="Search Page"
-        ContentTemplate="{DataTemplate views:SearchPage}"
-        Route="SearchPage" />
-    <ShellContent
-        Title="Toasts, Snackbar and Alerts"
-        ContentTemplate="{DataTemplate views:ToastAndSnackBarPage}"
-        Route="ToastAndSnackBarPage" />
+    <FlyoutItem Title="Search Page">
+        <ShellContent
+            Title="Search Page"
+            ContentTemplate="{DataTemplate views:SearchPage}"
+            Route="SearchPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Pop-up Alerts">
+        <ShellContent
+            Title="Toasts, Snackbar and Alerts"
+            ContentTemplate="{DataTemplate views:PopUpsPage}"
+            Route="PopUpsPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Toasts, Snackbar and Alerts">
+        <ShellContent
+            Title="Toasts, Snackbar and Alerts"
+            ContentTemplate="{DataTemplate views:ToastAndSnackBarPage}"
+            Route="ToastAndSnackBarPage" />
+    </FlyoutItem>
 
+    <MenuItem Command="{Binding NavigateToSettingsCommand}" Text="Settings" />
 </Shell>

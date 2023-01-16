@@ -5,12 +5,18 @@
              Title="PopUpsPage">
     <StackLayout>
         <!--Display Simple Popup-->
+        <Button Text="Simple Alert Dialog" Clicked="OnDisplayAlertSimple" Margin="24"/>
+        <Button Text="Simple Alert Dialog with 2 buttons" Clicked="OnDisplayAlert2Buttons" Margin="24"/>
+        
         <!--Display Action Sheet-->
-        <!--Display Prompt-->
+        <Button Text="Simple Action Sheet" Clicked="OnDisplayActionSheet" Margin="24"/>
+        <Button Text="More Action Sheet" Clicked="OnDisplayActionSheet2" Margin="24"/>
+        
+        <!--Display Prompt-->        
+        <Button Text="Display Prompt" Clicked="OnDisplayPrompt" Margin="24"/>
+        <Button Text="Display Prompt2" Clicked="OnDisplayPrompt2" Margin="24"/>
 
-        <!--Snack bar-->
-        <Label Text="Welcome to .NET MAUI!"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
+
+
     </StackLayout>
 </ContentPage>
