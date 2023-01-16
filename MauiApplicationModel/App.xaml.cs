@@ -1,6 +1,4 @@
-﻿using PdfKit;
-
-namespace MauiApplicationModel;
+﻿namespace MauiApplicationModel;
 
 public partial class App : Application
 {
