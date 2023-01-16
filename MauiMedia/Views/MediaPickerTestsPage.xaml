@@ -7,5 +7,6 @@
         <Image  x:Name="ImageResult"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Button Text="Take Picture" Clicked="OnTakePicture"/>
     </VerticalStackLayout>
 </ContentPage>

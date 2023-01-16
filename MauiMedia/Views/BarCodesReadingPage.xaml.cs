@@ -15,7 +15,7 @@ public partial class BarCodesReadingPage : ContentPage
 
     private void BarCodeReaderOnFrameReady(object sender, CameraFrameBufferEventArgs e)
     {
-        //e.Data.Size.Height;
+        _ = e.Data.Size.Height;
         //BarCodeReader.CaptureAsync();
     }
 
@@ -41,6 +41,9 @@ public partial class BarCodesReadingPage : ContentPage
             Multiple = true
 
         };
+        BarCodeReader.CameraLocation = CameraLocation.Rear;
+        BarCodeReader.IsTorchOn = true;
+        //BarCodeReader.Options = new BarcodeReaderOptions()
         BarCodeReader.FrameReady += BarCodeReaderOnFrameReady;
         BarCodeReader.BarcodesDetected += CameraBarcodeReaderView_BarcodesDetected;
         BarCodeReader.IsDetecting = true;

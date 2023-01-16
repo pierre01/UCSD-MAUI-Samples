@@ -22,4 +22,10 @@
         ContentTemplate="{DataTemplate local:MediaPickerTestsPage}"
         Route="MediaPickerTestsPage" />
 
+    <ShellContent
+        Title="MediaPicker Tests Page 2"
+        Icon="appiconfg.png"
+        ContentTemplate="{DataTemplate local:MediaPickerMediaGalleryPage}"
+        Route="MediaPickerMediaGalleryPage" />
+
 </Shell>

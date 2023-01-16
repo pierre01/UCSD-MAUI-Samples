@@ -8,28 +8,34 @@ public partial class MediaPickerTestsPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+
     private async void OnTakePicture(object sender, EventArgs e)
     {
 
         if (MediaPicker.Default.IsCaptureSupported)
         {
+            PermissionStatus status = await Permissions.RequestAsync<Permissions.Media>();
+            status = await Permissions.RequestAsync<Permissions.Camera>();
+            status = await Permissions.RequestAsync<Permissions.Photos>();
+            status = await Permissions.RequestAsync<Permissions.StorageRead>();
+            status = await Permissions.RequestAsync<Permissions.StorageWrite>();
+
             FileResult photo = await MediaPicker.Default.CapturePhotoAsync();
 
             if (photo != null)
             {
+                ImageResult.Source = null;
                 // save the file into local storage
                 string localFilePath = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
                 //string localFilePath = Path.Combine(FileSystem.AppDataDirectory, photo.FileName);
 
-                using (Stream sourceStream = await photo.OpenReadAsync())
-                {
-                    //using (FileStream localFileStream = File.OpenWrite(localFilePath))
-                    //{
-                    //    await sourceStream.CopyToAsync(localFileStream);
-                    //}
-                    ImageResult.Source = ImageSource.FromStream(() => sourceStream);
+                Stream sourceStream = await photo.OpenReadAsync();
+                
 
-                }
+                ImageResult.Source = ImageSource.FromStream(() => sourceStream);
+                sourceStream.Seek(0, SeekOrigin.Begin);
+                //sourceStream.DisposeAsync();
 
 
             }
