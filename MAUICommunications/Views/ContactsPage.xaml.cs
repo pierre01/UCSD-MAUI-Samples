@@ -1,5 +1,3 @@
-using Microsoft.Maui.ApplicationModel.Communication;
-
 namespace MAUICommunications.Views;
 
 
