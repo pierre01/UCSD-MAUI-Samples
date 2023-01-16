@@ -27,8 +27,8 @@
                 x:Name="myGraphicsView"
                 Drawable="{StaticResource drawable}"
                 HeightRequest="400"
-                VerticalOptions="Start"
                 HorizontalOptions="End"
+                VerticalOptions="Start"
                 WidthRequest="400" />
 
         </Grid>
