@@ -1,11 +1,51 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiNavigation.Views.SearchPage"
-             Title="SearchPage">
-    <StackLayout>
-        <Label Text="Welcome to .NET MAUI!"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
-    </StackLayout>
+<ContentPage
+    x:Class="MauiNavigation.Views.SearchPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="clr-namespace:MauiNavigation.ViewModels"
+    Title="SearchPage"
+    x:DataType="viewModels:SearchPageViewModel">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="TeamMemberTemplate" x:DataType="viewModels:Person">
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="48" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image
+                    Grid.RowSpan="2"
+                    Margin="4"
+                    Aspect="AspectFit"
+                    HeightRequest="40"
+                    Source="boyicon.png"
+                    WidthRequest="40" />
+                <Label
+                    Grid.Column="1"
+                    Margin="0"
+                    FontAttributes="None"
+                    FontSize="Medium"
+                    LineBreakMode="NoWrap"
+                    Text="{Binding Name}"
+                    VerticalOptions="Center" />
+            </Grid>
+        </DataTemplate>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <SearchBar
+                x:Name="searchBar"
+                SearchCommand="{Binding PerformSearchCommand}"
+                SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}" />
+            <CollectionView
+                x:Name="TeamCollectionView"
+                Margin="4"
+                ItemTemplate="{StaticResource TeamMemberTemplate}"
+                ItemsSource="{Binding SearchResults}"
+                SelectionChanged="OnTeamSelectionChanged"
+                SelectionMode="Single"
+                VerticalScrollBarVisibility="Default" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
