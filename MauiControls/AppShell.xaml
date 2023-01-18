@@ -21,4 +21,9 @@
         ContentTemplate="{DataTemplate views:StepAndProgressPage}"
         Icon="appiconfg.png"
         Route="StepAndProgressPage" />
+    <ShellContent
+        Title="Date and Time Pickers"
+        ContentTemplate="{DataTemplate views:DateTimePage}"
+        Icon="appiconfg.png"
+        Route="DateTimePage" />
 </Shell>

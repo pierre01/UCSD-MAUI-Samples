@@ -49,4 +49,10 @@
 
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="Views\DateTimePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
