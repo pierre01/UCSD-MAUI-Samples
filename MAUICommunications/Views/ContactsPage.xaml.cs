@@ -11,6 +11,8 @@ public partial class ContactsPage : ContentPage
     {
         try
         {
+            // Windows does not support picking contacts
+
             PermissionStatus status = await Permissions.RequestAsync<Permissions.ContactsRead>();
             //Fully Qualified Name is required because of IOS name conflict
             var contact = await Microsoft.Maui.ApplicationModel.Communication.Contacts.PickContactAsync();
