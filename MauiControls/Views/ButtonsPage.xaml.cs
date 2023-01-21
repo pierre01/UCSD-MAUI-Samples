@@ -26,4 +26,9 @@ public partial class ButtonsPage : ContentPage
     {
 
     }
+
+    private void ImageButton_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }

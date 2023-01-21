@@ -15,6 +15,14 @@
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
             <Label
+                Text="ImageButton"
+                VerticalOptions="Center"
+                WidthRequest="120" />
+            <ImageButton  Source="imagebutton.png" Clicked="ImageButton_Clicked" HeightRequest="40" WidthRequest="40"/>
+            <Label x:Name="ClickResultLabel2" Text="" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="4">
+            <Label
                 Text="Radio Buttons"
                 VerticalOptions="Center"
                 WidthRequest="120" />
