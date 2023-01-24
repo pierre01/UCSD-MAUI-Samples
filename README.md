@@ -60,6 +60,12 @@ Projects are used throughout the class in this order
    > **Getting information from your device**
 - MauiMedia
    > **Camera and barcode reading, Video, and Audio**
+- MauiLocalization
+   > **Making your application work with foreign languages**
+   	- Localized resources
+	- Translators
+	- Tools
+
 
 > [!NOTE]
 > Information the user should notice even if skimming.
