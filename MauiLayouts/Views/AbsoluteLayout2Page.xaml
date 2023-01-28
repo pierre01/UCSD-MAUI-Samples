@@ -1,26 +1,34 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage x:Class="MauiLayouts.Views.AbsoluteLayout2Page"
-             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:MauiLayouts.Views"
-             BackgroundColor="White">
-	<ContentPage.Content>
+<ContentPage
+    x:Class="MauiLayouts.Views.AbsoluteLayout2Page"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiLayouts.Views"
+    BackgroundColor="White">
+    <ContentPage.Content>
+        <!--  Demo Zindex  -->
         <AbsoluteLayout>
-            <BoxView Color="Blue"
-                 AbsoluteLayout.LayoutBounds="0.5,0,100,25"
-                 AbsoluteLayout.LayoutFlags="PositionProportional" />
-            <BoxView Color="Green"
-                 AbsoluteLayout.LayoutBounds="0,0.5,25,100"
-                 AbsoluteLayout.LayoutFlags="PositionProportional" />
-            <BoxView Color="Red"
-                 AbsoluteLayout.LayoutBounds="1,0.5,25,100"
-                 AbsoluteLayout.LayoutFlags="PositionProportional" />
-            <BoxView Color="Black"
-                 AbsoluteLayout.LayoutBounds="0.5,1,100,25"
-                 AbsoluteLayout.LayoutFlags="PositionProportional" />
-            <Label Text="Centered text" FontSize="Header"
-               AbsoluteLayout.LayoutBounds="0.5,0.5,320,100"
-               AbsoluteLayout.LayoutFlags="PositionProportional" />
+            <BoxView
+                AbsoluteLayout.LayoutBounds="0.5,0,100,25"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                Color="Blue" />
+            <BoxView
+                AbsoluteLayout.LayoutBounds="0,0.5,25,100"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                Color="Green" />
+            <BoxView
+                AbsoluteLayout.LayoutBounds="1,0.5,25,100"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                Color="Red" />
+            <BoxView
+                AbsoluteLayout.LayoutBounds="0.5,1,100,25"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                Color="Black" />
+            <Label
+                AbsoluteLayout.LayoutBounds="0.5,0.5,100,100"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                FontSize="Header"
+                Text="Centered text" />
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
