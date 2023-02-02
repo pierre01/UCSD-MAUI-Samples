@@ -1,7 +1,6 @@
-﻿using System.Collections.ObjectModel;
-using System.Windows.Input;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+
 
 namespace MauiNavigation.ViewModels;
 
@@ -78,7 +77,12 @@ public partial class SearchPageViewModel
     [RelayCommand]
     private void  PerformSearch(string query)
     {
-        SearchResults = Team.FindAll(m =>  m.Name.StartsWith(query) );
+        if (string.IsNullOrEmpty(query))
+        {
+            SearchResults = Team;
+            return;
+        }
+        SearchResults = Team.FindAll(m =>  m.Name.ToLower().StartsWith(query.ToLower()) );
     }
 
     [ObservableProperty] 

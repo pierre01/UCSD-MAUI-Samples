@@ -4,10 +4,10 @@
              x:Class="MauiNavigation.Views.ToastAndSnackBarPage"
              Title="ToastAndSnackBarPage">
     <VerticalStackLayout>
-        <!-- Toast -->
+        <!-- Toast  Does not work on Windows -->
         <Button Text="Toast" Clicked="OnDisplayToast" Margin="24"/>
         
-        <!--Snack bar-->        
+        <!--Snack bar Does not work on windows-->        
         <Button Text="Snack bar" Clicked="OnDisplaySnackBar" Margin="24"/>
     </VerticalStackLayout>
 </ContentPage>
