@@ -53,10 +53,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="1.0.1" />
 	  <PackageReference Include="Plugin.Maui.Audio" Version="1.0.0" />
 	  <PackageReference Include="Xamarin.MediaGallery" Version="2.2.0-preview" />
-	  <PackageReference Include="ZXing.Net.Maui" Version="0.2.0-preview.2" />
-	  <PackageReference Include="ZXing.Net.Maui.Controls" Version="0.2.0-preview.2" />
+	  <PackageReference Include="ZXing.Net.Maui" Version="0.3.0-preview.1" />
+	  <PackageReference Include="ZXing.Net.Maui.Controls" Version="0.3.0-preview.1" />
 	</ItemGroup>
 
 	<ItemGroup>

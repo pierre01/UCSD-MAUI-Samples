@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiMedia.Views.MediaPickerMediaGalleryPage"
-             Title="MediaPickerMediaGalleryPage">
+<ContentPage
+    x:Class="MauiMedia.Views.MediaPickerMediaGalleryPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="MediaPickerMediaGalleryPage">
     <VerticalStackLayout>
-        <Image  x:Name="ImageResult" 
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
-        <Button Text="Take Picture ..." Clicked="TakePicture" />
+        <Image
+            x:Name="ImageResult"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />
+        <Button Clicked="TakePicture" Text="Take Picture ..." />
     </VerticalStackLayout>
 </ContentPage>

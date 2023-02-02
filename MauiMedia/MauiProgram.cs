@@ -1,4 +1,5 @@
-﻿using ZXing.Net.Maui;
+﻿using CommunityToolkit.Maui;
+using ZXing.Net.Maui;
 using ZXing.Net.Maui.Controls;
 
 namespace MauiMedia
@@ -16,6 +17,7 @@ namespace MauiMedia
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 })
+                .UseMauiCommunityToolkitMediaElement()
             #region
             .ConfigureMauiHandlers(h =>
             {
