@@ -8,7 +8,7 @@
         <ScrollView>
             <FlexLayout x:Name="flexLayout"
                         Wrap="Wrap"
-                        JustifyContent="SpaceAround" />
+                        JustifyContent="SpaceEvenly" />
         </ScrollView>
     </Grid>
 </ContentPage>

@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:MauiLayouts.Views"
              BackgroundColor="White">
 	<ContentPage.Content>
-        <StackLayout >
+        <StackLayout Orientation="Vertical" >
             <!--by default StackLayout is vertical-->
 
             <StackLayout Background="LightPink" Padding="5">

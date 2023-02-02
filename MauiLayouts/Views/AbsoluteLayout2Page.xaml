@@ -15,7 +15,12 @@
             <BoxView
                 AbsoluteLayout.LayoutBounds="0,0.5,25,100"
                 AbsoluteLayout.LayoutFlags="PositionProportional"
-                Color="Green" />
+                Color="Green"  />
+            <Label
+                AbsoluteLayout.LayoutBounds="0.5,0.5,100,100"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                FontSize="Header"
+                Text="Centered text"  />            
             <BoxView
                 AbsoluteLayout.LayoutBounds="1,0.5,25,100"
                 AbsoluteLayout.LayoutFlags="PositionProportional"
@@ -24,11 +29,7 @@
                 AbsoluteLayout.LayoutBounds="0.5,1,100,25"
                 AbsoluteLayout.LayoutFlags="PositionProportional"
                 Color="Black" />
-            <Label
-                AbsoluteLayout.LayoutBounds="0.5,0.5,100,100"
-                AbsoluteLayout.LayoutFlags="PositionProportional"
-                FontSize="Header"
-                Text="Centered text" />
+
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

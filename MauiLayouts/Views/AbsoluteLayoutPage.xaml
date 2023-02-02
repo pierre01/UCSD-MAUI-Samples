@@ -5,9 +5,9 @@
              xmlns:local="clr-namespace:MauiLayouts.Views"
              BackgroundColor="White">
 	<ContentPage.Content>
-        <AbsoluteLayout Margin="20">
+        <AbsoluteLayout >
             <BoxView Color="Silver"
-                 AbsoluteLayout.LayoutBounds="0, 10, 200, 5" />
+                 AbsoluteLayout.LayoutBounds="0, 10, 390, 5" />
             <BoxView Color="Silver"
                  AbsoluteLayout.LayoutBounds="0, 20, 200, 5" />
             <BoxView Color="Silver"

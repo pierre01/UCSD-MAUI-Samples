@@ -201,12 +201,13 @@
                         VerticalOptions="FillAndExpand" />
 
                     <!--  Row SPAN  -->
-
+                    <!--<Path  Grid.ColumnSpan="3" Grid.RowSpan="2" Data="M0.5,6.5 C0.5,3.1862915 3.1862915,0.5 6.5,0.5 L163.97451,11.89992 C167.28822,11.89992 168,28.706292 168,32.02 L168.5015,48.013232 C168.5015,51.32694 164.27023,56.008727 160.95652,56.008727 L6.5,71.5 C3.1862915,71.5 0.5,68.813708 0.5,65.5 z"  Stroke="Black"  Fill="#FFA90101"/>-->
+                    
                     <RoundRectangle
                         Grid.Row="1"
                         Grid.RowSpan="3"
                         Grid.Column="3"
-                        Margin="20,4,30,4"
+                        Margin="20,4,35,4"
                         CornerRadius="6"
                         Fill="Blue"
                         HorizontalOptions="FillAndExpand"
