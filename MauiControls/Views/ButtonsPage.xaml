@@ -10,7 +10,7 @@
                 Text="Button"
                 VerticalOptions="Center"
                 WidthRequest="120" />
-            <Button Clicked="Button_Clicked" Text="Click me" />
+            <Button Clicked="OnButtonClicked" Text="Click me" />
             <Label x:Name="ClickResultLabel" Text="" />
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
@@ -18,8 +18,13 @@
                 Text="ImageButton"
                 VerticalOptions="Center"
                 WidthRequest="120" />
-            <ImageButton  Source="imagebutton.png" Clicked="ImageButton_Clicked" HeightRequest="40" WidthRequest="40"/>
-            <Label x:Name="ClickResultLabel2" Text="" />
+            <ImageButton
+                Clicked="OnPalmTreeButtonClicked"
+                HeightRequest="40"
+                IsEnabled="True"
+                Source="imagebutton.png"
+                WidthRequest="40" />
+            <Label x:Name="ClickResultPalmTree" Text="" />
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
             <Label

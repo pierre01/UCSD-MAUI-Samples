@@ -9,7 +9,8 @@ public partial class TextInputPage : ContentPage
 
     private void Entry_TextChanged(object sender, TextChangedEventArgs e)
     {
-
+        var v1 = e.NewTextValue;
+        var v2 = e.OldTextValue;
     }
 
     private void Editor_TextChanged(object sender, TextChangedEventArgs e)

@@ -14,6 +14,6 @@ public partial class DateTimePage : ContentPage
 
     private void OnTimeChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
     {
-        var newTime = MyTimePicker.Time;
+        //var newTime = MyTimePicker.Time;
     }
 }

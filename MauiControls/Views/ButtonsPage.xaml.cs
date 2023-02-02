@@ -7,10 +7,6 @@ public partial class ButtonsPage : ContentPage
 		InitializeComponent();
 	}
 
-    private void Button_Clicked(object sender, EventArgs e)
-    {
-
-    }
 
     private void RadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
     {
@@ -30,5 +26,15 @@ public partial class ButtonsPage : ContentPage
     private void ImageButton_Clicked(object sender, EventArgs e)
     {
 
+    }
+
+    private void OnButtonClicked(object sender, EventArgs e)
+    {
+        
+    }
+
+    private void OnPalmTreeButtonClicked(object sender, EventArgs e)
+    {
+        ClickResultPalmTree.Text = "Clicked!";
     }
 }
