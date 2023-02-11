@@ -26,12 +26,14 @@ public static class MauiProgram
     public static MauiAppBuilder RegisterServices(this MauiAppBuilder mauiAppBuilder)
     {
 		mauiAppBuilder.Services.AddSingleton<IPersonDataProvider,PersonDataProvider>();
+		mauiAppBuilder.Services.AddSingleton<IHomeDataProvider,HomeDataProvider>();
         return mauiAppBuilder;
     }
 
     public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
     {
-        mauiAppBuilder.Services.AddSingleton<PersonListViewModel>();
+ 		mauiAppBuilder.Services.AddSingleton<CarouselPageViewModel>();
+       mauiAppBuilder.Services.AddSingleton<PersonListViewModel>();
         mauiAppBuilder.Services.AddTransient<PersonDetailsViewModel>();
         return mauiAppBuilder;
     }
@@ -40,6 +42,7 @@ public static class MauiProgram
     {
         mauiAppBuilder.Services.AddSingleton<PersonListView>();
         mauiAppBuilder.Services.AddTransient<PersonDetailsView>();
+        mauiAppBuilder.Services.AddSingleton<CarouselViewPage>();
         return mauiAppBuilder;
     }
 }

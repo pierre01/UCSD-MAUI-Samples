@@ -1,12 +1,50 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiCollections.Views.CarouselViewPage"
-             Title="CarouselViewPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+<ContentPage
+    x:Class="MauiCollections.Views.CarouselViewPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:MauiCollections.Models"
+    xmlns:viewModels="clr-namespace:MauiCollections.ViewModels"
+    Title="Carousel View Page"
+    x:DataType="viewModels:CarouselPageViewModel" >
+    <StackLayout>
+        <CarouselView IndicatorView="indicatorView" ItemsSource="{Binding Homes}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame x:DataType="models:Home"
+                            Margin="20"
+                            BorderColor="DarkGray"
+                            CornerRadius="5"
+                            HasShadow="True"
+                            HeightRequest="300"
+                            HorizontalOptions="Center"
+                            VerticalOptions="CenterAndExpand">
+                            <StackLayout>
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding Description}"
+                                    VerticalOptions="Center" />
+                                <Image
+                                    Aspect="AspectFill"
+                                    HeightRequest="250"
+                                    HorizontalOptions="Center"
+                                    Source="{Binding CarouselPhoto}"
+                                    WidthRequest="250" />
+                                <Label HorizontalOptions="Center" Text="{Binding Location}" />
+
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView
+            x:Name="indicatorView"
+            HorizontalOptions="Center"
+            IndicatorColor="LightGray"
+            SelectedIndicatorColor="DarkGray" />
+    </StackLayout>
 </ContentPage>

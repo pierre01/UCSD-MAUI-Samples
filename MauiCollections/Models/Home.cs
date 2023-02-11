@@ -8,6 +8,13 @@ namespace MauiCollections.Models;
 
 public class Home
 {
-    public string Name { get; set; }
-    public string[] Photos =>new string[] { "home.jpg",  "kitchen.jpg" ,"livingroom.jpg", "bedroom.jpg", "bathroom.jpg" };
+    public string Description { get; set; }
+    public string Location { get; set; }
+    public int YearBuilt { get; set; }
+
+    public string[] Photos => new string[]
+        { "home01.jpg", "kitchen.jpg", "livingroom.jpg", "bedroom.jpg", "bathroom.jpg" };
+
+    public string CarouselPhoto{ get; set; } 
 }
+
