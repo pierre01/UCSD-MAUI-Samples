@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="MauiCollections.Views.PersonListView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:MauiCollections.Models"
+    xmlns:viewModels="clr-namespace:MauiCollections.ViewModels"
+    x:DataType="viewModels:PersonListViewModel">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="PersonTemplate">
+            <Grid x:DataType="models:Person" ColumnDefinitions="80,*">
+                <Border StrokeShape="RoundRectangle 75" StrokeThickness="1" Stroke="Black">
+                    <Image
+                        HeightRequest="80"
+                        Source="{Binding Photo}"
+                        WidthRequest="80" />
+                </Border>
+                <VerticalStackLayout Grid.Column="1" Margin="16,4,4,4">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        Text="{Binding FullName}" />
+                    <Label FontSize="Small" Text="{Binding DateOfBirth, StringFormat='Born: {0:D}'}" />
+                </VerticalStackLayout>
+            </Grid>
+        </DataTemplate>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid ColumnDefinitions="*,140">
+            <Grid Margin="8">
+                <CollectionView
+                    ItemTemplate="{StaticResource PersonTemplate}"
+                    ItemsSource="{Binding Persons}"
+                    SelectedItem="{Binding SelectedPerson}"
+                    SelectionMode="Single" />
+            </Grid>
+            <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
+                <Button
+                    Margin="8"
+                    Command="{Binding RemovePersonCommand}"
+                    Text="Remove" />
+                <Button
+                    Margin="8"
+                    Command="{Binding ShowDetailsCommand}"
+                    Text="Show Details..." />
+            </VerticalStackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

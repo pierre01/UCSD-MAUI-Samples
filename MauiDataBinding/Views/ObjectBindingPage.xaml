@@ -3,9 +3,10 @@
     x:Class="MauiDataBinding.Views.ObjectBindingPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:model="clr-namespace:MauiDataBinding.ViewModels"
+    xmlns:model="clr-namespace:MauiDataBinding.Views"
+    xmlns:viewModels="clr-namespace:MauiDataBinding.ViewModels"
     Title="ObjectBindingPage"
-    x:DataType="model:PersonViewModel">
+    x:DataType="viewModels:PersonViewModel">
     <!-- x:Datatype tells about the BindingContext type, so the designer can help with autocomplete -->
     <VerticalStackLayout>
         <Label
@@ -15,16 +16,19 @@
         <HorizontalStackLayout  HorizontalOptions="Center">
             <Entry  Text="{Binding FirstName}"  Margin="0,0,8,0" WidthRequest="100" FontSize="Medium"/>
             <Entry  Text="{Binding LastName}"  FontSize="Medium" WidthRequest="100" />
+            <VerticalStackLayout>
             <Button Text="Change" Command="{Binding ModifyPersonCommand}" />
             <Button Text="Cancel" Command="{Binding CancelChangesCommand}" />
+            <Button Text="Save"  Command="{Binding SaveChangesCommand}" />
+            </VerticalStackLayout>
         </HorizontalStackLayout>
 
-        <Label
-            FontSize="Large"
-            HorizontalOptions="Center"
-            Text="Age" />
+        <Label IsVisible="{Binding IsAgeVisible}"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               Text="Age" />
 
-        <HorizontalStackLayout HorizontalOptions="Center">
+        <HorizontalStackLayout HorizontalOptions="Center" IsVisible="{Binding IsAgeVisible}">
             <Label
                 Margin="0,0,8,0"
                 FontSize="Medium"
@@ -47,6 +51,12 @@
             FontSize="Large"
             HorizontalOptions="Center"
             Text="Kids" />
-        <CollectionView ItemsSource="{Binding Childrens}" SelectionMode="Single" SelectedItem="{Binding FavoriteKid}"></CollectionView>
+        <CollectionView ItemsSource="{Binding Children}" SelectionMode="Single" SelectedItem="{Binding FavoriteKid}" SelectionChangedCommand="{Binding FavoriteChildrenChangedCommand}" ></CollectionView>
+
+        <Label TextColor="Red"
+               FontSize="Medium"
+               HorizontalOptions="Center"
+               Text="{Binding Errors}" />
+
     </VerticalStackLayout>
 </ContentPage>

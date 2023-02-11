@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:MauiCollections.Models"
+             x:Class="MauiCollections.Views.PersonDetailsView">
+    <ContentPage.Content>
+        <Grid x:DataType="models:Person" ColumnDefinitions="160,*" RowDefinitions="280,*">
+            <Border HeightRequest="120" WidthRequest="120" StrokeShape="RoundRectangle 120" StrokeThickness="2" Stroke="Black">
+                <Image
+                    HeightRequest="140" WidthRequest="140"
+                    Source="{Binding Photo}"
+                     />
+            </Border>
+            <VerticalStackLayout Grid.Column="1" Margin="16,4,4,4" HeightRequest="200">
+                <Label FontSize="Small" Text="{Binding DateOfBirth, StringFormat='Born: {0:D}'}" />
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    Text="{Binding FullName}" />
+            </VerticalStackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

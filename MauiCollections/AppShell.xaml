@@ -3,12 +3,18 @@
     x:Class="MauiCollections.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiCollections"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:local="clr-namespace:MauiCollections.Views"
+    Shell.FlyoutBehavior="Flyout">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Person List"
+        ContentTemplate="{DataTemplate local:PersonListView}"
+        Route="PersonListView" />
+
+    <ShellContent
+        Title="Carousel Page"
+        ContentTemplate="{DataTemplate local:CarouselViewPage}"
+        Route="CarouselViewPage" />
+
 
 </Shell>

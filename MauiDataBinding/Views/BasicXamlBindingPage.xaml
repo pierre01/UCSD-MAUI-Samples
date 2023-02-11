@@ -13,7 +13,7 @@
                 FontSize="80"
                 HorizontalOptions="Center"
                 Rotation="{Binding Path=Value}"
-                Text="TEXT"
+                Text="{Binding Path=Value}"
                 VerticalOptions="Center" />
 
             <Slider
