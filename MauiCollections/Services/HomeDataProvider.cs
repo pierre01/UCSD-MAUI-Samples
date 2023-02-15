@@ -20,7 +20,7 @@ public class HomeDataProvider:IHomeDataProvider
 
     public HomeDataProvider()
     {
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
             var home= new Home();
             home.CarouselPhoto  = $"home{i+1:D2}.jpg";
