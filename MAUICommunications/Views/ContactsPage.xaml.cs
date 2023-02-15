@@ -38,14 +38,14 @@ public partial class ContactsPage : ContentPage
 
     public async IAsyncEnumerable<string> GetContactNames()
     {
-        //Fully Qualified Name is required because of IOS name conflict
-       var allContacts = await Contacts.Default.GetAllAsync();
+       // //Fully Qualified Name is required because of IOS name conflict
+       //var allContacts = await Contacts.Default.GetAllAsync();
 
-        // No contacts
-        if (allContacts == null)
+       // // No contacts
+       // if (allContacts == null)
             yield break;
 
-        foreach (var contact in allContacts)
-            yield return contact.DisplayName;
+       // foreach (var contact in allContacts)
+       //     yield return contact.DisplayName;
     }
 }
