@@ -33,7 +33,7 @@ public static class MauiProgram
     public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
     {
  		mauiAppBuilder.Services.AddSingleton<CarouselPageViewModel>();
-       mauiAppBuilder.Services.AddSingleton<PersonListViewModel>();
+        mauiAppBuilder.Services.AddSingleton<PersonListViewModel>();
         mauiAppBuilder.Services.AddTransient<PersonDetailsViewModel>();
         return mauiAppBuilder;
     }

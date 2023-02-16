@@ -8,7 +8,7 @@ using MauiCollections.Views;
 
 namespace MauiCollections.ViewModels;
 
-public partial class PersonListViewModel : ObservableObject
+public partial class PersonListViewModel : ObservableObject,IQueryAttributable
 {
     [ObservableProperty]
     private ObservableCollection<Person> _persons;
@@ -37,8 +37,8 @@ public partial class PersonListViewModel : ObservableObject
         _dataprovider.DeletePerson(SelectedPerson.Id);
         Persons.Remove(SelectedPerson);
         SelectedPerson  = null;
-        RemovePersonCommand.NotifyCanExecuteChanged();
-        ShowDetailsCommand.NotifyCanExecuteChanged();
+        //RemovePersonCommand.NotifyCanExecuteChanged();
+        //ShowDetailsCommand.NotifyCanExecuteChanged();
     }
 
     [RelayCommand(CanExecute = nameof(CanExecuteCommandOnPerson))]
@@ -57,8 +57,30 @@ public partial class PersonListViewModel : ObservableObject
         
     }
 
+    [RelayCommand]
+    private async void CreateNew()
+    {
+        var newPatient = new Person(0, DateTime.MinValue, "", "", "", "");
+        var navigationParameter = new Dictionary<string, object>
+        {
+            { "Person", newPatient }
+        };        
+        await Shell.Current.GoToAsync(nameof(PersonDetailsView), navigationParameter);
+
+    }
+
     private bool CanExecuteCommandOnPerson()
     {
         return SelectedPerson != null;
+    }
+
+    public void ApplyQueryAttributes(IDictionary<string, object> query)
+    {
+        var newPerson = query["NewPerson"] as Person;
+        if (newPerson.Id == 0)
+        {
+            newPerson.Id = _dataprovider.AddPerson(newPerson);
+            _persons.Add(newPerson);
+        }
     }
 }

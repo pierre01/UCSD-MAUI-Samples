@@ -60,29 +60,11 @@ public partial class PersonDetailsViewModel:ObservableValidator,IQueryAttributab
 
     }
 
-    public PersonDetailsViewModel(Person p)
-    {
-        LastName = p.LastName;
-        FirstName= p.FirstName;
-        DateOfBirth=p.DateOfBirth;
-        if (Age > 30)
-        {
-            IsAgeVisible = false;
-        }
-        else
-        {
-            IsAgeVisible = true;
-        }
-        Gender=p.Gender;
-        _person = p;
-
-    }
 
     [RelayCommand]
     public void ModifyPerson()
     {
-        LastName = "Durand";
-        FirstName = "Eddie";
+
 
 
     }
@@ -97,7 +79,7 @@ public partial class PersonDetailsViewModel:ObservableValidator,IQueryAttributab
     }
 
     [RelayCommand]
-    public void SaveChanges()
+    public async void SaveChanges()
     {
         ValidateAllProperties();
         if (HasErrors)
@@ -114,6 +96,11 @@ public partial class PersonDetailsViewModel:ObservableValidator,IQueryAttributab
         _person.DateOfBirth=DateOfBirth;
         _person.Gender=Gender;
         // Send updated Person to the server
+        var navigationParameter = new Dictionary<string, object>
+        {
+            { "NewPerson", _person }
+        };        
+        await Shell.Current.GoToAsync("///PersonListView", navigationParameter);
     }
 
 

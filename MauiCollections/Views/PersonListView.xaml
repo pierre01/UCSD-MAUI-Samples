@@ -10,7 +10,7 @@
     <ContentPage.Resources>
         <DataTemplate x:Key="PersonTemplate">
             <Grid x:DataType="models:Person" ColumnDefinitions="80,*">
-                <Border StrokeShape="RoundRectangle 75" StrokeThickness="1" Stroke="Black">
+                <Border StrokeShape="RoundRectangle 85" StrokeThickness="4" Stroke="Black">
                     <Image
                         HeightRequest="80"
                         Source="{Binding Photo}"
@@ -44,6 +44,10 @@
                     Margin="8"
                     Command="{Binding ShowDetailsCommand}"
                     Text="Show Details..." />
+                <Button
+                    Margin="8"
+                    Command="{Binding CreateNewCommand}"
+                    Text="Create New Patient..." />
             </VerticalStackLayout>
         </Grid>
     </ContentPage.Content>

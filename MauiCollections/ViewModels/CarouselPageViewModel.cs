@@ -7,7 +7,8 @@ namespace MauiCollections.ViewModels;
 
 public partial class CarouselPageViewModel : ObservableObject
 {
-    [ObservableProperty] private ObservableCollection<Home> _homes;
+    [ObservableProperty] 
+    private ObservableCollection<Home> _homes;
 
     public CarouselPageViewModel(IHomeDataProvider homeProvider)
     {

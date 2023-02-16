@@ -8,7 +8,7 @@
     Title="Carousel View Page"
     x:DataType="viewModels:CarouselPageViewModel" >
     <StackLayout>
-        <CarouselView IndicatorView="indicatorView" ItemsSource="{Binding Homes}">
+        <CarouselView IndicatorView="MyIndicatorView" ItemsSource="{Binding Homes}">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
@@ -42,7 +42,7 @@
             </CarouselView.ItemTemplate>
         </CarouselView>
         <IndicatorView
-            x:Name="indicatorView"
+            x:Name="MyIndicatorView"
             HorizontalOptions="Center"
             IndicatorColor="LightGray"
             SelectedIndicatorColor="DarkGray" />
