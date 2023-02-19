@@ -35,10 +35,12 @@
 
     <Grid RowDefinitions="50,1*">
         <SearchBar
-            x:Name="searchBar"
+            x:Name="SearchBar"
+            
             Placeholder="Enter Team member name"
             SearchCommand="{Binding PerformSearchCommand}"
-            SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}" />
+            TextChanged="OnSearchTextChanged"
+            SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}" />
         <CollectionView
             x:Name="TeamCollectionView"
             Grid.Row="1"

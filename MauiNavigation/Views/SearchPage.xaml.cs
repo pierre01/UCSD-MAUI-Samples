@@ -14,4 +14,9 @@ public partial class SearchPage : ContentPage
     {
 
     }
+
+    private void OnSearchTextChanged(object sender, TextChangedEventArgs e)
+    {
+
+    }
 }
