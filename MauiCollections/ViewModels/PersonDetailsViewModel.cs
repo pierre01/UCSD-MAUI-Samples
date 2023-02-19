@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using MauiCollections.Models;
-using MauiCollections.Views;
-using Microsoft.Maui.Graphics;
 
 namespace MauiCollections.ViewModels;
 
@@ -100,7 +91,7 @@ public partial class PersonDetailsViewModel:ObservableValidator,IQueryAttributab
         {
             { "NewPerson", _person }
         };        
-        await Shell.Current.GoToAsync("///PersonListView", navigationParameter);
+        //await Shell.Current.GoToAsync("///PersonListView", navigationParameter);
     }
 
 
