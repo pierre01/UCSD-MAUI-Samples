@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using MauiCollections.Models;
+using MauiCollections.Services;
 
 namespace MauiCollections.ViewModels;
 
@@ -22,6 +23,7 @@ public partial class PersonDetailsViewModel:ObservableValidator,IQueryAttributab
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(Age))]
+    [NotifyPropertyChangedFor(nameof(IsAgeVisible))]
     [Range(typeof(DateTime),"1/1/1900","2/2/2020",ErrorMessage = "Date of birth out of range")]
     private DateTime  _dateOfBirth;
 
@@ -46,9 +48,11 @@ public partial class PersonDetailsViewModel:ObservableValidator,IQueryAttributab
         get { return _person.FullName; }
     }
 
-    public PersonDetailsViewModel()
-    {
+    private INavigationService _navigationService;
 
+    public PersonDetailsViewModel(INavigationService navigationService)
+    {
+        _navigationService = navigationService;
     }
 
 
@@ -70,12 +74,13 @@ public partial class PersonDetailsViewModel:ObservableValidator,IQueryAttributab
     }
 
     [RelayCommand]
-    public async void SaveChanges()
+    public async Task SaveChanges()
     {
         ValidateAllProperties();
         if (HasErrors)
         {
             Errors = string.Join(Environment.NewLine, GetErrors().Select(e => e.ErrorMessage));
+            return;
         }
         else
         {
@@ -91,7 +96,7 @@ public partial class PersonDetailsViewModel:ObservableValidator,IQueryAttributab
         {
             { "NewPerson", _person }
         };        
-        //await Shell.Current.GoToAsync("///PersonListView", navigationParameter);
+        await _navigationService.GoToAsync("///PersonListView", navigationParameter);
     }
 
 

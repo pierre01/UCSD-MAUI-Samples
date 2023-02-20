@@ -20,11 +20,13 @@ public partial class PersonListViewModel : ObservableObject,IQueryAttributable
 
     private IPersonDataProvider _dataprovider;
 
-    public PersonListViewModel(IPersonDataProvider dataprovider )
+    private INavigationService _navigationService;
+    public PersonListViewModel(IPersonDataProvider dataProvider, INavigationService navigationService )
     {
-        _dataprovider = dataprovider;
+        _dataprovider = dataProvider;
         _persons = new ObservableCollection<Person>(_dataprovider.GetEveryone());
         SelectedPerson = null;
+        _navigationService = navigationService;
     }
 
     [RelayCommand(CanExecute = nameof(CanExecuteCommandOnPerson))]
@@ -53,7 +55,7 @@ public partial class PersonListViewModel : ObservableObject,IQueryAttributable
         {
             { "Person", SelectedPerson }
         };
-        await Shell.Current.GoToAsync(nameof(PersonDetailsView), navigationParameter);
+        await _navigationService.GoToAsync(nameof(PersonDetailsView), navigationParameter);
         
     }
 
@@ -65,7 +67,7 @@ public partial class PersonListViewModel : ObservableObject,IQueryAttributable
         {
             { "Person", newPatient }
         };        
-        await Shell.Current.GoToAsync(nameof(PersonDetailsView), navigationParameter);
+        await _navigationService.GoToAsync(nameof(PersonDetailsView), navigationParameter);
 
     }
 

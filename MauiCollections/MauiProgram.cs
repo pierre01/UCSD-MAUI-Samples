@@ -26,7 +26,8 @@ public static class MauiProgram
     public static MauiAppBuilder RegisterServices(this MauiAppBuilder mauiAppBuilder)
     {
 		mauiAppBuilder.Services.AddSingleton<IPersonDataProvider,PersonDataProvider>();
-		mauiAppBuilder.Services.AddSingleton<IHomeDataProvider,HomeDataProvider>();
+        mauiAppBuilder.Services.AddSingleton<IHomeDataProvider,HomeDataProvider>();
+        mauiAppBuilder.Services.AddSingleton<INavigationService,NavigationService>();
         return mauiAppBuilder;
     }
 
