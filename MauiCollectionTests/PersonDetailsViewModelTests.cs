@@ -42,9 +42,14 @@ public class PersonDetailsViewModelTests
         Assert.False(pv.HasErrors);
     }
 
+    //[Theory]
+    //[InlineData()]
     [Fact]
     public async Task TestYoungPersonViewModel()
     {
+        // Create DateTime object 30 years from today and 1 day
+        //DateTime dt = DateTime.Today.AddYears(-30).AddDays(1);
+
         Person p = new Person(1, new DateTime(DateTime.Today.Year, 8, 20), "James", "Kunitz", "Male", "smiley.jpg");
 
         var dic = new Dictionary<string, object>();
@@ -68,5 +73,6 @@ public class PersonDetailsViewModelTests
         pv.DateOfBirth = new DateTime(1969, 5, 31);
         pv.CancelChanges();
         Assert.True(pv.DateOfBirth == p.DateOfBirth);
+        pv.ModifyPerson();
     }
 }

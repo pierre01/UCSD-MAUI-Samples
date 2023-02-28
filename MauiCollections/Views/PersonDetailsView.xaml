@@ -29,6 +29,7 @@
                 Grid.Column="1"
                 Margin="16,4,4,4"
                 HeightRequest="200">
+                <DatePicker Date="{Binding DateOfBirth}"></DatePicker>
                 <Label FontSize="Small" Text="{Binding DateOfBirth, StringFormat='Born: {0:D}'}" />
                 <HorizontalStackLayout>
                     <Label

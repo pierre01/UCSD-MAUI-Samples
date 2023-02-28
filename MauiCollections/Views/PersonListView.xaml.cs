@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using MauiCollections.ViewModels;
@@ -14,4 +15,6 @@ public partial class PersonListView : ContentPage
         BindingContext = viewModel;
         InitializeComponent();
     }
+
+
 }

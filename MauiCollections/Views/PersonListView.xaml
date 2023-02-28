@@ -27,7 +27,7 @@
         </DataTemplate>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <Grid ColumnDefinitions="*,140">
+        <Grid ColumnDefinitions="*,240">
             <Grid Margin="8">
                 <CollectionView
                     ItemTemplate="{StaticResource PersonTemplate}"
@@ -47,7 +47,7 @@
                 <Button
                     Margin="8"
                     Command="{Binding CreateNewCommand}"
-                    Text="Create New Patient..." />
+                    Text="Create new..." />
             </VerticalStackLayout>
         </Grid>
     </ContentPage.Content>

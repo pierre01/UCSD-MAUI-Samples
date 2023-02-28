@@ -53,7 +53,8 @@ public partial class PersonListViewModel : ObservableObject,IQueryAttributable
         // Go to the details page
         var navigationParameter = new Dictionary<string, object>
         {
-            { "Person", SelectedPerson }
+            { "Person", SelectedPerson },
+            { "Receipe","Banana split"}
         };
         await _navigationService.GoToAsync(nameof(PersonDetailsView), navigationParameter);
         
@@ -62,10 +63,10 @@ public partial class PersonListViewModel : ObservableObject,IQueryAttributable
     [RelayCommand]
     private async void CreateNew()
     {
-        var newPatient = new Person(0, DateTime.MinValue, "", "", "", "");
+        var person = new Person(0, DateTime.MinValue, "", "", "", "");
         var navigationParameter = new Dictionary<string, object>
         {
-            { "Person", newPatient }
+            { "Person", person }
         };        
         await _navigationService.GoToAsync(nameof(PersonDetailsView), navigationParameter);
 
