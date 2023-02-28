@@ -9,8 +9,8 @@
     <ShellContent
         Title="Audio Media player"
         Icon="appiconfg.png"
-        ContentTemplate="{DataTemplate local:SoundAndMusic}"
-        Route="SoundAndMusic" />
+        ContentTemplate="{DataTemplate local:SoundAndMusicPage}"
+        Route="SoundAndMusicPage" />
     <ShellContent
         Title="Barcode Reading"
         Icon="appiconfg.png"

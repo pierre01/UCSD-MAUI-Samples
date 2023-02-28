@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Maui;
+using Plugin.Maui.Audio;
 using ZXing.Net.Maui;
 using ZXing.Net.Maui.Controls;
 
@@ -11,13 +12,15 @@ namespace MauiMedia
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
+                .UseMauiCommunityToolkitMediaElement()
                 .UseBarcodeReader()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 })
-                .UseMauiCommunityToolkitMediaElement()
+                
             #region
             .ConfigureMauiHandlers(h =>
             {
@@ -26,7 +29,7 @@ namespace MauiMedia
                 h.AddHandler(typeof(ZXing.Net.Maui.Controls.BarcodeGeneratorView), typeof(BarcodeGeneratorViewHandler));
             });
             #endregion
-
+            builder.Services.AddSingleton(AudioManager.Current);
             return builder.Build();
         }
     }
