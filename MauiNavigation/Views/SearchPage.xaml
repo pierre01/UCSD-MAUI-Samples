@@ -36,7 +36,6 @@
     <Grid RowDefinitions="50,1*">
         <SearchBar
             x:Name="SearchBar"
-            
             Placeholder="Enter Team member name"
             SearchCommand="{Binding PerformSearchCommand}"
             TextChanged="OnSearchTextChanged"
