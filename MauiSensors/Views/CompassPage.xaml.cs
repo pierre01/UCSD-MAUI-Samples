@@ -31,6 +31,8 @@ public partial class CompassPage : ContentPage
         // Update UI Label with compass state
         CompassLabel.TextColor = Colors.Green;
         CompassLabel.Text = $"Compass: {e.Reading}";
+        ((CompassFace)myCompassView.Drawable).SetNorth(360-e.Reading.HeadingMagneticNorth);
+        myCompassView.Invalidate();
     }
     protected override void OnDisappearing()
     {
