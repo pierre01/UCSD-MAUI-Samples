@@ -47,7 +47,7 @@ public class CompassFace: IDrawable
         canvas.DrawLine(0, 0, 0, -70);
         canvas.DrawLine(10, 0, 0, -70);
 
-        canvas.StrokeColor = Colors.Black;
+        canvas.StrokeColor = Colors.Gray;
         canvas.DrawLine(-10, 0, 0, 70);
         canvas.DrawLine(0, 0, 0, 70);
         canvas.DrawLine(10, 0, 0, 70);
