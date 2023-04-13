@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="using:MauiSensors.Views"
+             xmlns:views1="clr-namespace:MauiSensors.Views"
              x:Class="MauiSensors.Views.CompassPage"
              Title="CompassPage">
         <ContentPage.Resources>
-            <views:CompassFace x:Key="CompassFace" />
+            <views1:CompassFace x:Key="CompassFace" />
         </ContentPage.Resources>    
     <VerticalStackLayout>
         <GraphicsView

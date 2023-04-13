@@ -70,6 +70,15 @@ namespace MauiLocalization.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        internal static string Home {
+            get {
+                return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The Title.
         /// </summary>
         internal static string Title {

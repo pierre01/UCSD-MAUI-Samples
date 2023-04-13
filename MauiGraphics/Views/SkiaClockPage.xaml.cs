@@ -25,7 +25,7 @@ public partial class SkiaClockPage : ContentPage
     {
         if (_clock == null)
         {
-            _clock = new PeriodicTimer(TimeSpan.FromMilliseconds(20));
+            _clock = new PeriodicTimer(TimeSpan.FromMilliseconds(10));
         }        
         
         base.OnAppearing();

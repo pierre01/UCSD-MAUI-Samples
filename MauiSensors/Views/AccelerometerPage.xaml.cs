@@ -15,7 +15,7 @@ public partial class AccelerometerPage : ContentPage
             {
                 // Turn on accelerometer
                 Accelerometer.Default.ReadingChanged += Accelerometer_ReadingChanged;
-                Accelerometer.Default.Start(SensorSpeed.UI);
+                Accelerometer.Default.Start(SensorSpeed.Game);
             }
             else
             {

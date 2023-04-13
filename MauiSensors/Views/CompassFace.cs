@@ -40,13 +40,18 @@ public class CompassFace: IDrawable
         canvas.StrokeColor = Colors.OrangeRed;
 
         // North Pointing Hand
-        canvas.StrokeSize = 10;
+        canvas.StrokeSize = 2;
         canvas.SaveState();
         canvas.Rotate((float)_north);
+        canvas.DrawLine(-10, 0, 0, -70);
         canvas.DrawLine(0, 0, 0, -70);
+        canvas.DrawLine(10, 0, 0, -70);
+
+        canvas.StrokeColor = Colors.Black;
+        canvas.DrawLine(-10, 0, 0, 70);
+        canvas.DrawLine(0, 0, 0, 70);
+        canvas.DrawLine(10, 0, 0, 70);
         canvas.RestoreState();
-
-
 
         canvas.FillCircle(0, 0, 4);
         canvas.RestoreState();

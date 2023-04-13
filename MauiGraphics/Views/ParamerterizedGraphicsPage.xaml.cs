@@ -9,9 +9,9 @@ public partial class ParamerterizedGraphicsPage : ContentPage
     public ParamerterizedGraphicsPage()
 	{
 		InitializeComponent();
-        Bar01 = new GraphBar(20);
-        Bar02 = new GraphBar(200);
-        Bar03 = new GraphBar(80);
+        Bar01 = new GraphBar(20,valueColor: Colors.Red);
+        Bar02 = new GraphBar(200, valueColor:Colors.Blue);
+        Bar03 = new GraphBar(80, valueColor:Colors.Orange);
         Bar04 = new GraphBar(100);
         BindingContext = this;
 	}

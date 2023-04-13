@@ -15,7 +15,7 @@ public partial class BarometerPage : ContentPage
             {
                 // Turn on accelerometer
                 Barometer.Default.ReadingChanged += Barometer_ReadingChanged;
-                Barometer.Default.Start(SensorSpeed.UI);
+                Barometer.Default.Start(SensorSpeed.Game);
             }
             else
             {

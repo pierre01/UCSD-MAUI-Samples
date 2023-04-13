@@ -5,10 +5,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:drawable="clr-namespace:MauiGraphics.Views"
     Title="BasicGraphicsPage">
-    <ContentPage.Resources>
+    <!--<ContentPage.Resources>
         <drawable:DrawableArea x:Key="drawable" />
-        <drawable:DrawableArea x:Key="drawable2" />
-    </ContentPage.Resources>
+    </ContentPage.Resources>-->
     <Grid
         ColumnDefinitions="*,Auto,*"
         RowDefinitions="100,*"
@@ -25,7 +24,6 @@
 
             <GraphicsView
                 x:Name="myGraphicsView"
-                Drawable="{StaticResource drawable}"
                 HeightRequest="400"
                 HorizontalOptions="End"
                 VerticalOptions="Start"
