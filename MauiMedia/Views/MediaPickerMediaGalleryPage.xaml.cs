@@ -29,7 +29,7 @@ public partial class MediaPickerMediaGalleryPage : ContentPage
         if (file.Type == MediaFileType.Image)
         {
             Stream sourceStream = await file.OpenReadAsync();
-
+            
             //using (FileStream localFileStream = File.OpenWrite(localFilePath))
             //{
             //    await sourceStream.CopyToAsync(localFileStream);

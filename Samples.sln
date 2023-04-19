@@ -47,7 +47,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiAnimations", "MauiAnima
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiLocalization", "MauiLocalization\MauiLocalization.csproj", "{32D9FC9D-135D-42EA-91B0-F500D3595C99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiCollectionTests", "MauiCollectionTests\MauiCollectionTests.csproj", "{CFAE3788-E755-4296-94B4-BEAA4D2170F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiCollectionTests", "MauiCollectionTests\MauiCollectionTests.csproj", "{CFAE3788-E755-4296-94B4-BEAA4D2170F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiCamera", "MauiCamera\MauiCamera.csproj", "{BE1EC82A-0F4E-4374-8455-70ADF07A246D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -173,6 +175,12 @@ Global
 		{CFAE3788-E755-4296-94B4-BEAA4D2170F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFAE3788-E755-4296-94B4-BEAA4D2170F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFAE3788-E755-4296-94B4-BEAA4D2170F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE1EC82A-0F4E-4374-8455-70ADF07A246D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE1EC82A-0F4E-4374-8455-70ADF07A246D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE1EC82A-0F4E-4374-8455-70ADF07A246D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BE1EC82A-0F4E-4374-8455-70ADF07A246D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE1EC82A-0F4E-4374-8455-70ADF07A246D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE1EC82A-0F4E-4374-8455-70ADF07A246D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
