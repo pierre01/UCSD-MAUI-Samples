@@ -6,23 +6,28 @@
     xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI">
 
     <Grid>
-        <VerticalStackLayout
-            Padding="30,0"
+
+        <cv:CameraView
+            x:Name="CameraView"
+            BarcodeDetected="CameraView_BarcodeDetected"
             HorizontalOptions="Fill"
-            Spacing="25"
-            VerticalOptions="Fill">
-            <cv:CameraView
-                x:Name="CameraView"
-                BarcodeDetected="CameraView_BarcodeDetected"
-                HeightRequest="200"
-                Loaded="CameraView_CamerasLoaded"
-                WidthRequest="300" />
-            <HorizontalStackLayout>
-                <Button x:Name="SnapPic" Clicked="CameraSnaped" Text="Snap Pic"  Margin="16" /> <Button x:Name="CameraIndexButton" Clicked="CameraChanged" Text="Camera[0]"  Margin="16" />
-            </HorizontalStackLayout>
-            <Image   x:Name="SnapPreview"  Aspect="AspectFill"            HeightRequest="2000"
-                
-                WidthRequest="1800" />
-        </VerticalStackLayout>
+            Loaded="CameraView_CamerasLoaded"
+            VerticalOptions="Fill" />
+
+
+        <HorizontalStackLayout HorizontalOptions="End" VerticalOptions="End">
+            <Button
+                x:Name="SnapPic"
+                Margin="16"
+                Clicked="CameraSnaped"
+                Text="Snap Pic" /> 
+            <Button
+                x:Name="CameraIndexButton"
+                Margin="16"
+                Clicked="CameraChanged"
+                Text="Camera[0]" />
+        </HorizontalStackLayout>
+
+
     </Grid>
 </ContentPage>

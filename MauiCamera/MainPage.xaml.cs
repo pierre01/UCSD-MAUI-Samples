@@ -29,15 +29,15 @@ namespace MauiCamera
         {
             
             var stream = await CameraView.TakePhotoAsync();
-            //var sz = stream.Length;
+            
             if (stream != null)
             {
                 if (await _viewModel.SaveImage(stream))
                 {
 
                 }
-                var result = ImageSource.FromStream(() => stream);
-                SnapPreview.Source = result;
+                //var result = ImageSource.FromStream(() => stream);
+                //SnapPreview.Source = result;
             }
         }
 
