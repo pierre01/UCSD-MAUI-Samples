@@ -9,6 +9,7 @@ public partial class PhoneDialerPage : ContentPage
 
 	private void OpenDialerClicked(object sender, EventArgs e)
 	{
-
+		if (PhoneDialer.Default.IsSupported)
+			PhoneDialer.Default.Open("000-000-0000");
 	}
 }
