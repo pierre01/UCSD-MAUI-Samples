@@ -36,7 +36,7 @@
 
 		<!-- Splash Screen -->
 
-		<!-- Images - put ** instead of * to recursively add the subfoldewrs -->
+		<!-- Images - put ** instead of * to recursively add the subfolders -->
 		<MauiImage Include="Resources\Images\**" />
 		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
