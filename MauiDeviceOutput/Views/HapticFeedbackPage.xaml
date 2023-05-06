@@ -8,8 +8,8 @@
             Text="Haptic Feedback"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Button Text="Click Feedback" Clicked="HapticShortButton_Clicked" />
-        <Button Text="Long Press Feedback" Clicked="HapticLongButton_Clicked" />
+        <Button Text="Click Feedback"  Margin="16" Clicked="HapticShortButton_Clicked" />
+        <Button Text="Long Press Feedback"  Margin="16" Clicked="HapticLongButton_Clicked" />
 
     </VerticalStackLayout>
 </ContentPage>

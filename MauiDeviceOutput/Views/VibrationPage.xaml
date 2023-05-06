@@ -8,7 +8,7 @@
             Text="Vibration"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Button Text="Start Vibrating" x:Name="VibrateStartButton" Clicked="VibrateStartButton_Clicked" />
-        <Button Text="Stop Vibrating" x:Name="VibrateStopButton" Clicked="VibrateStopButton_Clicked" />
+        <Button Text="Start Vibrating" Margin="16" x:Name="VibrateStartButton" Clicked="VibrateStartButton_Clicked" />
+        <Button Text="Stop Vibrating"  Margin="16" x:Name="VibrateStopButton" Clicked="VibrateStopButton_Clicked" />
     </VerticalStackLayout>
 </ContentPage>
