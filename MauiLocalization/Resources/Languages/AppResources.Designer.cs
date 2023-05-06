@@ -61,6 +61,24 @@ namespace MauiLocalization.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clicked.
+        /// </summary>
+        internal static string Clicked {
+            get {
+                return ResourceManager.GetString("Clicked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Click me.
+        /// </summary>
+        internal static string ClickMe {
+            get {
+                return ResourceManager.GetString("ClickMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hello World!.
         /// </summary>
         internal static string HelloWorld {
@@ -75,6 +93,24 @@ namespace MauiLocalization.Resources.Languages {
         internal static string Home {
             get {
                 return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Times.
+        /// </summary>
+        internal static string Times {
+            get {
+                return ResourceManager.GetString("Times", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time.
+        /// </summary>
+        internal static string TimeSingular {
+            get {
+                return ResourceManager.GetString("TimeSingular", resourceCulture);
             }
         }
         

@@ -126,4 +126,16 @@
   <data name="Title" xml:space="preserve">
     <value>Le Titre</value>
   </data>
+  <data name="ClickMe" xml:space="preserve">
+    <value>Cliquez moi</value>
+  </data>
+  <data name="Clicked" xml:space="preserve">
+    <value>Cliqué</value>
+  </data>
+  <data name="Times" xml:space="preserve">
+    <value>Fois</value>
+  </data>
+  <data name="TimeSingular" xml:space="preserve">
+    <value>Fois</value>
+  </data>
 </root>

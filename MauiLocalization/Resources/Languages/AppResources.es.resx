@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,24 +118,24 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="HelloWorld" xml:space="preserve">
-    <value>Hello World!</value>
+    <value>¡Hola a todos!</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Home</value>
+    <value>Inicio</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>The Title</value>
+    <value>El título.</value>
   </data>
   <data name="ClickMe" xml:space="preserve">
-    <value>Click me</value>
+    <value>Hacer clic aquí</value>
   </data>
   <data name="Clicked" xml:space="preserve">
-    <value>Clicked</value>
+    <value>Se ha hecho clic</value>
   </data>
   <data name="Times" xml:space="preserve">
-    <value>Times</value>
+    <value>veces</value>
   </data>
   <data name="TimeSingular" xml:space="preserve">
-    <value>Time</value>
+    <value>Hora</value>
   </data>
 </root>

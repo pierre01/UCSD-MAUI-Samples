@@ -1,4 +1,6 @@
-﻿namespace MauiLocalization
+﻿using MauiLocalization.Resources.Languages;
+
+namespace MauiLocalization
 {
     public partial class MainPage : ContentPage
     {
@@ -7,6 +9,7 @@
         public MainPage()
         {
             InitializeComponent();
+            CounterBtn.Text = AppResources.ClickMe;
         }
 
         private void OnCounterClicked(object sender, EventArgs e)
@@ -14,9 +17,9 @@
             count++;
 
             if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
+                CounterBtn.Text = $"{AppResources.Clicked} {count} {AppResources.TimeSingular}";
             else
-                CounterBtn.Text = $"Clicked {count} times";
+                CounterBtn.Text = $"{AppResources.Clicked} {count} {AppResources.Times}";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
