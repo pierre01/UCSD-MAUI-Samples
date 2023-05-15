@@ -8,5 +8,8 @@
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Button 
+            Text="Pick a file"
+            Clicked="PickFile_Clicked" />
     </VerticalStackLayout>
 </ContentPage>

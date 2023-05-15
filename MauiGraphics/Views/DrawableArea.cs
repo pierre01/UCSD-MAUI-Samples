@@ -15,14 +15,15 @@ public class DrawableArea : IDrawable
         var h = DeviceDisplay.Current.MainDisplayInfo.Height;
         Random rnd = new Random();
         // Drawing goes here
-        canvas.StrokeSize = 16;        
+        var d2 = canvas.DisplayScale;
+        canvas.StrokeSize = 8;        
         canvas.StrokeLineCap = LineCap.Round;
         canvas.StrokeColor = Colors.Yellow;
-        canvas.DrawRectangle(0, 0, 400, 400);
+        canvas.DrawRectangle(8, 0, 400-16, 400-8);
         
         //canvas.Scale(canvas.DisplayScale, canvas.DisplayScale);
 
-        // Backgtound tracks
+        // Background tracks
         canvas.StrokeColor = Color.FromArgb("#b4cccccc");
         canvas.DrawArc(100, 100, 200, 200, 90, 95, true, false);
         canvas.DrawArc(120, 120, 160, 160, 90,   95, true, false);

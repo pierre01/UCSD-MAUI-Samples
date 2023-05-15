@@ -4,31 +4,40 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:drawable="clr-namespace:MauiGraphics.Views"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Title="BasicGraphicsPage">
     <!--<ContentPage.Resources>
         <drawable:DrawableArea x:Key="drawable" />
     </ContentPage.Resources>-->
-    <Grid
-        ColumnDefinitions="*,Auto,*"
-        RowDefinitions="100,*"
-        VerticalOptions="FillAndExpand">
-        <Button
+
+
+
+<VerticalStackLayout>        
+    <Button
             Grid.Column="1"
             Margin="16"
             Clicked="RefreshButtonClicked"
-            Text="Refresh..." />
-        <Grid
-            Grid.Row="1"
-            Grid.Column="1"
-            VerticalOptions="Start">
-
+            Text="Refresh..." /> 
+                
             <GraphicsView
                 x:Name="myGraphicsView"
                 HeightRequest="400"
                 HorizontalOptions="End"
                 VerticalOptions="Start"
                 WidthRequest="400" />
+				
+                <Image  HeightRequest="48" WidthRequest="48" Margin="4" Source="account_circle.png" />
 
-        </Grid>
-    </Grid>
+				<Image  HeightRequest="48" WidthRequest="48" Margin="4" Source="account_circle.png">
+					<Image.Behaviors>
+						<toolkit:IconTintColorBehavior TintColor="Red" />
+					</Image.Behaviors>
+				</Image>
+
+				<Image Grid.Row="4" HeightRequest="48" WidthRequest="48" Margin="4" Source="account_circle.png">
+					<Image.Behaviors>
+						<toolkit:IconTintColorBehavior TintColor="Green" />
+					</Image.Behaviors>
+				</Image>
+        </VerticalStackLayout>
 </ContentPage>
