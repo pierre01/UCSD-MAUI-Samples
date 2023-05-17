@@ -25,7 +25,7 @@ namespace MauiCamera
 
 
 
-        public async Task takepic()
+        public async Task Takepic()
         {
             
             var stream = await CameraView.TakePhotoAsync();
@@ -44,6 +44,11 @@ namespace MauiCamera
 
         private int _currentCamera = 0;
 
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CameraView_CamerasLoaded(object sender, EventArgs e)
         {
             if (CameraView.NumCamerasDetected > 0)
@@ -51,15 +56,29 @@ namespace MauiCamera
                 if (CameraView.NumMicrophonesDetected > 0)
                     CameraView.Microphone = CameraView.Microphones.First();
                 CameraView.Camera = CameraView.Cameras.First();
+                var resList = CameraView.Camera.AvailableResolutions;
+                // Get the largest resolution
+                var maxRes = GetLargestSize(resList);
                 MainThread.BeginInvokeOnMainThread(async () =>
                 {
-                    if (await CameraView.StartCameraAsync() == CameraResult.Success)
+                    if (await CameraView.StartCameraAsync(maxRes) == CameraResult.Success)
                     {
                         //ControlButton.Text = "Stop";
                         //playing = true;
                     }
                 });
             }
+        }
+
+        /// <summary>
+        ///  Get the largest camera resolution
+        /// </summary>
+        /// <param name="sizes">All the camera supported resolutions</param>
+        /// <returns></returns>
+        private Size GetLargestSize(List<Size> sizes)
+        {
+
+            return sizes.OrderByDescending(s => s.Width * s.Height).FirstOrDefault();
         }
 
         private void CameraView_BarcodeDetected(object sender, Camera.MAUI.ZXingHelper.BarcodeEventArgs args)
@@ -69,7 +88,7 @@ namespace MauiCamera
 
         private async void CameraSnaped(object sender, EventArgs e)
         {
-            await takepic();
+            await Takepic();
         }
 
         private async void CameraChanged(object sender, EventArgs e)
@@ -95,9 +114,12 @@ namespace MauiCamera
                 
                 CameraView.Camera = CameraView.Cameras[_currentCamera];
                 CameraIndexButton.Text = $"Camera[{_currentCamera}]";
+                var resList = CameraView.Camera.AvailableResolutions;
+                // Get the largest resolution
+                var maxRes = GetLargestSize(resList);
                 MainThread.BeginInvokeOnMainThread(async () =>
                 {
-                    if (await CameraView.StartCameraAsync() == CameraResult.Success)
+                    if (await CameraView.StartCameraAsync(maxRes) == CameraResult.Success)
                     {
                         //ControlButton.Text = "Stop";
                         //playing = true;
