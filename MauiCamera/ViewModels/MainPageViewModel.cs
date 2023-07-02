@@ -28,8 +28,9 @@ public partial class MainPageViewModel:ObservableObject
     public async Task<bool> SaveImage(Stream stream)
     {
         using var cancellationTokenSource = new CancellationTokenSource();
-
-        var fileSaverResult = await _fileSaver.SaveAsync("MyImage.Jpg", stream, cancellationTokenSource.Token);
+        string dataDir = FileSystem.Current.AppDataDirectory;
+        var filePath = Path.Combine(FileSystem.AppDataDirectory, "Attachment1.jpg");
+        var fileSaverResult = await _fileSaver.SaveAsync(filePath, stream, cancellationTokenSource.Token);
         if (fileSaverResult.IsSuccessful)
         {
             return true;

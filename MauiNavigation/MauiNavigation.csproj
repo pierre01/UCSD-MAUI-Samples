@@ -15,7 +15,7 @@
 		<ApplicationTitle>MauiNavigation</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauinavigation</ApplicationId>
+		<ApplicationId>net.delange.mauinavigation</ApplicationId>
 		<ApplicationIdGuid>F6AC8A98-9D34-45A8-B9A5-5738BCC32A1B</ApplicationIdGuid>
 
 		<!-- Versions -->

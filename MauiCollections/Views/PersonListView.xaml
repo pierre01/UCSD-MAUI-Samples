@@ -27,7 +27,7 @@
         </DataTemplate>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <Grid ColumnDefinitions="*,240">
+        <Grid ColumnDefinitions="*,140">
             <Grid Margin="8">
                 <CollectionView
                     ItemTemplate="{StaticResource PersonTemplate}"

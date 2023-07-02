@@ -65,8 +65,6 @@ Projects are used throughout the class in this order
    	- Localized resources
 	- Translators
 	- Tools
-
-
 > [!NOTE]
 > Information the user should notice even if skimming.
 

@@ -15,7 +15,7 @@
 		<ApplicationTitle>MauiStorage</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauistorage</ApplicationId>
+		<ApplicationId>net.delange.mauistorage</ApplicationId>
 		<ApplicationIdGuid>554DE867-0167-4935-A287-D5D2344376D5</ApplicationIdGuid>
 
 		<!-- Versions -->

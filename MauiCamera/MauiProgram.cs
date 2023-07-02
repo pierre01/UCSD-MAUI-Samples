@@ -12,12 +12,7 @@ public static class MauiProgram
     public static MauiApp CreateMauiApp()
     {
         var builder = MauiApp.CreateBuilder();
-        builder
-            .UseMauiApp<App>()
-                        .RegisterServices()
-        .RegisterViewModels()
-        .RegisterViews()
-
+        builder.UseMauiApp<App>()
             .UseMauiCameraView()
             .UseMauiCommunityToolkit()
             .ConfigureFonts(fonts =>

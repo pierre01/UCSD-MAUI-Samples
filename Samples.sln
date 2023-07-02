@@ -49,7 +49,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiLocalization", "MauiLoc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiCollectionTests", "MauiCollectionTests\MauiCollectionTests.csproj", "{CFAE3788-E755-4296-94B4-BEAA4D2170F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiCamera", "MauiCamera\MauiCamera.csproj", "{BE1EC82A-0F4E-4374-8455-70ADF07A246D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiCamera", "MauiCamera\MauiCamera.csproj", "{BE1EC82A-0F4E-4374-8455-70ADF07A246D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

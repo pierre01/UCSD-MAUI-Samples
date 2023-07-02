@@ -13,7 +13,7 @@
 		<ApplicationTitle>MauiLayouts</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauilayouts</ApplicationId>
+		<ApplicationId>net.delange.mauilayouts</ApplicationId>
 		<ApplicationId Condition="$(TargetFramework.Contains('-windows'))">20A52764-B9C4-4E8A-BD3A-969DFC32E712</ApplicationId>
 
 		<!-- Versions -->

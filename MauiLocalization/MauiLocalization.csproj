@@ -15,7 +15,7 @@
 		<ApplicationTitle>MauiLocalization</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauilocalization</ApplicationId>
+		<ApplicationId>net.delange.mauilocalization</ApplicationId>
 		<ApplicationIdGuid>9d75168c-4877-463b-ba8f-8b7853babba4</ApplicationIdGuid>
 
 		<!-- Versions -->
@@ -46,6 +46,10 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Splash\splash.svg" />
 	</ItemGroup>
 
 	<ItemGroup>

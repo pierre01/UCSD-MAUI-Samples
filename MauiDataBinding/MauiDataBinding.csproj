@@ -15,7 +15,7 @@
 		<ApplicationTitle>MauiDataBinding</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauidatabinding</ApplicationId>
+		<ApplicationId>net.delange.mauidatabinding</ApplicationId>
 		<ApplicationIdGuid>2B096E1E-DEC2-4175-9B5C-1B77FCE8E6B3</ApplicationIdGuid>
 
 		<!-- Versions -->

@@ -33,6 +33,10 @@ namespace MauiCamera.ViewModels
             try
             {
                 CancellationToken cancellationToken = default;
+                PermissionStatus status = await Permissions.RequestAsync<Permissions.StorageRead >();
+                status = await Permissions.RequestAsync<Permissions.StorageWrite>();
+                status = await Permissions.CheckStatusAsync<Permissions.StorageRead>();
+                status = await Permissions.CheckStatusAsync<Permissions.StorageWrite>();
                 var result = await _folderPicker.PickAsync(cancellationToken);
                 result.EnsureSuccess();
                 FolderName = result.Folder.Name;

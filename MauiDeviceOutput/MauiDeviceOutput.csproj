@@ -15,7 +15,7 @@
 		<ApplicationTitle>MauiDeviceOutput</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauideviceoutput</ApplicationId>
+		<ApplicationId>net.delange.mauideviceoutput</ApplicationId>
 		<ApplicationIdGuid>B878E617-187F-4EA8-84EA-60FB7C8FE94D</ApplicationIdGuid>
 
 		<!-- Versions -->

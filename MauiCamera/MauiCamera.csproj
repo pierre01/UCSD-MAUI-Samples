@@ -15,7 +15,7 @@
 		<ApplicationTitle>MauiCamera</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauicamera</ApplicationId>
+		<ApplicationId>net.delange.mauicamera</ApplicationId>
 		<ApplicationIdGuid>7d831158-3493-4060-8415-f712bab15df2</ApplicationIdGuid>
 
 		<!-- Versions -->
@@ -50,8 +50,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Camera.MAUI" Version="1.4.0" />
-		<PackageReference Include="CommunityToolkit.Maui" Version="5.1.0" />
+	  <None Remove="Resources\Splash\splash.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Camera.MAUI" Version="1.4.4" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="5.2.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>

@@ -15,7 +15,7 @@
 		<ApplicationTitle>MauiAnimations</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauianimations</ApplicationId>
+		<ApplicationId>net.delange.mauianimations</ApplicationId>
 		<ApplicationIdGuid>c35672ab-579c-49e3-a20a-8ab0fbaa071d</ApplicationIdGuid>
 
 		<!-- Versions -->

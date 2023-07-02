@@ -15,7 +15,7 @@
 		<ApplicationTitle>MauiGeoLocation</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauigeolocation</ApplicationId>
+		<ApplicationId>net.delange.mauigeolocation</ApplicationId>
 		<ApplicationIdGuid>10C7E079-BA2B-4223-A0F1-2E6BBEA15F51</ApplicationIdGuid>
 
 		<!-- Versions -->
@@ -50,7 +50,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="7.0.81" />
+	  <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="7.0.86" />
 	</ItemGroup>
 
 

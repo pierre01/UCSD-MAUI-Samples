@@ -15,7 +15,7 @@
 		<ApplicationTitle>MauiGraphics</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauigraphics</ApplicationId>
+		<ApplicationId>net.delange.mauigraphics</ApplicationId>
 		<ApplicationIdGuid>0C1C9578-2CF8-49BE-BFA1-3E2FA7A76084</ApplicationIdGuid>
 
 		<!-- Versions -->

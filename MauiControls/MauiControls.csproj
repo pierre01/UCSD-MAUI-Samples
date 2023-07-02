@@ -15,7 +15,7 @@
 		<ApplicationTitle>MauiControls</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauicontrols</ApplicationId>
+		<ApplicationId>net.delange.mauicontrols</ApplicationId>
 		<ApplicationIdGuid>8F66FFE0-7ED7-4310-87A0-E7949DE9C05B</ApplicationIdGuid>
 
 		<!-- Versions -->

@@ -15,7 +15,7 @@
 		<ApplicationTitle>MauiMedia</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauimedia</ApplicationId>
+		<ApplicationId>net.delange.mauimedia</ApplicationId>
 		<ApplicationIdGuid>b08ce8ef-b324-4c38-8568-b10f5616ba5c</ApplicationIdGuid>
 
 		<!-- Versions -->

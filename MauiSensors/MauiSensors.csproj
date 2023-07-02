@@ -15,7 +15,7 @@
 		<ApplicationTitle>MauiSensors</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauisensors</ApplicationId>
+		<ApplicationId>net.delange.mauisensors</ApplicationId>
 		<ApplicationIdGuid>855903F5-79E1-44F4-B43F-07EA9CA44661</ApplicationIdGuid>
 
 		<!-- Versions -->

@@ -15,7 +15,7 @@
 		<ApplicationTitle>MauiThemes</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauithemes</ApplicationId>
+		<ApplicationId>net.delange.mauithemes</ApplicationId>
 		<ApplicationIdGuid>67B9BBB2-C13B-4E7F-8708-E9507DAEE001</ApplicationIdGuid>
 
 		<!-- Versions -->

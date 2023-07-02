@@ -15,7 +15,7 @@
 		<ApplicationTitle>MAUICommunications</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauicommunications</ApplicationId>
+		<ApplicationId>net.delange.mauicommunications</ApplicationId>
 		<ApplicationIdGuid>32A552BF-7822-4777-8AF2-BEF4F6684FC9</ApplicationIdGuid>
 
 		<!-- Versions -->

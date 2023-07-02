@@ -15,7 +15,7 @@
 		<ApplicationTitle>MauiMvvm</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauimvvm</ApplicationId>
+		<ApplicationId>net.delange.mauimvvm</ApplicationId>
 		<ApplicationIdGuid>B33A967B-30EF-4EB0-A512-AFEEB28C53B2</ApplicationIdGuid>
 
 		<!-- Versions -->
