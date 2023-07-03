@@ -10,7 +10,7 @@
     <FlyoutItem Title="Search Page">
         <ShellContent
             Title="Search Page"
-            ContentTemplate="{DataTemplate views:SearchWithHandlerPage}"
+            ContentTemplate="{DataTemplate views:SearchPage}"
             Route="SearchPage" />
     </FlyoutItem>
     

@@ -9,9 +9,4 @@ public partial class SearchWithHandlerPage : ContentPage
         BindingContext = new SearchPageViewModel();
         InitializeComponent();
 	}
-
-    private void OnTeamSelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-
-    }
 }

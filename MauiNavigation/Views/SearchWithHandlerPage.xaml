@@ -12,6 +12,7 @@
             ClearPlaceholderEnabled="True"
             ClearPlaceholderCommand="{Binding ClearSearchCommand}"
             ItemsSource="{Binding Team}"
+            
             DisplayMemberName="Name"
             Placeholder="Enter person name"
             ShowsResults="true" />
@@ -51,7 +52,6 @@
             Margin="4"
             ItemTemplate="{StaticResource TeamMemberTemplate}"
             ItemsSource="{Binding Team}"
-            SelectionChanged="OnTeamSelectionChanged"
             SelectionMode="Single" />
     </Grid>
 </ContentPage>

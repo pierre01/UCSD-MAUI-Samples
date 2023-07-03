@@ -8,7 +8,6 @@ namespace MauiNavigation.ViewModels;
 public partial class SearchPageViewModel
 {
 
-
     public SearchPageViewModel()
     {
         _team = new()

@@ -34,7 +34,7 @@ public class PersonSearchHandler:SearchHandler
 
         if (string.IsNullOrWhiteSpace(newValue))
         {
-            //ItemsSource = null;
+            ItemsSource = null;
         }
         else
         {
