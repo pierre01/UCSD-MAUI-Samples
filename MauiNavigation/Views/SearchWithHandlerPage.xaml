@@ -9,8 +9,11 @@
     x:DataType="viewModels:SearchPageViewModel">
     <Shell.SearchHandler>
         <search:PersonSearchHandler
+            ClearPlaceholderEnabled="True"
+            ClearPlaceholderCommand="{Binding ClearSearchCommand}"
+            ItemsSource="{Binding Team}"
             DisplayMemberName="Name"
-            Placeholder="Enter search term"
+            Placeholder="Enter person name"
             ShowsResults="true" />
     </Shell.SearchHandler>
 
@@ -42,7 +45,7 @@
     </ContentPage.Resources>
 
 
-    <Grid>
+    <Grid RowDefinitions="*">
         <CollectionView
             x:Name="TeamCollectionView"
             Margin="4"

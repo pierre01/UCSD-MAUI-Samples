@@ -1,10 +1,13 @@
+using MauiNavigation.ViewModels;
+
 namespace MauiNavigation.Views;
 
 public partial class SearchWithHandlerPage : ContentPage
 {
 	public SearchWithHandlerPage()
 	{
-		InitializeComponent();
+        BindingContext = new SearchPageViewModel();
+        InitializeComponent();
 	}
 
     private void OnTeamSelectionChanged(object sender, SelectionChangedEventArgs e)

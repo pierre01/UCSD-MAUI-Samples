@@ -16,9 +16,12 @@ public class PersonSearchHandler:SearchHandler
         {
             SearchBoxVisibility = SearchBoxVisibility.Collapsible;
         }
+
+        
+
     }
 
-    public ObservableCollection<Person> Persons { get; set; }
+    public IEnumerable<Person> Persons { get; set; }
 
 
     protected override void OnQueryChanged(string oldValue, string newValue)
@@ -26,12 +29,12 @@ public class PersonSearchHandler:SearchHandler
         base.OnQueryChanged(oldValue, newValue);
         if(Persons == null)
         {
-            Persons = ItemsSource as ObservableCollection<Person>;
+            Persons = ItemsSource as IEnumerable<Person>;
         }
 
         if (string.IsNullOrWhiteSpace(newValue))
         {
-            ItemsSource = null;
+            //ItemsSource = null;
         }
         else
         {

@@ -54,4 +54,9 @@ public partial class App : Application
     private void Window_Created(object sender, EventArgs e)
     {
     }
+
+    internal static void HandleAppActions(AppAction action)
+    {
+        throw new NotImplementedException();
+    }
 }

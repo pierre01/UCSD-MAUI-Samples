@@ -10,16 +10,18 @@
     <FlyoutItem Title="Search Page">
         <ShellContent
             Title="Search Page"
-            ContentTemplate="{DataTemplate views:SearchPage}"
+            ContentTemplate="{DataTemplate views:SearchWithHandlerPage}"
             Route="SearchPage" />
     </FlyoutItem>
-    <FlyoutItem Title="Pop-up Alerts">
+    
+    <FlyoutItem Title="Pop-up Alerts" Icon="popup_icon.png">
         <ShellContent
             Title="Toasts, Snackbar and Alerts"
             ContentTemplate="{DataTemplate views:PopUpsPage}"
             Route="PopUpsPage" />
     </FlyoutItem>
-    <FlyoutItem Title="Toasts, Snackbar and Alerts">
+    
+    <FlyoutItem Title="Toasts, Snackbar and Alerts" Icon="popup_icon.png">
         <ShellContent
             Title="Toasts, Snackbar and Alerts"
             ContentTemplate="{DataTemplate views:ToastAndSnackBarPage}"
