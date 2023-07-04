@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="MauiNavigation.Views.SearchWithHandlerPage"
+    x:Class="MauiNavigation.Views.SearchPageWithHandler"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:search="clr-namespace:MauiNavigation.Search"
     xmlns:viewModels="clr-namespace:MauiNavigation.ViewModels"
-    Title="SearchWithHandlerPage"
-    x:DataType="viewModels:SearchPageViewModel">
+    xmlns:models="clr-namespace:MauiNavigation.Models"
+    Title="Search With Handler"
+    x:DataType="viewModels:SearchPageWithHandlerViewModel">
     <Shell.SearchHandler>
-        <search:PersonSearchHandler
+        <search:PersonSearchHandler x:Name="personSearchHandler"
             ClearPlaceholderEnabled="True"
-            ClearPlaceholderCommand="{Binding ClearSearchCommand}"
-            ItemsSource="{Binding Team}"
-            
+            ItemsSource="{Binding Team}"      
+            PersonSelected="personSearchHandler_PersonSelected"
             DisplayMemberName="Name"
             Placeholder="Enter person name"
             ShowsResults="true" />
@@ -20,7 +20,7 @@
 
 
     <ContentPage.Resources>
-        <DataTemplate x:Key="TeamMemberTemplate" x:DataType="viewModels:Person">
+        <DataTemplate x:Key="TeamMemberTemplate" x:DataType="models:Person">
             <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="48" />
@@ -52,6 +52,8 @@
             Margin="4"
             ItemTemplate="{StaticResource TeamMemberTemplate}"
             ItemsSource="{Binding Team}"
+            SelectedItem="{Binding SelectedPerson, Mode=TwoWay}"
+            SelectionChanged="TeamCollectionView_SelectionChanged"
             SelectionMode="Single" />
     </Grid>
 </ContentPage>

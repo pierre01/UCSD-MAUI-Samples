@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Maui;
+using MauiNavigation.ViewModels;
 using MauiNavigation.Views;
 
 namespace MauiNavigation;
@@ -11,6 +12,8 @@ public static class MauiProgram
 		builder
 			.UseMauiApp<App>()
             .UseMauiCommunityToolkit()
+            .RegisterViews()
+            .RegisterViewModels()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -18,8 +21,8 @@ public static class MauiProgram
             }).ConfigureEssentials(essentials =>
             {
                 essentials
-                    .AddAppAction("popups_page", "popups Page", icon: "popup_icon")
-                    .AddAppAction("toast_page", "Toast and Snacks")
+                    .AddAppAction("PopUpsPage", "Popups Page", icon: "popup_icon")
+                    .AddAppAction("ToastAndSnackBarPage", "Toast and Snacks", icon: "popup_icon")
                     .OnAppAction(App.HandleAppActions);
             });
 
@@ -29,20 +32,29 @@ public static class MauiProgram
 
     public static void HandleAppActions(AppAction appAction)
     {
-        App.Current.Dispatcher.Dispatch(async () =>
-        {
-            var page = appAction.Id switch
-            {
-                "popups_page" => new PopUpsPage(),
-                "toast_page" => new ToastAndSnackBarPage(),
-                _ => default(Page)
-            };
+        App.Current.Dispatcher.Dispatch
+                                (
+                                    async () =>
+                                    {
+                                        await Shell.Current.GoToAsync($"//{appAction.Id}");
+                                    }
+                                );
+    }
 
-            if (page != null)
-            {
-                await Application.Current.MainPage.Navigation.PopToRootAsync();
-                await Application.Current.MainPage.Navigation.PushAsync(page);
-            }
-        });
+    public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
+    {
+        mauiAppBuilder.Services.AddTransient<SearchPageViewModel>();
+        mauiAppBuilder.Services.AddTransient<SearchPageWithHandlerViewModel>();
+        return mauiAppBuilder;
+    }
+
+    public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
+    {
+        mauiAppBuilder.Services.AddTransient<PopUpsPage>();
+        mauiAppBuilder.Services.AddTransient<SearchPage>();
+        mauiAppBuilder.Services.AddTransient<SearchPageWithHandler>();
+        mauiAppBuilder.Services.AddTransient<ToastAndSnackBarPage>();
+        mauiAppBuilder.Services.AddSingleton<SettingsPage>();
+        return mauiAppBuilder;
     }
 }

@@ -51,13 +51,21 @@
 	<ItemGroup>
 	  <None Remove="Resources\AppIcon\appicon.svg" />
 	  <None Remove="Resources\Images\boyicon.svg" />
+	  <None Remove="Resources\Images\liquid_spot.svg" />
 	  <None Remove="Resources\Images\popup_icon.svg" />
+	  <None Remove="Resources\Images\settings.svg" />
 	  <None Remove="Resources\Splash\splash.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="CommunityToolkit.Maui" Version="5.1.0" />
+	  <PackageReference Include="CommunityToolkit.Maui" Version="5.2.0" />
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Views\SearchPageWithHandler.xaml.cs">
+	    <DependentUpon>SearchPageWithHandler.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -67,7 +75,7 @@
 	  <MauiXaml Update="Views\SearchPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\SearchWithHandlerPage.xaml">
+	  <MauiXaml Update="Views\SearchPageWithHandler.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SettingsPage.xaml">

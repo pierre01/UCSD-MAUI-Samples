@@ -18,5 +18,5 @@ public partial class AppShell : Shell
 
     }
 
-	public ICommand NavigateToSettingsCommand { get; private set; }
+    public ICommand NavigateToSettingsCommand { get; private set; }
 }

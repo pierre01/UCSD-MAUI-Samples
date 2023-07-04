@@ -3,30 +3,43 @@
     x:Class="MauiNavigation.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:views="clr-namespace:MauiNavigation.Views"
-    FlyoutBehavior="{OnIdiom Phone=Flyout,
+    FlyoutBehavior="{OnIdiom Phone=Flyout, Tablet=Flyout,
                              Desktop=Flyout}">
 
-    <FlyoutItem Title="Search Page">
-        <ShellContent
-            Title="Search Page"
-            ContentTemplate="{DataTemplate views:SearchPage}"
-            Route="SearchPage" />
-    </FlyoutItem>
-    
-    <FlyoutItem Title="Pop-up Alerts" Icon="popup_icon.png">
-        <ShellContent
-            Title="Toasts, Snackbar and Alerts"
-            ContentTemplate="{DataTemplate views:PopUpsPage}"
-            Route="PopUpsPage" />
-    </FlyoutItem>
-    
-    <FlyoutItem Title="Toasts, Snackbar and Alerts" Icon="popup_icon.png">
-        <ShellContent
-            Title="Toasts, Snackbar and Alerts"
-            ContentTemplate="{DataTemplate views:ToastAndSnackBarPage}"
-            Route="ToastAndSnackBarPage" />
-    </FlyoutItem>
+    <ShellContent
+        Title="Search Page"
+        ContentTemplate="{DataTemplate views:SearchPage}"
+        Icon="search.png"
+        Route="SearchPage" />
 
-    <MenuItem Command="{Binding NavigateToSettingsCommand}" Text="Settings" />
+    <ShellContent
+        Title="Search Page using Handler"
+        ContentTemplate="{DataTemplate views:SearchPageWithHandler}"
+        Icon="search.png"
+        Route="SearchPageWithHandler" />
+
+    <ShellContent
+        Title="Toasts, Snackbar and Alerts"
+        ContentTemplate="{DataTemplate views:PopUpsPage}"
+        Icon="popup_icon.png"
+        Route="PopUpsPage" />
+
+    <ShellContent
+        Title="Toasts, Snackbar and Alerts"
+        ContentTemplate="{DataTemplate views:ToastAndSnackBarPage}"
+        Icon="popup_icon.png"
+        Route="ToastAndSnackBarPage" />
+
+    <ShellContent
+        Title="Settings"
+        ContentTemplate="{DataTemplate views:SettingsPage}"
+        Icon="settings.png"
+        Route="SettingsPage" />
+
+    <MenuItem
+        Command="{Binding NavigateToSettingsCommand}"
+        IconImageSource="liquid_spot.png"
+        Text="Dialog To Settings" />
 </Shell>

@@ -1,10 +1,16 @@
-﻿using MauiNavigation.ViewModels;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using MauiNavigation.Models;
+using MauiNavigation.ViewModels;
 using System.Collections.ObjectModel;
 
 namespace MauiNavigation.Search;
 
+
 public class PersonSearchHandler:SearchHandler
 {
+    // Create an event for the selected person
+    public event EventHandler<Person> PersonSelected;
+
     public PersonSearchHandler()
     {
         // IOS
@@ -50,16 +56,16 @@ public class PersonSearchHandler:SearchHandler
     protected override async void OnItemSelected(object item)
     {
         var selectedPerson = item as Person;
-        base.OnItemSelected(item);
-        await Task.Delay(1000); // for the code to work on IOS add delay
+        //await Task.Delay(1000); // for the code to work on IOS add delay
 
 
         if (selectedPerson == null)
             return;
+        PersonSelected?.Invoke(this, selectedPerson);
 
         // This works because route names are unique in this application.
         //await Shell.Current.GoToAsync($"persondetail?id={selectedPerson.Name}");
+        base.OnItemSelected(item);
         
     }
-
 }

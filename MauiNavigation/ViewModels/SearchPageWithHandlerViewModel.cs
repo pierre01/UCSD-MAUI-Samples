@@ -4,10 +4,11 @@ using MauiNavigation.Models;
 
 namespace MauiNavigation.ViewModels;
 
-public partial class SearchPageViewModel : ObservableObject
+[INotifyPropertyChanged]
+public partial class SearchPageWithHandlerViewModel
 {
 
-    public SearchPageViewModel()
+    public SearchPageWithHandlerViewModel()
     {
         _team = new()
         {
@@ -74,29 +75,20 @@ public partial class SearchPageViewModel : ObservableObject
             new Person("Tom")
         };
         _searchResults = _team;
+        
     }
 
-    [RelayCommand]
-    private void  PerformSearch(string query)
-    {
-        if (string.IsNullOrEmpty(query))
-        {
-            SearchResults = Team;
-            return;
-        }
-        SearchResults = Team.FindAll(m =>  m.Name.ToLower().StartsWith(query.ToLower()) );
-    }
-
-    [RelayCommand]
-    private void ClearSearch()
-    {
-        SearchResults = Team;
-    }
 
     [ObservableProperty]
     public List<Person> _team ;
 
     [ObservableProperty] 
     public List<Person> _searchResults;
+
+    [ObservableProperty]
+    public Person _selectedPerson;
+   
+    
+    
 
 }

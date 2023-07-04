@@ -10,13 +10,4 @@ public partial class SearchPage : ContentPage
 		InitializeComponent();
     }
 
-    private void OnTeamSelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-
-    }
-
-    private void OnSearchTextChanged(object sender, TextChangedEventArgs e)
-    {
-
-    }
 }

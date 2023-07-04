@@ -1,4 +1,4 @@
-﻿namespace MauiNavigation.ViewModels;
+﻿namespace MauiNavigation.Models;
 
 public class Person
 {
