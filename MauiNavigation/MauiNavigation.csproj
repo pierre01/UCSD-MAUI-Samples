@@ -50,6 +50,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\AppIcon\appicon.svg" />
+	  <None Remove="Resources\Images\backicon.svg" />
 	  <None Remove="Resources\Images\boyicon.svg" />
 	  <None Remove="Resources\Images\liquid_spot.svg" />
 	  <None Remove="Resources\Images\popup_icon.svg" />

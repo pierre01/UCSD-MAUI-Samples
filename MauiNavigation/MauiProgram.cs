@@ -45,6 +45,7 @@ public static class MauiProgram
     {
         mauiAppBuilder.Services.AddTransient<SearchPageViewModel>();
         mauiAppBuilder.Services.AddTransient<SearchPageWithHandlerViewModel>();
+        mauiAppBuilder.Services.AddSingleton<SettingsPageViewModel>();
         return mauiAppBuilder;
     }
 
