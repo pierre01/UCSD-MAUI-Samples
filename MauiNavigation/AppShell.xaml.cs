@@ -6,7 +6,9 @@ public partial class AppShell : Shell
 {
 	public AppShell()
 	{
-		InitializeComponent();
+        //AppActions.Current.SetAsync(new { } AppAction("SettingsPage", "Settings", icon: "settings_icon"));
+
+        InitializeComponent();
 
 
         NavigateToSettingsCommand = new Command( () =>
@@ -16,7 +18,10 @@ public partial class AppShell : Shell
 
         BindingContext = this;
 
+
     }
+
+
 
     public ICommand NavigateToSettingsCommand { get; private set; }
 }

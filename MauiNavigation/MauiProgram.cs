@@ -30,16 +30,7 @@ public static class MauiProgram
         return builder.Build();
 	}
 
-    public static void HandleAppActions(AppAction appAction)
-    {
-        App.Current.Dispatcher.Dispatch
-                                (
-                                    async () =>
-                                    {
-                                        await Shell.Current.GoToAsync($"//{appAction.Id}");
-                                    }
-                                );
-    }
+
 
     public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
     {

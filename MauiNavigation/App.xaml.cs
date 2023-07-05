@@ -1,4 +1,6 @@
-﻿namespace MauiNavigation;
+﻿using Microsoft.Maui.ApplicationModel;
+
+namespace MauiNavigation;
 
 public partial class App : Application
 {
@@ -6,10 +8,10 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
-
+        MainPage = new AppShell();
 
     }
+
 
     protected override Window CreateWindow(IActivationState activationState)
     {
@@ -58,8 +60,12 @@ public partial class App : Application
     {
     }
 
-    internal static void HandleAppActions(AppAction action)
+    public static async void HandleAppActions(AppAction action)
     {
-        throw new NotImplementedException();
+        App.Current.Dispatcher.Dispatch(async () =>
+        {
+            await Shell.Current.GoToAsync($"///{action.Id}", true);
+        });
+        
     }
 }
