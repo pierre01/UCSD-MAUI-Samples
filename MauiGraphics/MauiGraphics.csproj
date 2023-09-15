@@ -51,9 +51,10 @@
 
 
 	<ItemGroup>
-	  <PackageReference Include="CommunityToolkit.Maui" Version="5.2.0" />
-	  <PackageReference Include="CommunityToolkit.Maui.Core" Version="5.2.0" />
-	  <PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.3" />
+	  <PackageReference Include="CommunityToolkit.Maui" Version="5.3.0" />
+	  <PackageReference Include="CommunityToolkit.Maui.Core" Version="5.3.0" />
+	  <PackageReference Include="Microcharts.Maui" Version="1.0.0" />
+	  <PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.5" />
 	  <PackageReference Include="ZXing.Net.Maui" Version="0.3.0-preview.1" />
 	  <PackageReference Include="ZXing.Net.Maui.Controls" Version="0.3.0-preview.1" />
 	</ItemGroup>

@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Maui;
+using Microcharts.Maui;
 using SkiaSharp.Views.Maui.Controls.Hosting;
 using ZXing.Net.Maui.Controls;
 
@@ -14,6 +15,7 @@ public static class MauiProgram
             .UseMauiCommunityToolkit()
             .UseBarcodeReader()
             .UseSkiaSharp()
+            .UseMicrocharts()
 
             .ConfigureFonts(fonts =>
             {
