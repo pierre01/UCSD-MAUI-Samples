@@ -7,12 +7,6 @@
     xmlns:views="clr-namespace:MauiAnimations.Views"
     Shell.FlyoutBehavior="Flyout">
 
-    <ShellContent
-        Title="Basic Animations"
-        ContentTemplate="{DataTemplate views:BasicAnimationsView}"
-        Route="BasicAnimationsView" />
-    <ShellContent
-        Title="Custom Animation"
-        ContentTemplate="{DataTemplate views:CustomAnimationView}"
-        Route="CustomAnimationView" />
+    <ShellContent Title="Basic Animations" ContentTemplate="{DataTemplate views:BasicAnimationsView}" Route="BasicAnimationsView" />
+    <ShellContent Title="Custom Animation" ContentTemplate="{DataTemplate views:CustomAnimationView}" Route="CustomAnimationView" />
 </Shell>
