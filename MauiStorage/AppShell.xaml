@@ -10,5 +10,8 @@
         Title="Preferences"
         ContentTemplate="{DataTemplate views:PreferencesPage}"
         Route="PreferencesPage" />
-    
+	<ShellContent
+        Title="File Picker"
+        ContentTemplate="{DataTemplate views:FilePickerPage}"
+        Route="FilePickerPage" />
 </Shell>

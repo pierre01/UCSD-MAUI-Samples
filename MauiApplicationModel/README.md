@@ -1,4 +1,4 @@
-﻿# Appication Model
+﻿# Application Model
 
 - Application Model
   > **Demo of the main MAUI App Model including:**

@@ -4,8 +4,9 @@
              x:Class="MauiStorage.Views.FilePickerPage"
              Title="FilePickerPage">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
+        <Image x:Name="ImageToDisplay" 
+			   MinimumHeightRequest="600"
+			   MinimumWidthRequest="400"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <Button 

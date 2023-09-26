@@ -9,7 +9,7 @@ public partial class PreferencesPage : ContentPage
     const string prefKeyPetName = "pet_name";
 
     /// <summary>
-    /// Prefereces deal with simple values :
+    /// Preferences deal with simple values :
     ///     Boolean
     ///     Double
     ///     Int32
