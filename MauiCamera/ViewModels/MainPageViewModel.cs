@@ -1,25 +1,19 @@
 ﻿using CommunityToolkit.Maui.Storage;
 using CommunityToolkit.Mvvm.ComponentModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace MauiCamera.ViewModels;
 
-public partial class MainPageViewModel:ObservableObject
+public partial class MainPageViewModel : ObservableObject
 {
     private IFileSaver _fileSaver;
     private IPreferences _preferences;
     private readonly string FolderPathKey = SettingsPageViewModel.FolderPathKey;
 
-    public MainPageViewModel(IFileSaver fileSaver,IPreferences preferences)
+    public MainPageViewModel(IFileSaver fileSaver, IPreferences preferences)
     {
         _fileSaver = fileSaver;
         _preferences = preferences;
-       
+
     }
 
 
