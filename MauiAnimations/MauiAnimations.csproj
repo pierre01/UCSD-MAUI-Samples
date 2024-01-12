@@ -57,7 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="CommunityToolkit.Maui.Core" Version="7.0.0" />
+	  <PackageReference Include="CommunityToolkit.Maui.Core" Version="7.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>

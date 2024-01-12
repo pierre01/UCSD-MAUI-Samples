@@ -1,43 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using MauiDataBinding.Views;
+using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace MauiDataBinding.ViewModels;
 
-partial class PersonViewModel:ObservableValidator
+partial class PersonViewModel : ObservableValidator
 {
     [ObservableProperty]
     [Required]
     [MaxLength(30)]
-    private string   _lastName;
+    private string _lastName;
 
     [ObservableProperty]
     [Required(ErrorMessage = "First Name Required")]
     [MinLength(2, ErrorMessage = "First Name should be 2 char min")]
-    private string   _firstName;
+    private string _firstName;
 
     [ObservableProperty]
-    private DateTime  _dateOfBirth;
+    private DateTime _dateOfBirth;
 
     [ObservableProperty]
-    private string    _gender;
-    [ObservableProperty]
-    private int       _age;
-    
+    private string _gender;
+
+    /// <summary>
+    /// Age in years
+    /// </summary>
+    public int Age
+    {
+        get
+        {
+            // return the years since date of birth
+            return (int)((DateTime.Now - DateOfBirth).TotalDays / 365.25);
+        }
+    }
+
+
     [ObservableProperty]
     private string _favoriteKid;
 
     public ObservableCollection<string> Children { get; set; } = new ObservableCollection<string>();
 
-    [ObservableProperty] 
+    [ObservableProperty]
     private bool _isAgeVisible;
 
     [ObservableProperty]
@@ -48,8 +53,8 @@ partial class PersonViewModel:ObservableValidator
     public PersonViewModel(Person p)
     {
         LastName = p.LastName;
-        FirstName= p.FirstName;
-        DateOfBirth=p.DateOfBirth;
+        FirstName = p.FirstName;
+        DateOfBirth = p.DateOfBirth;
         if (p.Age > 30)
         {
             IsAgeVisible = false;
@@ -58,8 +63,8 @@ partial class PersonViewModel:ObservableValidator
         {
             IsAgeVisible = true;
         }
-        Gender=p.Gender;
-        Age=p.Age;
+        Gender = p.Gender;
+        Age = p.Age;
         _person = p;
         Children.Add("Joe");
         Children.Add("Jane");
@@ -84,10 +89,10 @@ partial class PersonViewModel:ObservableValidator
     public void CancelChanges()
     {
         LastName = _person.LastName;
-        FirstName= _person.FirstName;
-        DateOfBirth=_person.DateOfBirth;
-        Gender=_person.Gender;
-        Age=_person.Age;
+        FirstName = _person.FirstName;
+        DateOfBirth = _person.DateOfBirth;
+        Gender = _person.Gender;
+        Age = _person.Age;
     }
 
     [RelayCommand]
@@ -104,10 +109,10 @@ partial class PersonViewModel:ObservableValidator
         }
 
         _person.LastName = LastName;
-        _person.FirstName= FirstName;
-        _person.DateOfBirth=DateOfBirth;
-        _person.Gender=Gender;
-        _person.Age=Age;
+        _person.FirstName = FirstName;
+        _person.DateOfBirth = DateOfBirth;
+        _person.Gender = Gender;
+        _person.Age = Age;
         // Send updated Person to the server
     }
 

@@ -10,7 +10,7 @@
         
         <!--Display Action Sheet-->
         <Button Text="Simple Action Sheet" Clicked="OnDisplayActionSheet" Margin="24"/>
-        <Button Text="More Action Sheet" Clicked="OnDisplayActionSheet2" Margin="24"/>
+        <Button Text="More Action Sheet" Clicked="OnDisplayActionSheet2" Margin="24" />
         
         <!--Display Prompt-->        
         <Button Text="Display Prompt" Clicked="OnDisplayPrompt" Margin="24"/>

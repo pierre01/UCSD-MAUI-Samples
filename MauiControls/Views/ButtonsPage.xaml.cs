@@ -2,10 +2,10 @@ namespace MauiControls.Views;
 
 public partial class ButtonsPage : ContentPage
 {
-	public ButtonsPage()
-	{
-		InitializeComponent();
-	}
+    public ButtonsPage()
+    {
+        InitializeComponent();
+    }
 
 
     private void RadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
@@ -23,14 +23,10 @@ public partial class ButtonsPage : ContentPage
 
     }
 
-    private void ImageButton_Clicked(object sender, EventArgs e)
-    {
-
-    }
 
     private void OnButtonClicked(object sender, EventArgs e)
     {
-        
+        ClickResultLabel.Text = "Clicked!";
     }
 
     private void OnPalmTreeButtonClicked(object sender, EventArgs e)

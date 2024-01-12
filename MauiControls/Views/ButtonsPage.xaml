@@ -11,7 +11,7 @@
                 VerticalOptions="Center"
                 WidthRequest="120" />
             <Button Clicked="OnButtonClicked" Text="Click me" />
-            <Label x:Name="ClickResultLabel" Text="" />
+            <Label x:Name="ClickResultLabel" VerticalOptions="Center" Text=""  Margin="8"/>
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
             <Label
@@ -24,7 +24,7 @@
                 IsEnabled="True"
                 Source="imagebutton.png"
                 WidthRequest="40" />
-            <Label x:Name="ClickResultPalmTree" Text="" />
+            <Label x:Name="ClickResultPalmTree" VerticalOptions="Center" Text="" />
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
             <Label
