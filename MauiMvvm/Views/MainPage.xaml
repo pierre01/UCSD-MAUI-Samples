@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiMvvm.Views.MainPage">
-			 
+             xmlns:vm="clr-namespace:MauiMvvm.ViewModels"
+             x:Class="MauiMvvm.Views.MainPage"
+             x:DataType="vm:MainPageViewModel" >
     <ScrollView>
         <VerticalStackLayout 
             Spacing="25" 
@@ -16,9 +17,15 @@
                 HorizontalOptions="Center" />
                 
             <Label 
-                Text="Hello, World!"
+                Text="{Binding MyName, StringFormat='Hello {0}!'}"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
+                HorizontalOptions="Center" />
+            
+            <Label 
+                Margin="24"
+                Text="{Binding Count}"
+                FontSize="32" FontAttributes="Bold"
                 HorizontalOptions="Center" />
             
             <Label 
@@ -30,9 +37,9 @@
 
             <Button 
                 x:Name="CounterBtn"
-                Text="Click me"
+                Text="{Binding ButtonText}"
                 SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+                Command="{Binding IncrementCommand}"
                 HorizontalOptions="Center" />
 
         </VerticalStackLayout>

@@ -1,26 +1,13 @@
-﻿using System.ComponentModel;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 
 namespace MauiMvvm.ViewModels;
 
-public class MainPageViewModel : INotifyPropertyChanged
+public class MainPageViewModelSimple
 {
-    private int _count;
-
-    public event PropertyChangedEventHandler PropertyChanged;
 
     public string MyName { get; set; }
 
-    public int Count
-    {
-        get => _count;
-        set
-        {
-            _count = value;
-            OnPropertyChanged(nameof(Count));
-            OnPropertyChanged(nameof(ButtonText));
-        }
-    }
+    public int Count { get; set; }
 
     public string ButtonText
     {
@@ -41,7 +28,7 @@ public class MainPageViewModel : INotifyPropertyChanged
         }
     }
 
-    public MainPageViewModel(string myName)
+    public MainPageViewModelSimple(string myName)
     {
         IncrementCommand = new Command(() =>
         {
@@ -51,12 +38,9 @@ public class MainPageViewModel : INotifyPropertyChanged
 
     }
 
-    private void OnPropertyChanged(string v)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(v));
-    }
 
     public ICommand IncrementCommand { get; set; }
 
 }
+
 
