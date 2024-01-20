@@ -64,7 +64,6 @@ partial class PersonViewModel : ObservableValidator
             IsAgeVisible = true;
         }
         Gender = p.Gender;
-        Age = p.Age;
         _person = p;
         Children.Add("Joe");
         Children.Add("Jane");
@@ -92,7 +91,6 @@ partial class PersonViewModel : ObservableValidator
         FirstName = _person.FirstName;
         DateOfBirth = _person.DateOfBirth;
         Gender = _person.Gender;
-        Age = _person.Age;
     }
 
     [RelayCommand]
@@ -112,7 +110,6 @@ partial class PersonViewModel : ObservableValidator
         _person.FirstName = FirstName;
         _person.DateOfBirth = DateOfBirth;
         _person.Gender = Gender;
-        _person.Age = Age;
         // Send updated Person to the server
     }
 

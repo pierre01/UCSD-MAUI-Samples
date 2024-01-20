@@ -7,13 +7,13 @@
     <VerticalStackLayout>
         
         
-        <StackLayout Padding="10,0">
+        <StackLayout Padding="30,0">
             <Label
                 BindingContext="{x:Reference Name=slider1}"
                 FontSize="80"
                 HorizontalOptions="Center"
                 Rotation="{Binding Path=Value}"
-                Text="{Binding Path=Value}"
+                Text="{Binding Path=Value, StringFormat='{0:F2}'}"
                 VerticalOptions="Center" />
 
             <Slider
@@ -24,7 +24,7 @@
         
         
         
-        <StackLayout Padding="10,0">
+        <StackLayout Padding="30,0">
             <Label
                 x:Name="label2"
                 FontSize="80"
@@ -36,6 +36,7 @@
                 x:Name="slider2"
                 Maximum="360"
                 VerticalOptions="Center" />
+            <!--The Binding is done in code behind-->
         </StackLayout>
         
         

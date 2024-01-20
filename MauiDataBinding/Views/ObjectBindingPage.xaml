@@ -7,56 +7,58 @@
     xmlns:viewModels="clr-namespace:MauiDataBinding.ViewModels"
     Title="ObjectBindingPage"
     x:DataType="viewModels:PersonViewModel">
-    <!-- x:Datatype tells about the BindingContext type, so the designer can help with autocomplete -->
+    <!--  x:Datatype tells about the BindingContext type, so the designer can help with autocomplete  -->
     <VerticalStackLayout>
-        <Label
-            FontSize="Large"
-            HorizontalOptions="Center"
-            Text="Name" />
-        <HorizontalStackLayout  HorizontalOptions="Center">
-            <Entry  Text="{Binding FirstName}"  Margin="0,0,8,0" WidthRequest="100" FontSize="Medium"/>
-            <Entry  Text="{Binding LastName}"  FontSize="Medium" WidthRequest="100" />
-            <VerticalStackLayout>
-            <Button Text="Change" Command="{Binding ModifyPersonCommand}" />
-            <Button Text="Cancel" Command="{Binding CancelChangesCommand}" />
-            <Button Text="Save"  Command="{Binding SaveChangesCommand}" />
-            </VerticalStackLayout>
+        <Label FontSize="Large"  Text="Name" Margin="10,16,0,0" />
+        <HorizontalStackLayout Margin="30,0,0,0" >
+            <Entry
+                Margin="0,0,8,0" FontSize="Medium"
+                Text="{Binding FirstName}"
+                WidthRequest="100" />
+            <Entry FontSize="Medium" Text="{Binding LastName}" WidthRequest="100" />
+
         </HorizontalStackLayout>
+        
+        <VerticalStackLayout  IsVisible="{Binding IsAgeVisible}">
 
-        <Label IsVisible="{Binding IsAgeVisible}"
-               FontSize="Large"
-               HorizontalOptions="Center"
-               Text="Age" />
+        <Label
+            FontSize="Large"  Margin="10,16,0,0"
+            IsVisible="{Binding IsAgeVisible}"
+            Text="Age" />
 
-        <HorizontalStackLayout HorizontalOptions="Center" IsVisible="{Binding IsAgeVisible}">
             <Label
-                Margin="0,0,8,0"
+                Margin="30,0,0,0"
                 FontSize="Medium"
-                Text="{Binding DateOfBirth, StringFormat='Born: {0:D}'}" />
-            <Label
-                FontSize="Medium"
-                Text="{Binding Age}"
-                VerticalOptions="Center" FontAttributes="Bold" Margin="0,0,8,0"/>
-            <Label FontSize="Medium"  >Years Old</Label>
-        </HorizontalStackLayout>
+                Text="{Binding Age, StringFormat='{0:D} Years old'}" />
+            <Label Margin="30,0,0,0" FontSize="Medium" Text="{Binding DateOfBirth, StringFormat='Born: {0:d}'}"  />          
+        </VerticalStackLayout>
 
-        <Label
-            FontSize="Large"
-            HorizontalOptions="Center"
-            Text="Gender" />
-        <HorizontalStackLayout HorizontalOptions="Center">
-            <Label FontSize="Medium" Text="{Binding Gender}" />
+        <Label FontSize="Large" Text="Gender" Margin="10,16,0,0"/>
+            <Label FontSize="Medium" Text="{Binding Gender}" Margin="30,0,0,0" />
+        <Label FontSize="Large"  Text="Kids" Margin="10,16,0,0" />
+        <CollectionView Margin="30,0,0,0"
+            ItemsSource="{Binding Children}"
+            SelectedItem="{Binding FavoriteKid}"
+            SelectionChangedCommand="{Binding FavoriteChildrenChangedCommand}"
+            SelectionMode="Single" />
+        <HorizontalStackLayout HorizontalOptions="End" Margin="0,16,0,0">
+            <Button
+                Margin="8"
+                Command="{Binding CancelChangesCommand}"
+                Text="Cancel" WidthRequest="80" />
+            <Button
+                Margin="8"
+                Command="{Binding SaveChangesCommand}"
+                Text="Save" WidthRequest="80" />
+            <Button
+                Margin="8"
+                Command="{Binding ModifyPersonCommand}"
+                Text="Change" WidthRequest="80" />
         </HorizontalStackLayout>
         <Label
-            FontSize="Large"
-            HorizontalOptions="Center"
-            Text="Kids" />
-        <CollectionView ItemsSource="{Binding Children}" SelectionMode="Single" SelectedItem="{Binding FavoriteKid}" SelectionChangedCommand="{Binding FavoriteChildrenChangedCommand}" ></CollectionView>
-
-        <Label TextColor="Red"
-               FontSize="Medium"
-               HorizontalOptions="Center"
-               Text="{Binding Errors}" />
+            FontSize="Medium" HorizontalOptions="Center"
+            Text="{Binding Errors}"
+            TextColor="Red" />
 
     </VerticalStackLayout>
 </ContentPage>
