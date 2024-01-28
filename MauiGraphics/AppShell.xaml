@@ -28,7 +28,12 @@
         Icon="appiconfg.png"
         ContentTemplate="{DataTemplate local:SkiaClockPage}"
         Route="SkiaClockPage" />
-
+    
+    <ShellContent
+        Title="Shapes Resources"
+        Icon="appiconfg.png"
+        ContentTemplate="{DataTemplate local:ShapesPage}"
+        Route="ShapesPage" />
 
     <ShellContent
         Title="Barcode Making"

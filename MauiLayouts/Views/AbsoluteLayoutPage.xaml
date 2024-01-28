@@ -8,9 +8,9 @@
         <AbsoluteLayout >
             <BoxView Color="Silver"
                  AbsoluteLayout.LayoutBounds="0, 10, 390, 5" />
-            <BoxView Color="Silver"
+            <BoxView Color="Red"
                  AbsoluteLayout.LayoutBounds="0, 20, 200, 5" />
-            <BoxView Color="Silver"
+            <BoxView Color="Blue"
                  AbsoluteLayout.LayoutBounds="10, 0, 5, 65" />
             <BoxView Color="Silver"
                  AbsoluteLayout.LayoutBounds="20, 0, 5, 65" />

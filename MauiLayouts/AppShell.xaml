@@ -8,30 +8,22 @@
     <Shell.ItemTemplate>
         <DataTemplate>
             <Grid
-                x:Name="FlyoutItemLayout"
-                ColumnSpacing="0"
-                HeightRequest="40"
-                RowSpacing="0"
+                x:Name="FlyoutItemLayout" ColumnSpacing="0"
+                HeightRequest="40" RowSpacing="0"
                 VerticalOptions="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="40" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Image
-                    x:Name="FlyoutItemImage"
-                    Margin="8"
-                    HeightRequest="32"
-                    HorizontalOptions="Fill"
+                    x:Name="FlyoutItemImage" Margin="8"
+                    HeightRequest="32" HorizontalOptions="Fill"
                     Source="{Binding FlyoutIcon}"
-                    VerticalOptions="Fill"
-                    WidthRequest="32" />
+                    VerticalOptions="Fill" WidthRequest="32" />
                 <Label
-                    x:Name="FlyoutItemLabel"
-                    Grid.Column="1"
-                    Margin="8"
-                    FontAttributes="Bold"
-                    FontSize="Medium"
-                    HorizontalOptions="Start"
+                    x:Name="FlyoutItemLabel" Grid.Column="1"
+                    Margin="8" FontAttributes="Bold"
+                    FontSize="Medium" HorizontalOptions="Start"
                     HorizontalTextAlignment="Start"
                     Text="{Binding Title}"
                     VerticalOptions="Center" />
@@ -41,31 +33,13 @@
     <ShellContent
         Title="Grid"
         ContentTemplate="{DataTemplate views:GridPage}"
-        Route="GridPage"
-        Icon="appiconfg.png" />
-    <ShellContent
-        Title="Stack Layout1"
-        ContentTemplate="{DataTemplate views:StackLayoutPage}"
-        Icon="appiconfg.png" />
-    <ShellContent
-        Title="Stack Layout 2"
-        ContentTemplate="{DataTemplate views:StackLayout2Page}"
-        Icon="appiconfg.png" />
-    <ShellContent
-        Title="Absolute Layout"
-        ContentTemplate="{DataTemplate views:AbsoluteLayoutPage}"
-        Icon="appiconfg.png" />
-    <ShellContent
-        Title="Absolute Layout2 "
-        ContentTemplate="{DataTemplate views:AbsoluteLayout2Page}"
-        Icon="appiconfg.png" />
-    <ShellContent
-        Title="Flex Layout"
-        ContentTemplate="{DataTemplate views:FlexLayoutPage}"
-        Icon="appiconfg.png" />
-    <ShellContent
-        Title="Flex Layout2"
-        ContentTemplate="{DataTemplate views:FlexLayout2Page}"
-        Icon="appiconfg.png" />
+        Icon="appiconfg.png" Route="GridPage" />
+    <ShellContent Title="Stack Layout1" ContentTemplate="{DataTemplate views:StackLayoutPage}" Icon="appiconfg.png" />
+    <ShellContent Title="Stack Layout 2" ContentTemplate="{DataTemplate views:StackLayout2Page}" Icon="appiconfg.png" />
+    <ShellContent Title="Absolute Layout" ContentTemplate="{DataTemplate views:AbsoluteLayoutPage}" Icon="appiconfg.png" />
+    <ShellContent Title="Absolute Layout2 " ContentTemplate="{DataTemplate views:AbsoluteLayout2Page}" Icon="appiconfg.png" />
+    <ShellContent Title="Flex Layout" ContentTemplate="{DataTemplate views:FlexLayoutPage}" Icon="appiconfg.png" />
+    <ShellContent Title="Flex Layout2" ContentTemplate="{DataTemplate views:FlexLayout2Page}" Icon="appiconfg.png" />
+    <ShellContent Title="Table Page" ContentTemplate="{DataTemplate views:TablePage}" Icon="appiconfg.png" />
 
 </Shell>

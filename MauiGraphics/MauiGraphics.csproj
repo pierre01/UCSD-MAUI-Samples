@@ -52,18 +52,24 @@
 
 
 	<ItemGroup>
-	  <PackageReference Include="CommunityToolkit.Maui" Version="7.0.0" />
-	  <PackageReference Include="CommunityToolkit.Maui.Core" Version="7.0.0" />
-	  <PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.6" />
+	  <PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
+	  <PackageReference Include="CommunityToolkit.Maui.Core" Version="7.0.1" />
+	  <PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.7" />
 	  <PackageReference Include="ZXing.Net.Maui" Version="0.4.0" />
 	  <PackageReference Include="ZXing.Net.Maui.Controls" Version="0.4.0" />
 	</ItemGroup>
 
 		<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.6" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.6" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
+
+		<ItemGroup>
+		  <MauiXaml Update="Views\ShapesPage.xaml">
+		    <Generator>MSBuild:Compile</Generator>
+		  </MauiXaml>
+		</ItemGroup>
 
 	<!-- Build Properties must be defined within these property groups to ensure successful publishing
        to the Mac App Store. See: https://aka.ms/maui-publish-app-store#define-build-properties-in-your-project-file -->
