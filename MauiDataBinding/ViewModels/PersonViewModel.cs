@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using MauiDataBinding.Views;
+using MauiDataBinding.Models;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -55,7 +55,7 @@ partial class PersonViewModel : ObservableValidator
         LastName = p.LastName;
         FirstName = p.FirstName;
         DateOfBirth = p.DateOfBirth;
-        if (p.Age > 30)
+        if (Age > 30)
         {
             IsAgeVisible = false;
         }
