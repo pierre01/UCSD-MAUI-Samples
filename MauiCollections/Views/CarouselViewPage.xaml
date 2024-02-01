@@ -29,11 +29,11 @@
                                     VerticalOptions="Center" />
                                 <Image
                                     Aspect="AspectFill"
-                                    HeightRequest="250"
+                                    HeightRequest="220"
                                     HorizontalOptions="Center"
                                     Source="{Binding CarouselPhoto}"
-                                    WidthRequest="250" />
-                                <Label HorizontalOptions="Center" Text="{Binding Location}" />
+                                    WidthRequest="220" />
+                                <Label  HorizontalOptions="Center" Text="{Binding Location}" />
 
                             </StackLayout>
                         </Frame>

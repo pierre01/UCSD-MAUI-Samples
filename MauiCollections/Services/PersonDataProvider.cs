@@ -1,19 +1,12 @@
 ﻿
 using MauiCollections.Models;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MauiCollections.Views;
 
 namespace MauiCollections.Services
 {
     public interface IPersonDataProvider
     {
         List<Person> GetEveryone();
-        List<Person> SearchFor(string searchString );
+        List<Person> SearchFor(string searchString);
         void DeletePerson(int Id);
         int AddPerson(Person person);
     }
@@ -40,27 +33,27 @@ namespace MauiCollections.Services
                 var day = rnd.Next(1, 28);
                 var month = rnd.Next(1, 12);
                 var imageName = $"image{i:D3}.jpg";
-                Person p = new Person(i,new DateTime(year,month,day), _firstNames[i - 1], _lastNames[i - 1],"N/A", imageName );
+                Person p = new Person(i, new DateTime(year, month, day), _firstNames[i - 1], _lastNames[i - 1], "N/A", imageName);
                 _people.Add(p);
-            }             
+            }
         }
 
         public List<Person> GetEveryone()
         {
-           return _people;
+            return _people;
         }
 
-        public List<Person> SearchFor(string searchString )
+        public List<Person> SearchFor(string searchString)
         {
-            if(String.IsNullOrEmpty(searchString))
+            if (String.IsNullOrEmpty(searchString))
                 return _people;
             searchString = searchString.ToLower();
-            return new List<Person>(_people.Where(p => p.FirstName.ToLower().Contains(searchString)||p.LastName.ToLower().Contains(searchString)));
+            return new List<Person>(_people.Where(p => p.FirstName.ToLower().Contains(searchString) || p.LastName.ToLower().Contains(searchString)));
         }
 
         public void DeletePerson(int Id)
         {
-           _people.Remove(_people.First( p => p.Id == Id));
+            _people.Remove(_people.First(p => p.Id == Id));
         }
 
         public int AddPerson(Person person)
