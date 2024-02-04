@@ -7,11 +7,6 @@ using MauiCollections.Models;
 
 namespace MauiCollections.Services;
 
-public interface IHomeDataProvider
-{
-    List<Home> GetCarouselHomes();
-}
-
 public class HomeDataProvider:IHomeDataProvider
 {
     List<Home> _homes = new List<Home>();
