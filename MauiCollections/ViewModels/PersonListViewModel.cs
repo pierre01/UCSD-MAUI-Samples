@@ -82,5 +82,13 @@ public partial class PersonListViewModel : ObservableObject, IQueryAttributable
             newPerson.Id = _dataprovider.AddPerson(newPerson);
             _persons.Add(newPerson);
         }
+        else
+        {
+            // Get the position od the person in the list
+            var index = _persons.IndexOf(newPerson);
+            // This will force the UI to update
+            _persons.Remove(newPerson);
+            _persons.Insert(index, newPerson);
+        }
     }
 }
