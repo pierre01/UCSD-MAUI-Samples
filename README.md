@@ -38,6 +38,10 @@ Projects are used throughout the class in this order
 	- ListView
 	- Picker
 	- TableView
+	- Templates
+	- Dependency Injection
+	- Services
+	- Navigation Parameters
 - MauiMvvm
   > **Model,View,ViewModel Pattern in details.**
 	- MVVM Basics
