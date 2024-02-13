@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MauiGraphics.Views;
+﻿namespace MauiGraphics.Views;
 
 internal class ClockFace : IDrawable
 {
@@ -25,6 +18,7 @@ internal class ClockFace : IDrawable
         // Hour and minute marks
         for (int angle = 0; angle < 360; angle += 6)
         {
+            // Draw a big mark every 30 degrees and a small mark every 6 degrees
             canvas.FillCircle(0, -90, angle % 30 == 0 ? 4 : 2);
             canvas.Rotate(6);
         }
@@ -50,7 +44,7 @@ internal class ClockFace : IDrawable
         // Second hand
         canvas.StrokeSize = 2;
         canvas.SaveState();
-        var newPos = (float)now.Second + now.Millisecond/1000f ;
+        var newPos = (float)now.Second + now.Millisecond / 1000f;
         canvas.StrokeColor = Colors.RosyBrown;
         canvas.Rotate(6 * newPos);
         canvas.DrawLine(0, 10, 0, -80);
