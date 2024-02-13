@@ -1,21 +1,19 @@
-using Microsoft.Maui.Controls.Shapes;
-
 namespace MauiAnimations.Views;
 
 public partial class BasicAnimationsView : ContentPage
 {
-	public BasicAnimationsView()
-	{
-		InitializeComponent();
-        PowLabel.Opacity=0;    
-        ReloadButton.TranslateTo(300,0,100,Easing.CubicOut);
-	}
+    public BasicAnimationsView()
+    {
+        InitializeComponent();
+        PowLabel.Opacity = 0;
+        ReloadButton.TranslateTo(300, 0, 100, Easing.CubicOut);
+    }
 
     private int _shotTriggered = 0;
     private async void OnShoot(object sender, EventArgs e)
     {
         ShootButton.IsEnabled = false;
-        PowLabel.Opacity=1;
+        PowLabel.Opacity = 1;
         if (_shotTriggered >= 8)
         {
             // We emptied the barrel 
@@ -29,18 +27,17 @@ public partial class BasicAnimationsView : ContentPage
         }
         await Task.WhenAll
         (
-             
+
             //TextToSpeech.Default.SpeakAsync(timeLeft),
             PowLabel.FadeTo(0, 400, Easing.CubicIn),
             PowLabel.ScaleTo(5, 400, Easing.CubicOut),
-
-            BarrelGrid.RelRotateTo(45,600)
+            BarrelGrid.RelRotateTo(45, 600)
         );
         _shotTriggered++;
         if (_shotTriggered == 8)
         {
             // Animate Reload button
-            ReloadButton.TranslateTo(0,0,500,Easing.CubicIn);
+            ReloadButton.TranslateTo(0, 0, 500, Easing.CubicIn);
 
             ReloadButton.IsEnabled = true;
         }
@@ -63,7 +60,7 @@ public partial class BasicAnimationsView : ContentPage
             // Reactivate cartridges
             cartridge.FadeTo(1, 100, Easing.CubicIn);
         }
-        ReloadButton.TranslateTo(300,0,800,Easing.CubicOut);
+        ReloadButton.TranslateTo(300, 0, 800, Easing.CubicOut);
         PowLabel.Text = "Bang!";
         _shotTriggered = 0;
         ShootButton.IsEnabled = true;
