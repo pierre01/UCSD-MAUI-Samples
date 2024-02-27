@@ -9,8 +9,6 @@
 		<integer>1</integer>
 		<integer>2</integer>
 	</array>
-	<key>NSContactsUsageDescription</key>
-	<string>This app needs access to contacts to pick a contact and get info.</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>arm64</string>
@@ -30,9 +28,5 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/appicon.appiconset</string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>mailto</string>
-	</array>
 </dict>
 </plist>

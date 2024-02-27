@@ -3,7 +3,8 @@
     x:Class="MAUICommunications.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:views="clr-namespace:MAUICommunications.Views"
+    xmlns:local="clr-namespace:MAUICommunications"
+       xmlns:views="clr-namespace:MAUICommunications.Views"
     Shell.FlyoutBehavior="Flyout">
 
     <ShellContent

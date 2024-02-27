@@ -3,10 +3,10 @@ namespace MAUICommunications.Views;
 
 public partial class ContactsPage : ContentPage
 {
-	public ContactsPage()
-	{
-		InitializeComponent();
-	}
+    public ContactsPage()
+    {
+        InitializeComponent();
+    }
     private async void SelectContactButton_Clicked(object sender, EventArgs e)
     {
         try
@@ -15,7 +15,7 @@ public partial class ContactsPage : ContentPage
 
             PermissionStatus status = await Permissions.RequestAsync<Permissions.ContactsRead>();
             //Fully Qualified Name is required because of IOS name conflict
-            var contact = await Microsoft.Maui.ApplicationModel.Communication.Contacts.PickContactAsync();
+            var contact = await Contacts.PickContactAsync();
 
             if (contact == null)
                 return;
@@ -38,14 +38,14 @@ public partial class ContactsPage : ContentPage
 
     public async IAsyncEnumerable<string> GetContactNames()
     {
-       // //Fully Qualified Name is required because of IOS name conflict
-       //var allContacts = await Contacts.Default.GetAllAsync();
+        // //Fully Qualified Name is required because of IOS name conflict
+        //var allContacts = await Contacts.Default.GetAllAsync();
 
-       // // No contacts
-       // if (allContacts == null)
-            yield break;
+        // // No contacts
+        // if (allContacts == null)
+        yield break;
 
-       // foreach (var contact in allContacts)
-       //     yield return contact.DisplayName;
+        // foreach (var contact in allContacts)
+        //     yield return contact.DisplayName;
     }
 }

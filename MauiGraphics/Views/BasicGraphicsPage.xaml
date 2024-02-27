@@ -12,32 +12,35 @@
 
 
 
-<VerticalStackLayout>        
-    <Button
-            Grid.Column="1"
-            Margin="16"
-            Clicked="RefreshButtonClicked"
-            Text="Refresh..." /> 
-                
-            <GraphicsView
-                x:Name="myGraphicsView"
-                HeightRequest="400"
-                HorizontalOptions="End"
-                VerticalOptions="Start"
-                WidthRequest="400" />
-				
-                <Image  HeightRequest="48" WidthRequest="48" Margin="4" Source="account_circle.png" />
+    <VerticalStackLayout>
+        <Button
+            Grid.Column="1" Margin="16"
+            Clicked="RefreshButtonClicked" Text="Refresh..." />
 
-				<Image  HeightRequest="48" WidthRequest="48" Margin="4" Source="account_circle.png">
-					<Image.Behaviors>
-						<toolkit:IconTintColorBehavior TintColor="Red" />
-					</Image.Behaviors>
-				</Image>
+        <GraphicsView
+            x:Name="myGraphicsView" HeightRequest="400"
+            HorizontalOptions="End" VerticalOptions="Start"
+            WidthRequest="400" />
 
-				<Image Grid.Row="4" HeightRequest="48" WidthRequest="48" Margin="4" Source="account_circle.png">
-					<Image.Behaviors>
-						<toolkit:IconTintColorBehavior TintColor="Green" />
-					</Image.Behaviors>
-				</Image>
-        </VerticalStackLayout>
+        <Image
+            Margin="4" HeightRequest="48"
+            Source="account_circle.png" WidthRequest="48" />
+
+        <Image
+            Margin="4" HeightRequest="48"
+            Source="account_circle.png" WidthRequest="48">
+            <Image.Behaviors>
+                <toolkit:IconTintColorBehavior TintColor="Red" />
+            </Image.Behaviors>
+        </Image>
+
+        <Image
+            Grid.Row="4" Margin="4"
+            HeightRequest="48" Source="account_circle.png"
+            WidthRequest="48">
+            <Image.Behaviors>
+                <toolkit:IconTintColorBehavior TintColor="Green" />
+            </Image.Behaviors>
+        </Image>
+    </VerticalStackLayout>
 </ContentPage>
