@@ -23,10 +23,10 @@
         Title="Phone Dialer"
         ContentTemplate="{DataTemplate views:PhoneDialerPage}"
         Route="PhoneDialerPage" />
-    <ShellContent
+    <!--<ShellContent
         Title="Service Calls"
         ContentTemplate="{DataTemplate views:ServiceCallPage}"
-        Route="ServiceCallPage" />
+        Route="ServiceCallPage" />-->
     <ShellContent
         Title="SMS Messaging"
         ContentTemplate="{DataTemplate views:SMSMessagingPage}"
