@@ -224,10 +224,10 @@
                         Grid.Column="1" CornerRadius="6"
                         Fill="Red" HorizontalOptions="FillAndExpand"
                         VerticalOptions="FillAndExpand" />
-                    <RoundRectangle
+                    <!--<RoundRectangle
                         Grid.Column="2" CornerRadius="6"
                         Fill="Red" HorizontalOptions="FillAndExpand"
-                        VerticalOptions="FillAndExpand" />
+                        VerticalOptions="FillAndExpand" />-->
 
 
                     <RoundRectangle
@@ -249,9 +249,9 @@
                         CornerRadius="6" Fill="Red"
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="FillAndExpand" />
-                    <RoundRectangle
+                    <Rectangle
                         Grid.Row="1" Grid.Column="2"
-                        CornerRadius="6" Fill="Red"
+                        Fill="Red"
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="FillAndExpand" />
                     <RoundRectangle
@@ -271,12 +271,12 @@
                         VerticalOptions="FillAndExpand" />
                     <RoundRectangle
                         Grid.Row="2" Grid.Column="1"
-                        CornerRadius="6" Fill="Red"
+                         Fill="Red" CornerRadius="6"
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="FillAndExpand" />
-                    <RoundRectangle
+                    <Rectangle
                         Grid.Row="2" Grid.Column="2"
-                        CornerRadius="6" Fill="Red"
+                        Fill="Red"
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="FillAndExpand" />
                     <RoundRectangle
@@ -304,9 +304,9 @@
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="FillAndExpand" />
 
-                    <RoundRectangle
+                    <Rectangle
                         Grid.Row="3" Grid.Column="2"
-                        CornerRadius="6" Fill="Red"
+                         Fill="Red"
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="FillAndExpand" />
 
