@@ -4,7 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="TextInput">
-    <StackLayout>
+    <VerticalStackLayout>
         <HorizontalStackLayout Margin="4">
             <Label Text="Name" VerticalOptions="Center" WidthRequest="120" />
             <Entry
@@ -30,5 +30,5 @@
                 TextTransform="Uppercase" WidthRequest="200" />
             <Label x:Name="EditorLabel" Text="" />
         </HorizontalStackLayout>
-    </StackLayout>
+    </VerticalStackLayout>
 </ContentPage>
