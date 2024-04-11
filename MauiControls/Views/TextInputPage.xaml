@@ -6,44 +6,28 @@
     Title="TextInput">
     <StackLayout>
         <HorizontalStackLayout Margin="4">
-            <Label
-                Text="Name"
-                VerticalOptions="Center"
-                WidthRequest="120" />
+            <Label Text="Name" VerticalOptions="Center" WidthRequest="120" />
             <Entry
                 ClearButtonVisibility="WhileEditing"
-                             Placeholder="Enter Name Here"
-                TextChanged="Name_TextChanged"
-                WidthRequest="200" />
+                Placeholder="Enter Name Here"
+                TextChanged="Name_TextChanged" WidthRequest="200" />
             <Label x:Name="NameLabel" Text="" />
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
-            <Label
-                Text="Age"
-                VerticalOptions="Center"
-                WidthRequest="120" />
+            <Label Text="Age" VerticalOptions="Center" WidthRequest="120" />
             <Entry
                 ClearButtonVisibility="WhileEditing"
-                
-                Placeholder="Enter Age Here"
-                TextChanged="Age_TextChanged"
-                Keyboard="Numeric"
-                WidthRequest="200" />
+                Keyboard="Numeric" Placeholder="Enter Age Here"
+                TextChanged="Age_TextChanged" WidthRequest="200" />
             <Label x:Name="AgeLabel" Text="" />
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
-            <Label
-                Text="Editor"
-                VerticalOptions="Center"
-                WidthRequest="120" />
+            <Label Text="Editor" VerticalOptions="Center" WidthRequest="120" />
             <Editor
-                TextTransform="Uppercase"
-                BackgroundColor="LightBlue"
-                TextColor="Black"
-                HeightRequest="200"
+                BackgroundColor="LightBlue" HeightRequest="200"
                 Text="There is already some text here"
-                TextChanged="Editor_TextChanged"
-                WidthRequest="200" />
+                TextChanged="Editor_TextChanged" TextColor="Black"
+                TextTransform="Uppercase" WidthRequest="200" />
             <Label x:Name="EditorLabel" Text="" />
         </HorizontalStackLayout>
     </StackLayout>
