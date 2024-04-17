@@ -6,79 +6,53 @@
     Title="ButtonsPage">
     <VerticalStackLayout>
         <HorizontalStackLayout Margin="4">
-            <Label
-                Text="Button"
-                VerticalOptions="Center"
-                WidthRequest="120" />
+            <Label Text="Button" VerticalOptions="Center" WidthRequest="120" />
             <Button Clicked="OnButtonClicked" Text="Click me" />
-            <Label x:Name="ClickResultLabel" VerticalOptions="Center" Text=""  Margin="8"/>
+            <Label
+                x:Name="ClickResultLabel" Margin="8"
+                Text="" VerticalOptions="Center" />
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
-            <Label
-                Text="ImageButton"
-                VerticalOptions="Center"
-                WidthRequest="120" />
+            <Label Text="ImageButton" VerticalOptions="Center" WidthRequest="120" />
             <ImageButton
                 Clicked="OnPalmTreeButtonClicked"
-                HeightRequest="40"
-                IsEnabled="True"
-                Source="imagebutton.png"
-                WidthRequest="40" />
-            <Label x:Name="ClickResultPalmTree" VerticalOptions="Center" Text="" />
+                HeightRequest="40" IsEnabled="True"
+                Source="imagebutton.png" WidthRequest="40" />
+            <Label x:Name="ClickResultPalmTree" Text="" VerticalOptions="Center" />
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
-            <Label
-                Text="Radio Buttons"
-                VerticalOptions="Center"
-                WidthRequest="120" />
+            <Label Text="Radio Buttons" VerticalOptions="Center" WidthRequest="120" />
             <RadioButton
-                BackgroundColor="LightGreen"
                 CheckedChanged="RadioButton_CheckedChanged"
-                Content="  Radio Button 1 Group 1 "
-                GroupName="G1"
+                Content="  Radio Button 1 Group 1 " GroupName="G1"
                 IsChecked="True" />
         </HorizontalStackLayout>
+
+        <RadioButton
+            Margin="124,0,0,0"
+            CheckedChanged="RadioButton_CheckedChanged"
+            Content="  Radio Button 2 Group 2 " GroupName="G2" />
+
+
+        <RadioButton
+            Margin="124,0,0,0"
+            CheckedChanged="RadioButton_CheckedChanged"
+            Content="  Radio Button 3 Group 1 " GroupName="G1" />
+
+
+        <RadioButton
+            Margin="124,0,0,0"
+            CheckedChanged="RadioButton_CheckedChanged"
+            Content="  Radio Button 4 Group 2 " GroupName="G2"
+            IsChecked="True" />
+
         <HorizontalStackLayout Margin="4">
-            <Label Text="" WidthRequest="120" />
-            <RadioButton
-                BackgroundColor="LightBlue"
-                CheckedChanged="RadioButton_CheckedChanged"
-                Content="  Radio Button 2 Group 2 "
-                GroupName="G2" />
-        </HorizontalStackLayout>
-        <HorizontalStackLayout Margin="4">
-            <Label
-                Text=""
-                VerticalOptions="Center"
-                WidthRequest="120" />
-            <RadioButton
-                BackgroundColor="LightGreen"
-                CheckedChanged="RadioButton_CheckedChanged"
-                Content="  Radio Button 3 Group 1 "
-                GroupName="G1" />
-        </HorizontalStackLayout>
-        <HorizontalStackLayout Margin="4">
-            <Label Text="" WidthRequest="120" />
-            <RadioButton
-                BackgroundColor="LightBlue"
-                CheckedChanged="RadioButton_CheckedChanged"
-                Content="  Radio Button 4 Group 2 "
-                GroupName="G2"
-                IsChecked="True" />
-        </HorizontalStackLayout>
-        <HorizontalStackLayout Margin="4">
-            <Label
-                Text="Check Box"
-                VerticalOptions="Center"
-                WidthRequest="120" />
+            <Label Text="Check Box" VerticalOptions="Center" WidthRequest="120" />
             <CheckBox CheckedChanged="CheckBox_Changed" />
             <Label x:Name="CheckedResultLabel" Text="" />
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="4">
-            <Label
-                Text="Switch"
-                VerticalOptions="Center"
-                WidthRequest="120" />
+            <Label Text="Switch" VerticalOptions="Center" WidthRequest="120" />
             <Switch IsToggled="True" Toggled="Switch_Toggled" />
             <Label x:Name="SwitchResultLabel" Text="" />
         </HorizontalStackLayout>

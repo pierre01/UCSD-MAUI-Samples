@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33" />
-	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true">
+	<uses-sdk />
+	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:supportsRtl="true">
 		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDyXgQimRh4Z6QtXJ8WB3y0tIpeVMF-LVI" />
 	</application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -10,5 +10,4 @@
 	<!-- Required to access the user's location -->
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-	
 </manifest>
