@@ -34,7 +34,8 @@ public static class MauiProgram
     {
         mauiAppBuilder.Services.AddSingleton<IFolderPicker>(FolderPicker.Default);
         mauiAppBuilder.Services.AddSingleton<IFileSaver>(FileSaver.Default);
-        mauiAppBuilder.Services.AddSingleton<IPreferences >(Preferences.Default);
+        mauiAppBuilder.Services.AddSingleton<IPreferences>(Preferences.Default);
+        mauiAppBuilder.Services.AddSingleton<IFileSystem>(FileSystem.Current);
         return mauiAppBuilder;
     }
 
