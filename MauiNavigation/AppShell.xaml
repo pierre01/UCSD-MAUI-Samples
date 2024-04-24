@@ -21,7 +21,7 @@
         Route="SearchPageWithHandler" />
 
     <ShellContent
-        Title="Toasts, Snackbar and Alerts"
+        Title="Pop Ups and Alerts"
         ContentTemplate="{DataTemplate views:PopUpsPage}"
         Icon="popup_icon.png"
         Route="PopUpsPage" />
