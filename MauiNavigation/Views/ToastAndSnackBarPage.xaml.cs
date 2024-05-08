@@ -6,10 +6,12 @@ namespace MauiNavigation.Views;
 
 public partial class ToastAndSnackBarPage : ContentPage
 {
-	public ToastAndSnackBarPage()
-	{
-		InitializeComponent();
-	}
+    public ToastAndSnackBarPage()
+    {
+        InitializeComponent();
+        Snackbar.Dismissed += UndoPreviousAction;
+
+    }
 
     private async void OnDisplayToast(object sender, EventArgs e)
     {
@@ -24,6 +26,8 @@ public partial class ToastAndSnackBarPage : ContentPage
         await toast.Show(cancellationTokenSource.Token);
     }
 
+    bool isUndoed = false;
+
     private async void OnDisplaySnackBar(object sender, EventArgs e)
     {
         CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
@@ -36,16 +40,35 @@ public partial class ToastAndSnackBarPage : ContentPage
             CornerRadius = new CornerRadius(10),
             Font = Font.SystemFontOfSize(14),
             ActionButtonFont = Font.SystemFontOfSize(14),
-            CharacterSpacing = 0.5
+            CharacterSpacing = 0.5,
         };
 
         string text = "This is a Snackbar";
-        string actionButtonText = "Click Here to Dismiss";
-        Action action = async () => await DisplayAlert("Snackbar ActionButton Tapped", "The user has tapped the Snackbar ActionButton", "OK");
+        string actionButtonText = "Undo";
+        Action action = () => isUndoed = true;
         TimeSpan duration = TimeSpan.FromSeconds(3);
 
         var snackbar = Snackbar.Make(text, action, actionButtonText, duration, snackbarOptions);
 
         await snackbar.Show(cancellationTokenSource.Token);
+
+    }
+
+    private async void UndoPreviousAction(object sender, EventArgs e)
+    {
+        CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+        if (isUndoed == true)
+        {
+            isUndoed = false;
+            var toast = Toast.Make("Action Cancelled", ToastDuration.Short, 12);
+            await toast.Show(cancellationTokenSource.Token);
+        }
+        else
+        {
+            var toast = Toast.Make("Action Committed", ToastDuration.Short, 12);
+            await toast.Show(cancellationTokenSource.Token);
+
+        }
+
     }
 }

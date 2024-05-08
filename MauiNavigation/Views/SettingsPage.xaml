@@ -7,7 +7,7 @@
     Title="Settings"
     x:DataType="viewModels:SettingsPageViewModel">
     <Shell.BackButtonBehavior>
-        <BackButtonBehavior   IconOverride="backicon.png"    />
+        <BackButtonBehavior     IconOverride="backicon.png"    />
     </Shell.BackButtonBehavior>
     <VerticalStackLayout>
         <Label
