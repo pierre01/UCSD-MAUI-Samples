@@ -11,24 +11,27 @@
     </ContentPage.Resources>-->
 
 
-
-    <VerticalStackLayout>
-        <Button
-            Grid.Column="1" Margin="16"
-            Clicked="RefreshButtonClicked" Text="Refresh..." />
+    <Grid HorizontalOptions="FillAndExpand" RowDefinitions="Auto,400,Auto,Auto,Auto,*" VerticalOptions="FillAndExpand">
+        <Button Margin="16" Clicked="RefreshButtonClicked" Text="Refresh..." />
 
         <GraphicsView
-            x:Name="myGraphicsView" HeightRequest="400"
-            HorizontalOptions="End" VerticalOptions="Start"
-            WidthRequest="400" />
+            x:Name="myGraphicsView" Grid.Row="1"
+            HorizontalOptions="Start"   HeightRequest="400"
+            VerticalOptions="Start"  />
 
         <Image
-            Margin="4" HeightRequest="48"
-            Source="account_circle.png" WidthRequest="48" />
+            Grid.Row="2" Margin="4"
+            HeightRequest="48" Source="account_circle.png"
+            WidthRequest="48"  >           
+            <Image.Behaviors>
+                <toolkit:IconTintColorBehavior TintColor="white" />
+            </Image.Behaviors>
+        </Image>
 
         <Image
-            Margin="4" HeightRequest="48"
-            Source="account_circle.png" WidthRequest="48">
+            Grid.Row="3" Margin="4"
+            HeightRequest="48" Source="account_circle.png"
+            WidthRequest="48">
             <Image.Behaviors>
                 <toolkit:IconTintColorBehavior TintColor="Red" />
             </Image.Behaviors>
@@ -42,5 +45,5 @@
                 <toolkit:IconTintColorBehavior TintColor="Green" />
             </Image.Behaviors>
         </Image>
-    </VerticalStackLayout>
+    </Grid>
 </ContentPage>

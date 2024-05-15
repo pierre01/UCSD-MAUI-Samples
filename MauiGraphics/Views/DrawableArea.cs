@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MauiGraphics.Views;
+﻿namespace MauiGraphics.Views;
 
 public class DrawableArea : IDrawable
 {
@@ -16,28 +10,36 @@ public class DrawableArea : IDrawable
         Random rnd = new Random();
         // Drawing goes here
         var d2 = canvas.DisplayScale;
-        canvas.StrokeSize = 8;        
+        var w2 = dirtyRect.Width;
+        var h2 = dirtyRect.Height;
+        var scale = w2 / 400;
+        if (scale > 1)
+        {
+            scale = 1;
+        }
+        canvas.Scale(scale, scale);
+        canvas.StrokeSize = 8;
         canvas.StrokeLineCap = LineCap.Round;
         canvas.StrokeColor = Colors.Yellow;
-        canvas.DrawRectangle(8, 0, 400-16, 400-8);
-        
-        //canvas.Scale(canvas.DisplayScale, canvas.DisplayScale);
+        canvas.DrawRectangle(0, 0, 400, 400);
 
+        canvas.StrokeSize = 16;
         // Background tracks
         canvas.StrokeColor = Color.FromArgb("#b4cccccc");
-        canvas.DrawArc(100, 100, 200, 200, 90, 95, true, false);
-        canvas.DrawArc(120, 120, 160, 160, 90,   95, true, false);
-        canvas.DrawArc(140, 140, 120, 120, 90,   95, true, false);        
-        
+        canvas.DrawArc(50, 50, 260, 260, 90, 95, true, false);
+        canvas.DrawArc(74, 74, 212, 212, 90, 95, true, false);
+        canvas.DrawArc(98, 98, 164, 164, 90, 95, true, false);
+
+
         // Track 1
         canvas.StrokeColor = Colors.Green;
-        canvas.DrawArc(100, 100, 200, 200, 90, rnd.Next(90,360),true, false);
+        canvas.DrawArc(50, 50, 260, 260, 90, rnd.Next(90, 360), true, false);
         // Track 2
-        canvas.StrokeColor = Colors.Orange;                 
-        canvas.DrawArc(120, 120, 160, 160, 90, rnd.Next(90, 360), true, false);
+        canvas.StrokeColor = Colors.Orange;
+        canvas.DrawArc(74, 74, 212, 212, 90, rnd.Next(90, 360), true, false);
         // Track 3
-        canvas.StrokeColor = Colors.Red;                  
-        canvas.DrawArc(140, 140, 120, 120, 90, rnd.Next(90, 360), true, false);
-        
+        canvas.StrokeColor = Colors.Red;
+        canvas.DrawArc(98, 98, 164, 164, 90, rnd.Next(90, 360), true, false);
+
     }
 }

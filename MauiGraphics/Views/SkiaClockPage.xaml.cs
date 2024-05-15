@@ -1,3 +1,4 @@
+using MauiGraphics.Utilities;
 using SkiaSharp;
 using SkiaSharp.Views.Maui;
 
@@ -15,8 +16,8 @@ public partial class SkiaClockPage : ContentPage
     protected override void OnDisappearing()
     {
         _clock.Dispose();
-        _clock = null;        
-        
+        _clock = null;
+
         base.OnDisappearing();
 
     }
@@ -26,8 +27,8 @@ public partial class SkiaClockPage : ContentPage
         if (_clock == null)
         {
             _clock = new PeriodicTimer(TimeSpan.FromMilliseconds(10));
-        }        
-        
+        }
+
         base.OnAppearing();
 
         while (await _clock.WaitForNextTickAsync())
@@ -39,11 +40,21 @@ public partial class SkiaClockPage : ContentPage
 
     private void SKCanvasView_OnPaintSurface(object sender, SKPaintSurfaceEventArgs e)
     {
+        float d = (float)ScreenGraphics.Density;
+        var w = ScreenGraphics.WidthInPixels;
+        var h = ScreenGraphics.WidthInPixels;
         SKImageInfo info = e.Info;
+        var w3 = info.Width;
+        var h3 = info.Height;
         SKSurface surface = e.Surface;
+        var w2 = surface.Canvas.DeviceClipBounds.Width;
+        var h2 = surface.Canvas.DeviceClipBounds.Height;
+        var h4 = ScreenGraphics.HeightInDp;
+        var w4 = ScreenGraphics.WidthInDp;
+        var wallowed = (w3 / w2) * w;
         SKCanvas canvas = surface.Canvas;
-        Rect rc = new Rect(0, 0, info.Width, info.Height);
-        
+        Rect rc = new Rect(0, 0, w3, w3);
+
         canvas.Clear();
 
         // Dispose
@@ -55,9 +66,9 @@ public partial class SkiaClockPage : ContentPage
 
         // Translation and scaling
         //info.Height
+        //float scale = Math.Min((float)rc.Width / 400f, (float)rc.Height / 400f);
         canvas.Translate((float)rc.Center.X, (float)rc.Center.Y);
-        float scale = Math.Min((float)rc.Width / 200f, (float)rc.Height / 200f);
-        canvas.Scale(scale, scale);
+        canvas.Scale(d, d);
 
         // Hour and minute marks
         for (float angle = 0; angle < 360; angle += 6)
@@ -105,12 +116,12 @@ public partial class SkiaClockPage : ContentPage
 
         // Second hand
         canvas.Save();
-        var newPos = (float)now.Second + now.Millisecond/1000f ;
+        var newPos = (float)now.Second + now.Millisecond / 1000f;
 
         canvas.RotateDegrees(6f * newPos);
 
         canvas.DrawLine(0, 10, 0, -80, clockSecondHandPaint);
-        canvas.DrawCircle(0f, 0f,  4 , clockTicksPaint);
+        canvas.DrawCircle(0f, 0f, 4, clockTicksPaint);
         canvas.Restore();
 
         clockSecondHandPaint.Dispose();

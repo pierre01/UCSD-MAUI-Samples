@@ -7,9 +7,9 @@
     <VerticalStackLayout>
         <skia:SKCanvasView x:Name="SkiCanvas"
             PaintSurface="SKCanvasView_OnPaintSurface"
-                            HeightRequest="400"
-                            HorizontalOptions="End"
+                            HeightRequest="500"
+                            HorizontalOptions="Center"
                             VerticalOptions="Start"
-                            WidthRequest="400" />
+                            WidthRequest="500" />
     </VerticalStackLayout>
 </ContentPage>
