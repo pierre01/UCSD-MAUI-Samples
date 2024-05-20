@@ -15,6 +15,7 @@
             PersonSelected="personSearchHandler_PersonSelected"
             DisplayMemberName="Name"
             Placeholder="Enter person name"
+                                    
             ShowsResults="true" />
     </Shell.SearchHandler>
 

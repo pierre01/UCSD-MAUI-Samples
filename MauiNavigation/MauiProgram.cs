@@ -12,7 +12,7 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
-              .UseMauiCommunityToolkit()
+            .UseMauiCommunityToolkit()
             .RegisterViews()
             .RegisterViewModels()
             .ConfigureFonts(fonts =>
@@ -20,9 +20,9 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             })
-            .ConfigureEssentials(essentials =>
+            .ConfigureEssentials(mapActions =>
             {
-                essentials
+                mapActions
                     .AddAppAction("PopUpsPage", "Popups Page", icon: "popup_icon")
                     .AddAppAction("ToastAndSnackBarPage", "Toast and Snacks", icon: "popup_icon")
                     .OnAppAction(App.HandleAppActions);

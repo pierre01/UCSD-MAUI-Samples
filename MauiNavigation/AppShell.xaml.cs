@@ -4,16 +4,15 @@ namespace MauiNavigation;
 
 public partial class AppShell : Shell
 {
-	public AppShell()
-	{
-        //AppActions.Current.SetAsync(new { } AppAction("SettingsPage", "Settings", icon: "settings_icon"));
+    public AppShell()
+    {
 
         InitializeComponent();
 
 
-        NavigateToSettingsCommand = new Command( () =>
+        NavigateToSettingsCommand = new Command(() =>
         {
-             DisplayAlert("Settings","Settings Menu Selected","Ok");
+            DisplayAlert("Settings", "Settings Menu Selected", "Ok");
         });
 
         BindingContext = this;
