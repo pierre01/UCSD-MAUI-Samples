@@ -8,9 +8,9 @@ public partial class MainPage : ContentPage
 
     public MainPage()
     {
-        BindingContext = new MainPageViewModelSimple("Pierre");
+        //BindingContext = new MainPageViewModelSimple("Pierre");
         //BindingContext = new MainPageViewModel("Pierre");
-        //BindingContext = new MainPageViewModel2("Pierre");
+        BindingContext = new MainPageViewModel2("Pierre");
         //BindingContext = new MainPageViewModel3("Pierre");
         InitializeComponent();
     }

@@ -42,18 +42,16 @@ public partial class SkiaClockPage : ContentPage
     {
         float d = (float)ScreenGraphics.Density;
         var w = ScreenGraphics.WidthInPixels;
-        var h = ScreenGraphics.WidthInPixels;
+        var h = ScreenGraphics.HeightInPixels;
         SKImageInfo info = e.Info;
         var w3 = info.Width;
         var h3 = info.Height;
         SKSurface surface = e.Surface;
         var w2 = surface.Canvas.DeviceClipBounds.Width;
         var h2 = surface.Canvas.DeviceClipBounds.Height;
-        var h4 = ScreenGraphics.HeightInDp;
-        var w4 = ScreenGraphics.WidthInDp;
         var wallowed = (w3 / w2) * w;
         SKCanvas canvas = surface.Canvas;
-        Rect rc = new Rect(0, 0, w3, w3);
+        Rect rc = new Rect(0, 0, w3, h3);
 
         canvas.Clear();
 
@@ -65,10 +63,9 @@ public partial class SkiaClockPage : ContentPage
         };
 
         // Translation and scaling
-        //info.Height
-        //float scale = Math.Min((float)rc.Width / 400f, (float)rc.Height / 400f);
         canvas.Translate((float)rc.Center.X, (float)rc.Center.Y);
-        canvas.Scale(d, d);
+        float scale = (float)Math.Min(rc.Width / 250f, rc.Height / 250f);
+        canvas.Scale(scale, scale);
 
         // Hour and minute marks
         for (float angle = 0; angle < 360; angle += 6)

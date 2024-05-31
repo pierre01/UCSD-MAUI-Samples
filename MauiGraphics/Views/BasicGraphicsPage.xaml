@@ -16,7 +16,7 @@
 
         <GraphicsView
             x:Name="myGraphicsView" Grid.Row="1"
-            HorizontalOptions="Start"   HeightRequest="400"
+            HorizontalOptions="Start"   HeightRequest="400" WidthRequest="400"
             VerticalOptions="Start"  />
 
         <Image

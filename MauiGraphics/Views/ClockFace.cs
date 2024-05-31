@@ -12,7 +12,7 @@ internal class ClockFace : IDrawable
 
         // Translation and scaling
         canvas.Translate(dirtyRect.Center.X, dirtyRect.Center.Y);
-        float scale = Math.Min(dirtyRect.Width / 220f, dirtyRect.Height / 220f);
+        float scale = Math.Min(dirtyRect.Width / 260f, dirtyRect.Height / 260f);
         canvas.Scale(scale, scale);
 
         // Hour and minute marks

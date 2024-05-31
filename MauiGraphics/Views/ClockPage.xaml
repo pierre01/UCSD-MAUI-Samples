@@ -11,8 +11,8 @@
 
         <GraphicsView
                 x:Name="myGraphicsView"
-                Drawable="{StaticResource ClockFace01}" HeightRequest="400"
-                         WidthRequest="400"
+                Drawable="{StaticResource ClockFace01}" HeightRequest="500"
+                         WidthRequest="500"
             VerticalOptions="Start"  />
 
     </StackLayout>
