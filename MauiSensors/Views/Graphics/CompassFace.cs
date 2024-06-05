@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace MauiSensors.Views.Graphics;
 
-namespace MauiSensors.Views;
-
-public class CompassFace: IDrawable
+public class CompassFace : IDrawable
 {
     private double _north;
 
     public void SetNorth(double angle)
     {
         _north = angle;
-    } 
-    
+    }
+
 
     public void Draw(ICanvas canvas, RectF dirtyRect)
     {

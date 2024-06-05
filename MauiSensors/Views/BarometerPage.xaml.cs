@@ -2,24 +2,24 @@ namespace MauiSensors.Views;
 
 public partial class BarometerPage : ContentPage
 {
-	public BarometerPage()
-	{
-		InitializeComponent();
+    public BarometerPage()
+    {
+        InitializeComponent();
         ToggleBarometer();
-	}
+    }
     public void ToggleBarometer()
     {
         if (Barometer.Default.IsSupported)
         {
             if (!Barometer.Default.IsMonitoring)
             {
-                // Turn on accelerometer
+                // Turn on barometer
                 Barometer.Default.ReadingChanged += Barometer_ReadingChanged;
                 Barometer.Default.Start(SensorSpeed.Game);
             }
             else
             {
-                // Turn off accelerometer
+                // Turn off barometer
                 Barometer.Default.Stop();
                 Barometer.Default.ReadingChanged -= Barometer_ReadingChanged;
             }

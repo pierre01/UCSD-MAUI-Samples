@@ -2,11 +2,11 @@ namespace MauiSensors.Views;
 
 public partial class GyroscopePage : ContentPage
 {
-	public GyroscopePage()
-	{
-		InitializeComponent();
+    public GyroscopePage()
+    {
+        InitializeComponent();
         ToggleGyroscope();
-	}
+    }
     private void ToggleGyroscope()
     {
         if (Gyroscope.Default.IsSupported)
@@ -31,6 +31,10 @@ public partial class GyroscopePage : ContentPage
         // Update UI Label with gyroscope state
         GyroscopeLabel.TextColor = Colors.Green;
         GyroscopeLabel.Text = $"Gyroscope: {e.Reading}";
+        e.Reading.AngularVelocity.X.ToString("0.00");
+        e.Reading.AngularVelocity.Y.ToString("0.00");
+        e.Reading.AngularVelocity.Z.ToString("0.00");
+
     }
     protected override void OnDisappearing()
     {

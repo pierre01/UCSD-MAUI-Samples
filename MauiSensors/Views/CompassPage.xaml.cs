@@ -1,12 +1,14 @@
+using MauiSensors.Views.Graphics;
+
 namespace MauiSensors.Views;
 
 public partial class CompassPage : ContentPage
 {
-	public CompassPage()
-	{
-		InitializeComponent();
+    public CompassPage()
+    {
+        InitializeComponent();
         ToggleCompass();
-	}
+    }
     private void ToggleCompass()
     {
         if (Compass.Default.IsSupported)
@@ -31,8 +33,8 @@ public partial class CompassPage : ContentPage
         // Update UI Label with compass state
         CompassLabel.TextColor = Colors.Green;
         CompassLabel.Text = $"Compass: {e.Reading}";
-        ((CompassFace)myCompassView.Drawable).SetNorth(360-e.Reading.HeadingMagneticNorth);
-        myCompassView.Invalidate();
+        ((CompassFace)CompassView.Drawable).SetNorth(360 - e.Reading.HeadingMagneticNorth);
+        CompassView.Invalidate();
     }
     protected override void OnDisappearing()
     {

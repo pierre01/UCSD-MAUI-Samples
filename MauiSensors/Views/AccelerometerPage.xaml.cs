@@ -1,12 +1,14 @@
+using MauiSensors.Views.Graphics;
+
 namespace MauiSensors.Views;
 
 public partial class AccelerometerPage : ContentPage
 {
-	public AccelerometerPage()
-	{
-		InitializeComponent();
+    public AccelerometerPage()
+    {
+        InitializeComponent();
         ToggleAccelerometer();
-	}
+    }
     public void ToggleAccelerometer()
     {
         if (Accelerometer.Default.IsSupported)
@@ -26,11 +28,16 @@ public partial class AccelerometerPage : ContentPage
         }
     }
 
+
     private void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
     {
         // Update UI Label with accelerometer state
         AccelLabel.TextColor = Colors.Green;
         AccelLabel.Text = $"Accel: {e.Reading}";
+
+        ((AccelerometerGraphics)AccelerometerView.Drawable).SetAccelerometerReading((double)e.Reading.Acceleration.X, (double)e.Reading.Acceleration.Y, (double)e.Reading.Acceleration.Z);
+        AccelerometerView.Invalidate();
+
     }
 
     protected override void OnDisappearing()
