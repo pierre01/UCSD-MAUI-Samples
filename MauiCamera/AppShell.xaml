@@ -7,11 +7,16 @@
     xmlns:views="clr-namespace:MauiCamera.Views"
     Shell.FlyoutBehavior="Flyout">
 
-    <ShellContent
+     
+	<ShellContent
+        Title="Community Camera"
+        ContentTemplate="{DataTemplate views:CommunityCamera}"
+        Route="CommunityCamera" />   
+   <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />    
-    <ShellContent
+        Route="MainPage" />     
+	<ShellContent
         Title="Settings"
         ContentTemplate="{DataTemplate views:SettingsPage}"
         Route="SettingsPage" />

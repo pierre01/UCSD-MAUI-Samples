@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiDeviceOutput.Views.VibrationPage"
-             Title="VibrationPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Vibration"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Button Text="Start Vibrating" Margin="16" x:Name="VibrateStartButton" Clicked="VibrateStartButton_Clicked" />
-        <Button Text="Stop Vibrating"  Margin="16" x:Name="VibrateStopButton" Clicked="VibrateStopButton_Clicked" />
-    </VerticalStackLayout>
+<ContentPage
+	x:Class="MauiDeviceOutput.Views.VibrationPage"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	Title="VibrationPage">
+	<VerticalStackLayout>
+		<Label
+			HorizontalOptions="Center"
+			Text="Vibration"
+			VerticalOptions="Center" />
+		<Button
+			x:Name="VibrateStartButton"
+			Margin="16"
+			Clicked="VibrateStartButton_Clicked"
+			Text="Start Vibrating" />
+		<Button
+			x:Name="VibrateStopButton"
+			Margin="16"
+			Clicked="VibrateStopButton_Clicked"
+			Text="Stop Vibrating" />
+	</VerticalStackLayout>
 </ContentPage>

@@ -15,7 +15,7 @@ public partial class GyroscopePage : ContentPage
             {
                 // Turn on compass
                 Gyroscope.Default.ReadingChanged += Gyroscope_ReadingChanged;
-                Gyroscope.Default.Start(SensorSpeed.UI);
+                Gyroscope.Default.Start(SensorSpeed.Default);
             }
             else
             {

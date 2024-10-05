@@ -121,7 +121,8 @@ public partial class MusicPlayerPageViewModel :ObservableObject, IQueryAttributa
 			{
 				if (audioPlayer?.CanSetSpeed ?? false)
 				{
-					audioPlayer.Speed = Math.Round(value, 1, MidpointRounding.AwayFromZero);
+					audioPlayer.SetSpeed(Math.Round(value, 1, MidpointRounding.AwayFromZero));
+					//audioPlayer.Speed = Math.Round(value, 1, MidpointRounding.AwayFromZero);
                     OnPropertyChanged();
 				}
 			}

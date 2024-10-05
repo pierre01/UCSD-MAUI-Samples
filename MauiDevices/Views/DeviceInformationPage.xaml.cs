@@ -11,7 +11,7 @@ public partial class DeviceInformationPage : ContentPage
     private void ReadDeviceInfo()
     {
         System.Text.StringBuilder sb = new System.Text.StringBuilder();
-
+        
         sb.AppendLine($"Model: {DeviceInfo.Current.Model}");
         sb.AppendLine($"Manufacturer: {DeviceInfo.Current.Manufacturer}");
         sb.AppendLine($"Name: {DeviceInfo.Name}");

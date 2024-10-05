@@ -26,7 +26,7 @@ public partial class ToastAndSnackBarPage : ContentPage
         await toast.Show(cancellationTokenSource.Token);
     }
 
-    bool isUndoed = false;
+    bool _isUndoed = false;
 
     private async void OnDisplaySnackBar(object sender, EventArgs e)
     {
@@ -45,7 +45,7 @@ public partial class ToastAndSnackBarPage : ContentPage
 
         string text = "This is a Snackbar";
         string actionButtonText = "Undo";
-        Action action = () => isUndoed = true;
+        Action action = () => _isUndoed = true;
         TimeSpan duration = TimeSpan.FromSeconds(3);
 
         var snackbar = Snackbar.Make(text, action, actionButtonText, duration, snackbarOptions);
@@ -57,9 +57,9 @@ public partial class ToastAndSnackBarPage : ContentPage
     private async void UndoPreviousAction(object sender, EventArgs e)
     {
         CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
-        if (isUndoed == true)
+        if (_isUndoed == true)
         {
-            isUndoed = false;
+            _isUndoed = false;
             var toast = Toast.Make("Action Cancelled", ToastDuration.Short, 12);
             await toast.Show(cancellationTokenSource.Token);
         }

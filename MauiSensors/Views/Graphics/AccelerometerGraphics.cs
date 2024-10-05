@@ -56,13 +56,15 @@
             //    canvas.FillCircle(dirtyRect.Width / 2 + (float)(Math.Cos(pitch) * 100), dirtyRect.Height / 2 + (float)(Math.Sin(pitch) * 100), 10);
             //}
 
-            // The code below is Pierre's implementation of the above code using 2 skeuomorphic designs 
+
+
+            // The code below is Pierre's implementation of the above code using two different skeuomorphic designs 
             // 1 - Use a plumb when in landscape mode
             // 2 - Use a spirit level bubble when in portrait mode
 
             if (orientation == DisplayOrientation.Landscape)
             {
-                // Draw the plumb
+                // Draw the plumb Bob
                 canvas.FillColor = Colors.Black;
                 canvas.FillRectangle(0, 0, dirtyRect.Width, dirtyRect.Height);
                 canvas.StrokeColor = Colors.White;
@@ -78,6 +80,8 @@
             }
             else
             {
+                // Draw the spirit level bubble
+                canvas.FillColor = Colors.White;
                 canvas.FillCircle(dirtyRect.Width / 2 + (float)(Math.Cos(pitch) * 100), dirtyRect.Height / 2 + (float)(Math.Sin(pitch) * 100), 10);
             }
 

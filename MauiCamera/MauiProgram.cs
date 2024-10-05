@@ -1,9 +1,11 @@
 ﻿using Camera.MAUI;
 using CommunityToolkit.Maui;
+using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Storage;
 using MauiCamera.ViewModels;
 using MauiCamera.Views;
 using Microsoft.Extensions.Logging;
+using Plugin.Maui.OCR;
 
 namespace MauiCamera;
 
@@ -14,7 +16,10 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder.UseMauiApp<App>()
             .UseMauiCameraView()
+            .UseMauiApp<App>()
             .UseMauiCommunityToolkit()
+            .UseMauiCommunityToolkitCamera()
+            .UseOcr()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -36,13 +41,15 @@ public static class MauiProgram
         mauiAppBuilder.Services.AddSingleton<IFileSaver>(FileSaver.Default);
         mauiAppBuilder.Services.AddSingleton<IPreferences>(Preferences.Default);
         mauiAppBuilder.Services.AddSingleton<IFileSystem>(FileSystem.Current);
-        return mauiAppBuilder;
+        mauiAppBuilder.Services.AddSingleton<IOcrService>(OcrPlugin.Default);
+         return mauiAppBuilder;
     }
 
     public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
     {
         mauiAppBuilder.Services.AddSingleton<SettingsPageViewModel>();
         mauiAppBuilder.Services.AddSingleton<MainPageViewModel>();
+        mauiAppBuilder.Services.AddTransient<CommunityCameraViewModel>();
 
         return mauiAppBuilder;
     }
@@ -51,6 +58,7 @@ public static class MauiProgram
     {
         mauiAppBuilder.Services.AddSingleton<MainPage>();
         mauiAppBuilder.Services.AddSingleton<SettingsPage>();
+        mauiAppBuilder.Services.AddTransient<CommunityCamera>();
         return mauiAppBuilder;
     }
 }

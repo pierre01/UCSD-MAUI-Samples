@@ -2,12 +2,11 @@ namespace MauiSensors.Views;
 
 public partial class ShakePage : ContentPage
 {
-	public ShakePage()
-	{
-		InitializeComponent();
-        ToggleShake();
-        
-	}
+    public ShakePage()
+    {
+        InitializeComponent();
+
+    }
     private void ToggleShake()
     {
         if (Accelerometer.Default.IsSupported)
@@ -39,5 +38,10 @@ public partial class ShakePage : ContentPage
         base.OnDisappearing();
         ToggleShake();
 
+    }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        ToggleShake();
     }
 }

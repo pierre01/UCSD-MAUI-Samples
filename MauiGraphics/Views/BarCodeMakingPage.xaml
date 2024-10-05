@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
-             x:Class="MauiGraphics.Views.BarCodeMakingPage"
-             Title="Bar CodeMaking">
-    <StackLayout>
-        <controls:BarcodeGeneratorView x:Name="BarcodeDisplayControl" WidthRequest="250" HeightRequest="250" Format="QrCode"  Value="" />
-        <Entry x:Name="EntryforQrCode" TextChanged="QRCodeChanged" />
-    </StackLayout>
+<ContentPage
+	x:Class="MauiGraphics.Views.BarCodeMakingPage"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:controls="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
+	Title="Bar CodeMaking">
+	<StackLayout>
+		<controls:BarcodeGeneratorView
+			x:Name="BarcodeDisplayControl"
+			Format="QrCode"
+			HeightRequest="250"
+			WidthRequest="250"
+			Value="" />
+		<Entry x:Name="EntryforQrCode" TextChanged="QRCodeChanged" />
+	</StackLayout>
 </ContentPage>

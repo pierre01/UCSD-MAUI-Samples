@@ -37,8 +37,10 @@
   </Applications>
 
   <Capabilities>
-	<DeviceCapability Name="location"/>    
+	<DeviceCapability Name="location"/>
+	<Capability Name="internetClient"/>    
 	<rescap:Capability Name="runFullTrust" />
+	<DeviceCapability Name="proximity"/>
 
   </Capabilities>
 

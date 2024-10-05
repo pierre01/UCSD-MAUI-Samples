@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="MauiCamera.Views.CommunityCamera"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+	xmlns:viewModels="clr-namespace:MauiCamera.ViewModels"
+	x:DataType="viewModels:CommunityCameraViewModel">
+
+	<Grid ColumnDefinitions="*,*,*" RowDefinitions="*,60,60">
+		<toolkit:CameraView
+			x:Name="ActiveCamera"
+			Grid.Row="0"
+			Grid.ColumnSpan="3"
+			MediaCaptured="ActiveCamera_MediaCaptured"
+			CameraFlashMode="{Binding FlashMode}"
+			SelectedCamera="{Binding SelectedCamera}"
+			ZoomFactor="{Binding CurrentZoom}" />
+
+		<Slider
+			Grid.Row="1"
+			Grid.Column="0"
+			Maximum="{Binding SelectedCamera.MaximumZoomFactor, FallbackValue=1}"
+			Minimum="{Binding SelectedCamera.MinimumZoomFactor, FallbackValue=1}"
+			Value="{Binding CurrentZoom}" />
+
+		<Picker
+			Title="Flash"
+			Grid.Row="1"
+			Grid.Column="1"
+			IsVisible="{Binding Path=SelectedCamera.IsFlashSupported, FallbackValue=false}"
+			ItemsSource="{Binding FlashModes}"
+			SelectedItem="{Binding FlashMode}" />
+
+		<Picker
+			Title="Available Resolutions"
+			Grid.Row="1"
+			Grid.Column="2"
+			ItemsSource="{Binding SelectedCamera.SupportedResolutions}"
+			SelectedItem="{Binding SelectedResolution}" />
+
+		<Button
+			Grid.Row="2"
+			Grid.Column="0"
+			Command="{Binding CaptureImageCommand, Source={x:Reference Camera}}"
+			Text="Capture Image" />
+
+		<Button
+			Grid.Row="2"
+			Grid.Column="1"
+			Command="{Binding StartCameraPreviewCommand, Source={x:Reference Camera}}"
+			Text="Capture Image" />
+
+		<Button
+			Grid.Row="2"
+			Grid.Column="2"
+			Command="{Binding StopCameraPreviewCommand, Source={x:Reference Camera}}"
+			Text="Capture Image" />
+	</Grid>
+
+</ContentPage>
