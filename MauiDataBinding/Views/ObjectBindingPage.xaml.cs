@@ -1,3 +1,4 @@
+using MauiDataBinding.Models;
 using MauiDataBinding.ViewModels;
 
 namespace MauiDataBinding.Views;

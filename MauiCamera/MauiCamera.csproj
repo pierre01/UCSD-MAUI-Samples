@@ -56,10 +56,10 @@
     <PackageReference Include="CommunityToolkit.Maui" Version="9.1.0" />
     <PackageReference Include="CommunityToolkit.Maui.Camera" Version="1.0.5" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
-	<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.91" />
-    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.91" />
-    <PackageReference Include="Plugin.Maui.OCR" Version="1.0.12" />
+	<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.92" />
+    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.92" />
+    <PackageReference Include="Plugin.Maui.OCR" Version="1.0.15" />
   </ItemGroup>
   <ItemGroup>
     <MauiXaml Update="Views\CommunityCamera.xaml">

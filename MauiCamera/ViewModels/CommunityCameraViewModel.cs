@@ -17,7 +17,7 @@ public partial class CommunityCameraViewModel(ICameraProvider cameraProvider):Ob
 	CameraFlashMode flashMode;
 
 	[ObservableProperty]
-	CameraInfo? selectedCamera;
+	CameraInfo selectedCamera;
 
 	[ObservableProperty]
 	Size selectedResolution;
