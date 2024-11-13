@@ -1,7 +1,13 @@
+using System.Threading;
+
 namespace MauiControls.Views;
 
 public partial class ButtonsPage : ContentPage
 {
+    private bool _isButtonPressed; 
+    private CancellationTokenSource _cancellationTokenSource;
+    private int count =0;
+
     public ButtonsPage()
     {
         InitializeComponent();
@@ -33,4 +39,31 @@ public partial class ButtonsPage : ContentPage
     {
         ClickResultPalmTree.Text = "Clicked!";
     }
+
+    private void OnRepeatButtonPressed(object sender, EventArgs e)
+    {
+
+        _isButtonPressed = true;
+        _cancellationTokenSource = new CancellationTokenSource();
+
+        Task.Run(async () =>
+        {
+            while (_isButtonPressed)
+            {
+                Dispatcher.Dispatch(() =>
+                {
+                    ClickRepeatResultLabel.Text = $"Clicked! {count++} times";
+                });                  
+                await Task.Delay(150); // Adjust the delay as needed
+            }
+        }, _cancellationTokenSource.Token);
+    }
+
+    private void OnRepeatButtonReleased(object sender, EventArgs e)
+    {
+        _isButtonPressed = false;
+        _cancellationTokenSource.Cancel();
+    }
+
 }
+
