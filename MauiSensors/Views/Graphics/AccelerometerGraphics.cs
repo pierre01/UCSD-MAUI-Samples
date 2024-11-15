@@ -1,4 +1,5 @@
-﻿namespace MauiSensors.Views.Graphics
+﻿using Microsoft.Maui.Devices;
+namespace MauiSensors.Views.Graphics
 {
     public class AccelerometerGraphics : IDrawable
     {

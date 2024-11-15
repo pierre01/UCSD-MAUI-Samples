@@ -1,4 +1,5 @@
 using MauiSensors.Views.Graphics;
+using Microsoft.Maui.Devices.Sensors;
 
 namespace MauiSensors.Views;
 

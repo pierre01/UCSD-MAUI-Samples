@@ -1,3 +1,4 @@
+using Microsoft.Maui.Devices.Sensors;
 namespace MauiSensors.Views;
 
 public partial class BarometerPage : ContentPage

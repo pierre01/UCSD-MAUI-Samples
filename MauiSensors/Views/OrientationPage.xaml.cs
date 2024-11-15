@@ -1,3 +1,4 @@
+using Microsoft.Maui.Devices;
 namespace MauiSensors.Views;
 
 public partial class OrientationPage : ContentPage
