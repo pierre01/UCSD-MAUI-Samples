@@ -61,6 +61,15 @@ namespace MauiLocalization.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Counts the number of times you click.
+        /// </summary>
+        internal static string ButtonHintText {
+            get {
+                return ResourceManager.GetString("ButtonHintText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clicked.
         /// </summary>
         internal static string Clicked {
@@ -120,6 +129,15 @@ namespace MauiLocalization.Resources.Languages {
         internal static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome to .NET Multi-platform App UI.
+        /// </summary>
+        internal static string WelcomeLabelText {
+            get {
+                return ResourceManager.GetString("WelcomeLabelText", resourceCulture);
             }
         }
     }

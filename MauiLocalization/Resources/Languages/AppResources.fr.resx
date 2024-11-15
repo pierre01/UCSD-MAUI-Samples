@@ -138,4 +138,10 @@
   <data name="TimeSingular" xml:space="preserve">
     <value>Fois</value>
   </data>
+  <data name="ButtonHintText" xml:space="preserve">
+    <value>Compte le nombre de fois où vous cliquez</value>
+  </data>
+  <data name="WelcomeLabelText" xml:space="preserve">
+    <value>Bienvenue sur .NET Application multiplateforme UI</value>
+  </data>
 </root>

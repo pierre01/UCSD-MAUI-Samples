@@ -9,7 +9,6 @@ namespace MauiLocalization
         public MainPage()
         {
             InitializeComponent();
-            CounterBtn.Text = AppResources.ClickMe;
         }
 
         private void OnCounterClicked(object sender, EventArgs e)

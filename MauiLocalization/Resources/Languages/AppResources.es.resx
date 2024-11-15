@@ -124,7 +124,7 @@
     <value>Inicio</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>El título.</value>
+    <value>El título</value>
   </data>
   <data name="ClickMe" xml:space="preserve">
     <value>Hacer clic aquí</value>
@@ -137,5 +137,11 @@
   </data>
   <data name="TimeSingular" xml:space="preserve">
     <value>Hora</value>
+  </data>
+  <data name="ButtonHintText" xml:space="preserve">
+    <value>Cuenta la cantidad de veces que hace clic</value>
+  </data>
+  <data name="WelcomeLabelText" xml:space="preserve">
+    <value>Bienvenido a .NET múltiples aplicaciones UI</value>
   </data>
 </root>

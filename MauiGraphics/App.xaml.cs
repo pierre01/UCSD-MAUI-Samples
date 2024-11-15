@@ -6,7 +6,6 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new AppShell();
     }
 
     /// <summary>
@@ -16,8 +15,7 @@ public partial class App : Application
     /// <returns></returns>
     protected override Window CreateWindow(IActivationState activationState)
     {
-        var window = base.CreateWindow(activationState);
-
+        var window = new Window(new AppShell());
         const int newWidth = 600;
         const int newHeight = 800;
         window.X = 500;
