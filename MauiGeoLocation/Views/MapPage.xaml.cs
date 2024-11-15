@@ -1,4 +1,5 @@
 using Microsoft.Maui.Maps;
+using Microsoft.Maui.Devices.Sensors;
 
 namespace MauiGeoLocation.Views;
 

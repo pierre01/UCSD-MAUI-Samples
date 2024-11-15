@@ -1,3 +1,4 @@
+using Microsoft.Maui.Devices.Sensors;
 namespace MauiGeoLocation.Views;
 
 public partial class GeocodingPage : ContentPage
