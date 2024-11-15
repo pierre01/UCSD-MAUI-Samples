@@ -1,6 +1,7 @@
 using MauiGraphics.Utilities;
 using SkiaSharp;
 using SkiaSharp.Views.Maui;
+using Microsoft.Maui.Graphics;
 
 namespace MauiGraphics.Views;
 

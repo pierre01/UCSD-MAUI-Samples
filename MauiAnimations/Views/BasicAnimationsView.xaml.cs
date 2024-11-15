@@ -22,7 +22,7 @@ public partial class BasicAnimationsView : ContentPage
         else
         {
             var cartridge = BarrelGrid.Children[_shotTriggered] as VisualElement;
-            cartridge.FadeTo(.5, 400, Easing.CubicIn);
+            await cartridge.FadeTo(.5, 400, Easing.CubicIn);
 
         }
         await Task.WhenAll
@@ -37,12 +37,12 @@ public partial class BasicAnimationsView : ContentPage
         if (_shotTriggered == 8)
         {
             // Animate Reload button
-            ReloadButton.TranslateTo(0, 0, 500, Easing.CubicIn);
+            await ReloadButton.TranslateTo(0, 0, 500, Easing.CubicIn);
 
             ReloadButton.IsEnabled = true;
         }
         ShootButton.IsEnabled = true;
-        PowLabel.ScaleTo(1, 40);
+        await PowLabel.ScaleTo(1, 40);
     }
 
     /// <summary>

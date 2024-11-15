@@ -1,4 +1,5 @@
-﻿namespace MauiGraphics.Utilities;
+﻿using Microsoft.Maui.Devices;
+namespace MauiGraphics.Utilities;
 
 public static class ScreenGraphics
 {

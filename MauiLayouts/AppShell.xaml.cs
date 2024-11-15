@@ -1,4 +1,5 @@
-﻿namespace MauiLayouts;
+﻿using Microsoft.Maui.Devices;
+namespace MauiLayouts;
 
 public partial class AppShell : Shell
 {

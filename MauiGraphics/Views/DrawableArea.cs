@@ -1,4 +1,5 @@
-﻿namespace MauiGraphics.Views;
+﻿using Microsoft.Maui.Devices;
+namespace MauiGraphics.Views;
 
 public class DrawableArea : IDrawable
 {
