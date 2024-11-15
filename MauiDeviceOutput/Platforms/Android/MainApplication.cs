@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Runtime;
+using Microsoft.Maui.Devices;
 
 [assembly: UsesPermission(Android.Manifest.Permission.Vibrate)]
 [assembly: UsesPermission(Android.Manifest.Permission.Flashlight)]

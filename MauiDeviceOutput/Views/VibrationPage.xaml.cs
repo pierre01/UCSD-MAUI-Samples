@@ -1,3 +1,4 @@
+using Microsoft.Maui.Devices;
 namespace MauiDeviceOutput.Views;
 
 public partial class VibrationPage : ContentPage

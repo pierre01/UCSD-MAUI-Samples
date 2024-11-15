@@ -1,3 +1,5 @@
+using Microsoft.Maui.Devices;
+using Microsoft.Maui.ApplicationModel;
 namespace MauiDeviceOutput.Views;
 
 public partial class FlashLightPage : ContentPage
