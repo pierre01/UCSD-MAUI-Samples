@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.ObjectModel;
+using Microsoft.Maui.Networking;
 
 namespace MAUICommunications.ViewModels;
 

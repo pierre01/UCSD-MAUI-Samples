@@ -1,3 +1,5 @@
+using Microsoft.Maui.ApplicationModel.Communication;
+using Microsoft.Maui.Storage;
 namespace MAUICommunications.Views;
 
 public partial class EmailPage : ContentPage

@@ -1,5 +1,7 @@
+using Communication = Microsoft.Maui.ApplicationModel.Communication;
 namespace MAUICommunications.Views;
 
+// Code that uses the namespace:
 
 public partial class ContactsPage : ContentPage
 {
@@ -15,7 +17,7 @@ public partial class ContactsPage : ContentPage
 
             PermissionStatus status = await Permissions.RequestAsync<Permissions.ContactsRead>();
             //Fully Qualified Name is required because of IOS name conflict
-            var contact = await Contacts.PickContactAsync();
+            var contact = await Communication.Contacts.Default.PickContactAsync();
 
             if (contact == null)
                 return;
