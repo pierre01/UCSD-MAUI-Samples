@@ -1,3 +1,5 @@
+using Microsoft.Maui.Devices;
+using Microsoft.Maui.ApplicationModel;
 namespace MauiDevices.Views;
 
 public partial class DeviceInformationPage : ContentPage

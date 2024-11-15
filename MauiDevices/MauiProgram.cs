@@ -1,4 +1,5 @@
-﻿namespace MauiDevices;
+﻿using Microsoft.Maui.Devices;
+namespace MauiDevices;
 
 public static class MauiProgram
 {
