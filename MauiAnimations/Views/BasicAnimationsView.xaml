@@ -1,106 +1,106 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="MauiAnimations.Views.BasicAnimationsView"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="Basic Animations">
-    <ContentPage.Resources>
-        <Style x:Key="BulletEllipse" TargetType="Ellipse">
-            <Setter Property="WidthRequest" Value="60" />
-            <Setter Property="HeightRequest" Value="60" />
-            <Setter Property="Fill" Value="Orange" />
-            <Setter Property="Stroke" Value="Red" />
-            <Setter Property="StrokeThickness" Value="4" />
-        </Style>
-    </ContentPage.Resources>
-    <VerticalStackLayout>
-        <Label
-            x:Name="PowLabel"
-            Margin="32"
-            FontSize="24"
-            HorizontalOptions="Center"
-            Text="Bang!"
-            VerticalOptions="Center" />
+	x:Class="MauiAnimations.Views.BasicAnimationsView"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	Title="Basic Animations">
+	<ContentPage.Resources>
+		<Style x:Key="BulletEllipse" TargetType="Ellipse">
+			<Setter Property="WidthRequest" Value="60" />
+			<Setter Property="HeightRequest" Value="60" />
+			<Setter Property="Fill" Value="Orange" />
+			<Setter Property="Stroke" Value="Red" />
+			<Setter Property="StrokeThickness" Value="4" />
+		</Style>
+	</ContentPage.Resources>
+	<VerticalStackLayout>
+		<Label
+			x:Name="PowLabel"
+			Margin="32"
+			FontSize="24"
+			HorizontalOptions="Center"
+			Text="Bang!"
+			VerticalOptions="Center" />
 
-        <Grid
-            x:Name="BarrelGrid"
-            Margin="40"
-            ColumnDefinitions="*,*,*"
-            HeightRequest="300"
-            RowDefinitions="*,*,*"
-            WidthRequest="300">
+		<Grid
+			x:Name="BarrelGrid"
+			Margin="40"
+			ColumnDefinitions="*,*,*"
+			HeightRequest="300"
+			RowDefinitions="*,*,*"
+			WidthRequest="300">
 
-            <Ellipse
-                Grid.Row="0"
-                Grid.Column="1"
-                HorizontalOptions="Center"
-                Style="{StaticResource BulletEllipse}"
-                VerticalOptions="Start" />
-            <Ellipse
-                Grid.Row="0"
-                Grid.Column="0"
-                HorizontalOptions="Center"
-                Style="{StaticResource BulletEllipse}"
-                VerticalOptions="Center" />
-            <Ellipse
-                Grid.Row="1"
-                Grid.Column="0"
-                HorizontalOptions="Start"
-                Style="{StaticResource BulletEllipse}"
-                VerticalOptions="Center" />
-            <Ellipse
-                Grid.Row="2"
-                Grid.Column="0"
-                HorizontalOptions="Center"
-                Style="{StaticResource BulletEllipse}"
-                VerticalOptions="Center" />
-            <Ellipse
-                Grid.Row="2"
-                Grid.Column="1"
-                HorizontalOptions="Center"
-                Style="{StaticResource BulletEllipse}"
-                VerticalOptions="End" />
-            <Ellipse
-                Grid.Row="2"
-                Grid.Column="2"
-                HorizontalOptions="Center"
-                Style="{StaticResource BulletEllipse}"
-                VerticalOptions="Center" />
-            <Ellipse
-                Grid.Row="1"
-                Grid.Column="2"
-                HorizontalOptions="End"
-                Style="{StaticResource BulletEllipse}"
-                VerticalOptions="Center" />
+			<Ellipse
+				Grid.Row="0"
+				Grid.Column="1"
+				HorizontalOptions="Center"
+				Style="{StaticResource BulletEllipse}"
+				VerticalOptions="Start" />
+			<Ellipse
+				Grid.Row="0"
+				Grid.Column="0"
+				HorizontalOptions="Center"
+				Style="{StaticResource BulletEllipse}"
+				VerticalOptions="Center" />
+			<Ellipse
+				Grid.Row="1"
+				Grid.Column="0"
+				HorizontalOptions="Start"
+				Style="{StaticResource BulletEllipse}"
+				VerticalOptions="Center" />
+			<Ellipse
+				Grid.Row="2"
+				Grid.Column="0"
+				HorizontalOptions="Center"
+				Style="{StaticResource BulletEllipse}"
+				VerticalOptions="Center" />
+			<Ellipse
+				Grid.Row="2"
+				Grid.Column="1"
+				HorizontalOptions="Center"
+				Style="{StaticResource BulletEllipse}"
+				VerticalOptions="End" />
+			<Ellipse
+				Grid.Row="2"
+				Grid.Column="2"
+				HorizontalOptions="Center"
+				Style="{StaticResource BulletEllipse}"
+				VerticalOptions="Center" />
+			<Ellipse
+				Grid.Row="1"
+				Grid.Column="2"
+				HorizontalOptions="End"
+				Style="{StaticResource BulletEllipse}"
+				VerticalOptions="Center" />
 
-            <Ellipse
-                Grid.Row="0"
-                Grid.Column="2"
-                HorizontalOptions="Center"
-                Style="{StaticResource BulletEllipse}"
-                VerticalOptions="Center" />
+			<Ellipse
+				Grid.Row="0"
+				Grid.Column="2"
+				HorizontalOptions="Center"
+				Style="{StaticResource BulletEllipse}"
+				VerticalOptions="Center" />
 
-            <Ellipse
-                Grid.RowSpan="3"
-                Grid.ColumnSpan="3"
-                Margin="-40"
-                Stroke="gray"
-                StrokeThickness="4" />
-        </Grid>
-        <Grid ColumnDefinitions="*,*">
-            <Button
-                x:Name="ShootButton"
-                Margin="24"
-                Clicked="OnShoot"
-                Text="Shoot!"
-                WidthRequest="100" />        
-            <Button
-                x:Name="ReloadButton"
-                Grid.Column="1"
-                Margin="24"
-                Clicked="OnReload"
-                Text="Reload!"
-                WidthRequest="100" />
-        </Grid>
-    </VerticalStackLayout>
+			<Ellipse
+				Grid.RowSpan="3"
+				Grid.ColumnSpan="3"
+				Margin="-40"
+				Stroke="gray"
+				StrokeThickness="4" />
+		</Grid>
+		<Grid ColumnDefinitions="*,*">
+			<Button
+				x:Name="ShootButton"
+				Margin="24"
+				Clicked="OnShoot"
+				Text="Shoot!"
+				WidthRequest="100" />
+			<Button
+				x:Name="ReloadButton"
+				Grid.Column="1"
+				Margin="24"
+				Clicked="OnReload"
+				Text="Reload!"
+				WidthRequest="100" />
+		</Grid>
+	</VerticalStackLayout>
 </ContentPage>

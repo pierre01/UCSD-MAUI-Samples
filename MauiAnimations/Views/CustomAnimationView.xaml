@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="MauiAnimations.Views.CustomAnimationView"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="Custom Animations">
-    <VerticalStackLayout>
-        <Label
-            HorizontalOptions="Center"
-            Text="Custom Animation"
-            VerticalOptions="Center" />
-        <Image
-            x:Name="DotNetBotImage"
-            HeightRequest="200"
-            HorizontalOptions="Center"
-            SemanticProperties.Description="Cute dot net bot waving hi to you!"
-            Source="dotnet_bot.png" />
-        <Button
-            x:Name="AnimateBtn"
-            Clicked="OnAnimationClicked"
-            HorizontalOptions="Center"
-            SemanticProperties.Hint="Starts custom Animation when you click"
-            Text="Animate!" />
-    </VerticalStackLayout>
+	x:Class="MauiAnimations.Views.CustomAnimationView"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	Title="Custom Animations">
+	<VerticalStackLayout>
+		<Label
+			HorizontalOptions="Center"
+			Text="Custom Animation"
+			VerticalOptions="Center" />
+		<Image
+			x:Name="DotNetBotImage"
+			HeightRequest="200"
+			HorizontalOptions="Center"
+			SemanticProperties.Description="Cute dot net bot waving hi to you!"
+			Source="dotnet_bot.png" />
+		<Button
+			x:Name="AnimateBtn"
+			Clicked="OnAnimationClicked"
+			HorizontalOptions="Center"
+			SemanticProperties.Hint="Starts custom Animation when you click"
+			Text="Animate!" />
+	</VerticalStackLayout>
 </ContentPage>
