@@ -1,4 +1,7 @@
 using System.IO;
+using Microsoft.Maui.Storage;
+using Microsoft.Maui.ApplicationModel;
+using Microsoft.Maui.Media;
 
 namespace MauiMedia.Views;
 

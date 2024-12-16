@@ -1,6 +1,7 @@
 using Microsoft.Maui.Storage;
 using NativeMedia;
 using System.IO;
+using Microsoft.Maui.ApplicationModel;
 
 namespace MauiMedia.Views;
 
