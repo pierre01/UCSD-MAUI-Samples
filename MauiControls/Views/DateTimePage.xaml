@@ -7,7 +7,7 @@
     <VerticalStackLayout>
 
         <DatePicker
-            Margin="40"
+            Margin="40" 
             Date="06/21/2022"
             DateSelected="OnDateSelected"
             MaximumDate="12/31/2022"
@@ -15,9 +15,9 @@
 
         <TimePicker
             x:Name="MyTimePicker"
-            Margin="40"
+            Margin="40" 
             PropertyChanged="OnTimeChanged"
-            Time="4:15:26" />
+            Time="14:15:26" />
 
     </VerticalStackLayout>
 </ContentPage>
