@@ -6,6 +6,7 @@ using MauiCamera.ViewModels;
 using MauiCamera.Views;
 using Microsoft.Extensions.Logging;
 using Plugin.Maui.OCR;
+using Microsoft.Maui.Storage;
 
 namespace MauiCamera;
 

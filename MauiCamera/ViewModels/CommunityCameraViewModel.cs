@@ -2,31 +2,26 @@
 using CommunityToolkit.Maui.Core.Primitives;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MauiCamera.ViewModels;
 
 public partial class CommunityCameraViewModel(ICameraProvider cameraProvider):ObservableObject
 {
-  
+ 
     [ObservableProperty]
-	CameraFlashMode flashMode;
+    private CameraFlashMode _flashMode;
 
 	[ObservableProperty]
-	CameraInfo selectedCamera;
+	CameraInfo _selectedCamera;
 
 	[ObservableProperty]
-	Size selectedResolution;
+    private Size _selectedResolution;
 
 	[ObservableProperty]
-	float currentZoom;
+    private float _currentZoom;
 
 	[ObservableProperty]
-	string cameraNameText = "", zoomRangeText = "", currentZoomText = "", flashModeText = "", resolutionText = "";
+	string _cameraNameText = "", _zoomRangeText = "", _currentZoomText = "", _flashModeText = "", _resolutionText = "";
 
 	public IReadOnlyList<CameraInfo> Cameras => cameraProvider?.AvailableCameras ?? [];
 

@@ -9,9 +9,14 @@ namespace MauiCamera.Views;
 /// </summary>
 public partial class CommunityCamera : ContentPage
 {
-	public CommunityCamera()
+	public CommunityCamera(CommunityCameraViewModel communityCameraViewModel)
 	{
 		InitializeComponent();
-	    BindingContext  = new CommunityCameraViewModel((ICameraProvider) ActiveCamera);
+	    BindingContext  = communityCameraViewModel;
 	}
+
+    private void ActiveCamera_MediaCaptured(object sender, CommunityToolkit.Maui.Views.MediaCapturedEventArgs e)
+    {
+
+    }
 }

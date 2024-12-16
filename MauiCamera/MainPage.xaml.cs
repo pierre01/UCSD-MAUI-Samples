@@ -5,6 +5,7 @@ using CommunityToolkit.Maui.Storage;
 using MauiCamera.ViewModels;
 using System.Text;
 using System.Threading;
+using Microsoft.Maui.ApplicationModel;
 
 namespace MauiCamera
 {
