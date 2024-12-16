@@ -1,3 +1,4 @@
+using Microsoft.Maui.Storage;
 namespace MauiStorage.Views;
 
 public partial class PreferencesPage : ContentPage
@@ -21,9 +22,10 @@ public partial class PreferencesPage : ContentPage
 	public PreferencesPage()
 	{
 		InitializeComponent();
-	}
+        // TODO: Add code to save, get, clear, and forget preferences and display them in the UI
+    }
 
-	private void SavePreferences()
+    private void SavePreferences()
 	{
         // Set a string value:
         Preferences.Default.Set(prefKeyFirstName, "John");
