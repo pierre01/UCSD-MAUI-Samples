@@ -15,7 +15,7 @@
             builder.ConfigureMauiHandlers(handlers =>
 {
 #if ANDROID
-	//handlers.AddHandler(typeof(TimePicker), typeof(Platforms.Android.SpinTimePickerHandler));
+	// handlers.AddHandler(typeof(TimePicker), typeof(Platforms.Android.SpinTimePickerHandler));
 #endif
 }) ;
             return builder.Build();
