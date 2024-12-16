@@ -2,6 +2,8 @@
 using MauiNavigation.Models;
 using MauiNavigation.ViewModels;
 using System.Collections.ObjectModel;
+using Microsoft.Maui.ApplicationModel;
+using Microsoft.Maui.Devices;
 
 namespace MauiNavigation.Search;
 
