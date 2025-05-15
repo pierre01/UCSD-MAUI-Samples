@@ -11,8 +11,10 @@
 		<toolkit:CameraView
 			x:Name="ActiveCamera"
 			Grid.Row="0"
-			Grid.ColumnSpan="3"
+			Grid.ColumnSpan="3" 
+			CaptureImageCommand="{Binding CaptureImageCommand}"
 			MediaCaptured="ActiveCamera_MediaCaptured"
+			ImageCaptureResolution="{Binding SelectedResolution}"
 			CameraFlashMode="{Binding FlashMode}"
 			SelectedCamera="{Binding SelectedCamera}"
 			ZoomFactor="{Binding CurrentZoom}" />
@@ -42,20 +44,21 @@
 		<Button
 			Grid.Row="2"
 			Grid.Column="0"
-			Command="{Binding CaptureImageCommand, Source={x:Reference Camera}}"
+			Command="{Binding CaptureImageCommand}"
 			Text="Capture Image" />
 
 		<Button
 			Grid.Row="2"
 			Grid.Column="1"
-			Command="{Binding StartCameraPreviewCommand, Source={x:Reference Camera}}"
-			Text="Capture Image" />
+			Command="{Binding StartCameraPreviewCommand}"
+			Text="Start Preview" />
 
 		<Button
 			Grid.Row="2"
 			Grid.Column="2"
-			Command="{Binding StopCameraPreviewCommand, Source={x:Reference Camera}}"
-			Text="Capture Image" />
+			Command="{Binding StopCameraPreviewCommand}"
+			
+			Text="Stop Preview" />
 	</Grid>
 
 </ContentPage>

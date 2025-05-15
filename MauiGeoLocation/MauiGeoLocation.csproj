@@ -42,13 +42,13 @@
     <None Remove="Resources\AppIcon\appiconfg.svg" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="CommunityToolkit.Maui.Maps" Version="2.0.4" />
-    <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="9.0.10" />
+    <PackageReference Include="CommunityToolkit.Maui.Maps" Version="3.0.2" />
+    <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="9.0.70" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Maui.Controls" Version="9.0.10" />
-    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="9.0.10" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Maui.Controls" Version="9.0.70" />
+    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="9.0.70" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.5" />
   </ItemGroup>
   <!-- Build Properties must be defined within these property groups to ensure successful publishing
        to the Mac App Store. See: https://aka.ms/maui-publish-app-store#define-build-properties-in-your-project-file -->

@@ -1,3 +1,5 @@
+using Microsoft.Maui.ApplicationModel;
+using Microsoft.Maui.Devices;
 namespace MauiApplicationModel.Views;
 
 public partial class PermissionsPage : ContentPage
