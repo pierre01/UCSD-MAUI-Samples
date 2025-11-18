@@ -1,5 +1,4 @@
 using Microsoft.Maui.Storage;
-using NativeMedia;
 using System.IO;
 using Microsoft.Maui.ApplicationModel;
 
@@ -15,31 +14,29 @@ public partial class MediaPickerMediaGalleryPage : ContentPage
 
     private async void TakePicture(object sender, EventArgs e)
     {
-        //...
-        if (!MediaGallery.CheckCapturePhotoSupport())
-            return;
-
         var status = await Permissions.RequestAsync<Permissions.Camera>();
 
         if (status != PermissionStatus.Granted)
             return;
 
-
-        var file = await MediaGallery.CapturePhotoAsync();
-
-        if (file.Type == MediaFileType.Image)
+        try
         {
-            Stream sourceStream = await file.OpenReadAsync();
-            
-            //using (FileStream localFileStream = File.OpenWrite(localFilePath))
-            //{
-            //    await sourceStream.CopyToAsync(localFileStream);
-            //}
-            ImageResult.Source = ImageSource.FromStream(() => sourceStream);
+            var photo = await MediaPicker.CapturePhotoAsync();
+            if (photo == null)
+                return;
 
+            using var stream = await photo.OpenReadAsync();
+            var ms = new MemoryStream();
+            await stream.CopyToAsync(ms);
+            ms.Position = 0;
+
+            ImageResult.Source = ImageSource.FromStream(() => ms);
+        }
+        catch (Exception)
+        {
+            // Capture cancelled or failed - keep existing behavior
         }
     }
-
 
 
 }
