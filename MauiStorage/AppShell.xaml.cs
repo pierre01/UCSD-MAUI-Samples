@@ -1,9 +1,10 @@
-﻿namespace MauiStorage;
-
-public partial class AppShell : Shell
+﻿namespace MauiStorage
 {
-	public AppShell()
-	{
-		InitializeComponent();
-	}
+    public partial class AppShell : Shell
+    {
+        public AppShell()
+        {
+            InitializeComponent();
+        }
+    }
 }

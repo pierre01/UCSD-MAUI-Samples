@@ -1,9 +1,10 @@
-﻿namespace MauiMvvm;
-
-public partial class AppShell : Shell
+﻿namespace MauiMvvm
 {
-	public AppShell()
-	{
-		InitializeComponent();
-	}
+    public partial class AppShell : Shell
+    {
+        public AppShell()
+        {
+            InitializeComponent();
+        }
+    }
 }

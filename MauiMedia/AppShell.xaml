@@ -3,29 +3,12 @@
     x:Class="MauiMedia.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiMedia.Views"
-    FlyoutBehavior="Flyout">
+    xmlns:local="clr-namespace:MauiMedia"
+    Title="MauiMedia">
 
     <ShellContent
-        Title="Audio Media player"
-        Icon="appiconfg.png"
-        ContentTemplate="{DataTemplate local:SoundAndMusicPage}"
-        Route="SoundAndMusicPage" />
-    <ShellContent
-        Title="Barcode Reading"
-        Icon="appiconfg.png"
-        ContentTemplate="{DataTemplate local:BarCodesReadingPage}"
-        Route="BarCodesReadingPage" />    
-    <ShellContent
-        Title="MediaPicker Tests Page"
-        Icon="appiconfg.png"
-        ContentTemplate="{DataTemplate local:MediaPickerTestsPage}"
-        Route="MediaPickerTestsPage" />
-
-    <ShellContent
-        Title="MediaPicker Tests Page 2"
-        Icon="appiconfg.png"
-        ContentTemplate="{DataTemplate local:MediaPickerMediaGalleryPage}"
-        Route="MediaPickerMediaGalleryPage" />
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
 
 </Shell>

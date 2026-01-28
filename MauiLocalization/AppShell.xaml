@@ -4,11 +4,10 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiLocalization"
-    xmlns:languages="clr-namespace:MauiLocalization.Resources.Languages"
-    Shell.FlyoutBehavior="Disabled">
+    Title="MauiLocalization">
 
     <ShellContent
-        Title="{x:Static languages:AppResources.Home}"
+        Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-	x:Class="MauiControls.AppShell"
-	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	xmlns:local="clr-namespace:MauiControls"
+    x:Class="MauiControls.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiControls"
 	xmlns:views="clr-namespace:MauiControls.Views">
 
-	<ShellContent
+    <ShellContent
 		Title="Buttons"
 		ContentTemplate="{DataTemplate views:ButtonsPage}"
 		Icon="appiconfg.png"
 		Route="ButtonsPage" />
-	<ShellContent
+    <ShellContent
 		Title="Text Inputs"
 		ContentTemplate="{DataTemplate views:TextInputPage}"
 		Icon="appiconfg.png"
 		Route="TextInputPage" />
-	<ShellContent
+    <ShellContent
 		Title="Steps, progress and range Inputs"
 		ContentTemplate="{DataTemplate views:StepAndProgressPage}"
 		Icon="appiconfg.png"
 		Route="StepAndProgressPage" />
-	<ShellContent
+    <ShellContent
 		Title="Date and Time Pickers"
 		ContentTemplate="{DataTemplate views:DateTimePage}"
 		Icon="appiconfg.png"

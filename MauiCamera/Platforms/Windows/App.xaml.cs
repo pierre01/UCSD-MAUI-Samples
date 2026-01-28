@@ -21,4 +21,5 @@ namespace MauiCamera.WinUI
 
         protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
     }
+
 }

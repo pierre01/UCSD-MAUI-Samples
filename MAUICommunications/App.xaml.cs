@@ -1,24 +1,17 @@
-﻿namespace MAUICommunications;
+﻿using Microsoft.Extensions.DependencyInjection;
 
-public partial class App : Application
+namespace MauiCommunications
 {
-    public App()
+    public partial class App : Application
     {
-        InitializeComponent();
+        public App()
+        {
+            InitializeComponent();
+        }
 
-    }
-    
-    protected override Window CreateWindow(IActivationState? activationState)
-    {
-        var window = new Window(new AppShell());
-
-        const int newWidth = 800;
-        const int newHeight = 700;
-        window.X = 500;
-        window.Y = 200;
-        window.Width = newWidth;
-        window.Height = newHeight;
-
-        return window;
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            return new Window(new AppShell());
+        }
     }
 }

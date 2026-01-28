@@ -4,21 +4,11 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiCamera"
-    xmlns:views="clr-namespace:MauiCamera.Views"
-    Shell.FlyoutBehavior="Flyout">
+    Title="MauiCamera">
 
-     
-	<ShellContent
-        Title="Community Camera"
-        ContentTemplate="{DataTemplate views:CommunityCamera}"
-        Route="CommunityCamera" />   
-   <ShellContent
+    <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />     
-	<ShellContent
-        Title="Settings"
-        ContentTemplate="{DataTemplate views:SettingsPage}"
-        Route="SettingsPage" />
+        Route="MainPage" />
 
 </Shell>

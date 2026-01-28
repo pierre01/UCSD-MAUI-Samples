@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace MAUICommunications
+namespace MauiCommunications
 {
     public class Program
     {

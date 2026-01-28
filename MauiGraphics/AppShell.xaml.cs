@@ -1,9 +1,10 @@
-﻿namespace MauiGraphics;
-
-public partial class AppShell : Shell
+﻿namespace MauiGraphics
 {
-	public AppShell()
-	{
-		InitializeComponent();
-	}
+    public partial class AppShell : Shell
+    {
+        public AppShell()
+        {
+            InitializeComponent();
+        }
+    }
 }

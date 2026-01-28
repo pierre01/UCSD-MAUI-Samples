@@ -1,43 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-	x:Class="MauiNavigation.AppShell"
-	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiNavigation.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiNavigation"
 	xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
 	xmlns:views="clr-namespace:MauiNavigation.Views"
 	FlyoutBehavior="Flyout">
 
-	<ShellContent
+    <ShellContent
 		Title="Search Page"
 		ContentTemplate="{DataTemplate views:SearchPage}"
 		Icon="search.png"
 		Route="SearchPage" />
 
-	<ShellContent
+    <ShellContent
 		Title="Search Page using Handler"
 		ContentTemplate="{DataTemplate views:SearchPageWithHandler}"
 		Icon="search.png"
 		Route="SearchPageWithHandler" />
 
-	<ShellContent
+    <ShellContent
 		Title="Pop Ups and Alerts"
 		ContentTemplate="{DataTemplate views:PopUpsPage}"
 		Icon="popup_icon.png"
 		Route="PopUpsPage" />
 
-	<ShellContent
+    <ShellContent
 		Title="Toasts, Snackbar and Alerts"
 		ContentTemplate="{DataTemplate views:ToastAndSnackBarPage}"
 		Icon="popup_icon.png"
 		Route="ToastAndSnackBarPage" />
 
-	<ShellContent
+    <ShellContent
 		Title="Settings"
 		ContentTemplate="{DataTemplate views:SettingsPage}"
 		Icon="settings.png"
 		Route="SettingsPage" />
 
-	<MenuItem
+    <MenuItem
 		Command="{Binding NavigateToSettingsCommand}"
 		IconImageSource="liquid_spot.png"
 		Text="Dialog To Settings" />

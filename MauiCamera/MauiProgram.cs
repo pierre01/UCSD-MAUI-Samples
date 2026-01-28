@@ -1,65 +1,25 @@
-﻿using Camera.MAUI;
-using CommunityToolkit.Maui;
-using CommunityToolkit.Maui.Core;
-using CommunityToolkit.Maui.Storage;
-using MauiCamera.ViewModels;
-using MauiCamera.Views;
-using Microsoft.Extensions.Logging;
-using Plugin.Maui.OCR;
-using Microsoft.Maui.Storage;
+﻿using Microsoft.Extensions.Logging;
 
-namespace MauiCamera;
-
-public static class MauiProgram
+namespace MauiCamera
 {
-    public static MauiApp CreateMauiApp()
+    public static class MauiProgram
     {
-        var builder = MauiApp.CreateBuilder();
-        builder.UseMauiApp<App>()
-            .UseMauiCameraView()
-            .UseMauiApp<App>()
-            .UseMauiCommunityToolkit()
-            .UseMauiCommunityToolkitCamera()
-            .UseOcr()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-            });
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                });
 
 #if DEBUG
-        builder.Logging.AddDebug();
+    		builder.Logging.AddDebug();
 #endif
-        builder.RegisterServices();
-        builder.RegisterViewModels();
-        builder.RegisterViews();
-        return builder.Build();
-    }
 
-    public static MauiAppBuilder RegisterServices(this MauiAppBuilder mauiAppBuilder)
-    {
-        mauiAppBuilder.Services.AddSingleton<IFolderPicker>(FolderPicker.Default);
-        mauiAppBuilder.Services.AddSingleton<IFileSaver>(FileSaver.Default);
-        mauiAppBuilder.Services.AddSingleton<IPreferences>(Preferences.Default);
-        mauiAppBuilder.Services.AddSingleton<IFileSystem>(FileSystem.Current);
-        mauiAppBuilder.Services.AddSingleton<IOcrService>(OcrPlugin.Default);
-         return mauiAppBuilder;
-    }
-
-    public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
-    {
-        mauiAppBuilder.Services.AddSingleton<SettingsPageViewModel>();
-        mauiAppBuilder.Services.AddSingleton<MainPageViewModel>();
-        mauiAppBuilder.Services.AddTransient<CommunityCameraViewModel>();
-
-        return mauiAppBuilder;
-    }
-
-    public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
-    {
-        mauiAppBuilder.Services.AddSingleton<MainPage>();
-        mauiAppBuilder.Services.AddSingleton<SettingsPage>();
-        mauiAppBuilder.Services.AddTransient<CommunityCamera>();
-        return mauiAppBuilder;
+            return builder.Build();
+        }
     }
 }

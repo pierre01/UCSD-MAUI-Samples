@@ -12,18 +12,18 @@ public partial class PopUpsPage : ContentPage
 
     public async void OnDisplayAlertSimple(object sender, EventArgs e)
     {
-        await DisplayAlert("Alert", "You have been alerted", "OK");
+        await DisplayAlertAsync("Alert", "You have been alerted", "OK");
     }
 
     public async void OnDisplayAlert2Buttons(object sender, EventArgs e)
     {
-        bool answer = await DisplayAlert("Question?", "Would you like to play a game", "Yes", "No");
+        bool answer = await DisplayAlertAsync("Question?", "Would you like to play a game", "Yes", "No");
         Debug.WriteLine("Answer: " + answer);
     }
 
     public async void OnDisplayActionSheet(object sender, EventArgs e)
     {
-        string action = await DisplayActionSheet("ActionSheet: Send to?", "Cancel", null, "Email", "Twitter", "Facebook");
+        string action = await DisplayActionSheetAsync("ActionSheet: Send to?", "Cancel", null, "Email", "Twitter", "Facebook");
         Debug.WriteLine("Action: " + action);
 
     }
@@ -41,7 +41,7 @@ public partial class PopUpsPage : ContentPage
 
     async void OnDisplayActionSheet2(object sender, EventArgs e)
     {
-        string action = await DisplayActionSheet("ActionSheet: SavePhoto?", "Cancel", "Delete", "Photo Roll", "Email");
+        string action = await DisplayActionSheetAsync("ActionSheet: SavePhoto?", "Cancel", "Delete", "Photo Roll", "Email");
         Debug.WriteLine("Action: " + action);
     }
 }

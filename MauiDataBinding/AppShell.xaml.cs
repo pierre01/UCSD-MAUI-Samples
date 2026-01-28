@@ -1,9 +1,10 @@
-﻿namespace MauiDataBinding;
-
-public partial class AppShell : Shell
+﻿namespace MauiDataBinding
 {
-	public AppShell()
-	{
-		InitializeComponent();
-	}
+    public partial class AppShell : Shell
+    {
+        public AppShell()
+        {
+            InitializeComponent();
+        }
+    }
 }

@@ -15,21 +15,27 @@ public partial class ToastAndSnackBarPage : ContentPage
 
     private async void OnDisplayToast(object sender, EventArgs e)
     {
-        CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+        if (DeviceInfo.Current.Platform == DevicePlatform.WinUI)
+        {
+            await DisplayAlertAsync("Alert", "Not available on Windows", "OK");
+            return; 
+        }
 
-        string text = "This is a Toast";
-        ToastDuration duration = ToastDuration.Short;
-        double fontSize = 14;
-
-        var toast = Toast.Make(text, duration, fontSize);
-
-        await toast.Show(cancellationTokenSource.Token);
+        using var cts = new CancellationTokenSource();
+        var toast = Toast.Make("This is a Toast", ToastDuration.Short, 14);
+        await toast.Show(cts.Token);
     }
 
     bool _isUndoed = false;
 
     private async void OnDisplaySnackBar(object sender, EventArgs e)
     {
+        if (DeviceInfo.Current.Platform == DevicePlatform.WinUI)
+        {
+            await DisplayAlertAsync("Alert", "Not available on Windows", "OK");
+            return; 
+        }
+
         CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
 
         var snackbarOptions = new SnackbarOptions

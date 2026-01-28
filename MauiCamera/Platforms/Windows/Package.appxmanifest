@@ -8,7 +8,7 @@
 
   <Identity Name="maui-package-name-placeholder" Publisher="CN=User Name" Version="0.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="76183E26-C80B-402E-895D-140AF6B9599C" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="3330DA6A-4F9D-4457-BA0E-330B212A6D16" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>$placeholder$</DisplayName>
@@ -41,8 +41,6 @@
 
   <Capabilities>
     <rescap:Capability Name="runFullTrust" />
-    <DeviceCapability Name="microphone"/>
-    <DeviceCapability Name="webcam"/>
   </Capabilities>
 
 </Package>

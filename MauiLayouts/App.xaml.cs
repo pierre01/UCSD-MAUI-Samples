@@ -1,14 +1,15 @@
-﻿namespace MauiLayouts
+﻿using Microsoft.Extensions.DependencyInjection;
+
+namespace MauiLayouts
 {
     public partial class App : Application
     {
         public App()
         {
             InitializeComponent();
-
         }
 
-        protected override Window CreateWindow(IActivationState activationState)
+        protected override Window CreateWindow(IActivationState? activationState)
         {
             var window = new Window(new AppShell());
             const int newWidth = 600;

@@ -1,69 +1,66 @@
-﻿using Microsoft.Maui.ApplicationModel;
+﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace MauiNavigation;
-
-public partial class App : Application
+namespace MauiNavigation
 {
-	public App()
-	{
-		InitializeComponent();
-
-
-    }
-
-
-    protected override Window CreateWindow(IActivationState activationState)
+    public partial class App : Application
     {
-
-        var window = new Window(new AppShell());
-        const int newWidth = 800;
-        const int newHeight = 600;
-        window.X = 500;
-        window.Y = 200;
-        window.Width = newWidth;
-        window.Height = newHeight;
-
-        window.Created += Window_Created;
-        window.Activated += Window_Activated;
-        window.Deactivated += Window_Deactivated;
-        window.Stopped += Window_Stopped;
-        window.Resumed += Window_Resumed;
-        window.Destroying += Window_Destroying;
-
-
-        return window;
-    }
-
-    private void Window_Destroying(object sender, EventArgs e)
-    {
-    }
-
-    private void Window_Resumed(object sender, EventArgs e)
-    {
-    }
-
-    private void Window_Stopped(object sender, EventArgs e)
-    {
-    }
-
-    private void Window_Deactivated(object sender, EventArgs e)
-    {
-    }
-
-    private void Window_Activated(object sender, EventArgs e)
-    {
-    }
-
-    private void Window_Created(object sender, EventArgs e)
-    {
-    }
-
-    public static async void HandleAppActions(AppAction action)
-    {
-        App.Current.Dispatcher.Dispatch(async () =>
+        public App()
         {
-            await Shell.Current.GoToAsync($"///{action.Id}", true);
-        });
-        
+            InitializeComponent();
+        }
+
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            var window = new Window(new AppShell());
+            const int newWidth = 800;
+            const int newHeight = 600;
+            window.X = 500;
+            window.Y = 200;
+            window.Width = newWidth;
+            window.Height = newHeight;
+
+            window.Created += Window_Created;
+            window.Activated += Window_Activated;
+            window.Deactivated += Window_Deactivated;
+            window.Stopped += Window_Stopped;
+            window.Resumed += Window_Resumed;
+            window.Destroying += Window_Destroying;
+
+
+            return window;
+        }
+
+        private void Window_Destroying(object? sender, EventArgs e)
+        {
+        }
+
+        private void Window_Resumed(object? sender, EventArgs e)
+        {
+        }
+
+        private void Window_Stopped(object? sender, EventArgs e)
+        {
+        }
+
+        private void Window_Deactivated(object? sender, EventArgs e)
+        {
+        }
+
+        private void Window_Activated(object? sender, EventArgs e)
+        {
+        }
+
+        private void Window_Created(object? sender, EventArgs e)
+        {
+        }
+
+        public static async void HandleAppActions(AppAction action)
+        {
+            App.Current.Dispatcher.Dispatch(async () =>
+            {
+                await Shell.Current.GoToAsync($"///{action.Id}", true);
+            });
+
+        }
     }
 }

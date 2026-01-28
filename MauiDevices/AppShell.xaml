@@ -3,20 +3,12 @@
     x:Class="MauiDevices.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiDevices.Views"
-    Shell.FlyoutBehavior="Flyout">
+    xmlns:local="clr-namespace:MauiDevices"
+    Title="MauiDevices">
 
     <ShellContent
-        Title="Device Info"
-        ContentTemplate="{DataTemplate local:DeviceInformationPage}"
-        Route="DeviceInformationPage" />
-    <ShellContent
-        Title="Device Display"
-        ContentTemplate="{DataTemplate local:DeviceDisplayPage}"
-        Route="DeviceDisplayPage" />
-    <ShellContent
-        Title="Battery Info"
-        ContentTemplate="{DataTemplate local:BatteryPage}"
-        Route="BatteryPage" />
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
 
 </Shell>

@@ -21,4 +21,5 @@ namespace MauiControls.WinUI
 
         protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
     }
+
 }

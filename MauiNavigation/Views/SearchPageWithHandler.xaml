@@ -12,17 +12,15 @@
         <search:PersonSearchHandler x:Name="personSearchHandler"
             ClearPlaceholderEnabled="True"
             ItemsSource="{Binding Team}"      
-            PersonSelected="personSearchHandler_PersonSelected"
-            DisplayMemberName="Name"
-            Placeholder="Enter person name"
-                                    
+            PersonSelected="PersonSearchHandler_PersonSelected"
+            Placeholder="Enter person name"               
             ShowsResults="true" />
     </Shell.SearchHandler>
 
 
     <ContentPage.Resources>
         <DataTemplate x:Key="TeamMemberTemplate" x:DataType="models:Person">
-            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="48" />
                     <ColumnDefinition Width="*" />

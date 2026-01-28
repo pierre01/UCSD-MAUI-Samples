@@ -9,7 +9,7 @@
     x:DataType="viewModels:SearchPageViewModel">
     <ContentPage.Resources>
         <DataTemplate x:Key="TeamMemberTemplate" x:DataType="models:Person">
-            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="48" />
                     <ColumnDefinition Width="*" />

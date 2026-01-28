@@ -1,11 +1,10 @@
-﻿using Microsoft.Maui.Devices;
-namespace MauiLayouts;
-
-public partial class AppShell : Shell
+﻿namespace MauiLayouts
 {
-    public AppShell()
+    public partial class AppShell : Shell
     {
-        InitializeComponent();
-        var di = DeviceDisplay.Current.MainDisplayInfo;
+        public AppShell()
+        {
+            InitializeComponent();
+        }
     }
 }

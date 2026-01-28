@@ -1,25 +1,17 @@
-﻿namespace MauiSensors;
+﻿using Microsoft.Extensions.DependencyInjection;
 
-public partial class App : Application
+namespace MauiSensors
 {
-	public App()
-	{
-		InitializeComponent();
-
-	}
-
-	protected override Window CreateWindow(IActivationState activationState)
+    public partial class App : Application
     {
-        var window = new Window(new AppShell());
-        const int newWidth = 600;
-        const int newHeight = 1000;
+        public App()
+        {
+            InitializeComponent();
+        }
 
-        window.X = 500;
-        window.Y = 500;
-        window.Width = newWidth;
-        window.Height = newHeight;
-        window.MinimumHeight = newHeight;
-        return window;
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            return new Window(new AppShell());
+        }
     }
-
 }

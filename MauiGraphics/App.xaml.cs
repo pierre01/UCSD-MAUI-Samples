@@ -1,28 +1,17 @@
-﻿namespace MauiGraphics;
+﻿using Microsoft.Extensions.DependencyInjection;
 
-public partial class App : Application
+namespace MauiGraphics
 {
-    public App()
+    public partial class App : Application
     {
-        InitializeComponent();
+        public App()
+        {
+            InitializeComponent();
+        }
 
-    }
-
-    /// <summary>
-    /// Sets the size running on desktop
-    /// </summary>
-    /// <param name="activationState"></param>
-    /// <returns></returns>
-    protected override Window CreateWindow(IActivationState activationState)
-    {
-        var window = new Window(new AppShell());
-        const int newWidth = 600;
-        const int newHeight = 800;
-        window.X = 500;
-        window.Y = 200;
-        window.Width = newWidth;
-        window.Height = newHeight;
-
-        return window;
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            return new Window(new AppShell());
+        }
     }
 }

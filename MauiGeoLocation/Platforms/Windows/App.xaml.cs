@@ -21,4 +21,5 @@ namespace MauiGeoLocation.WinUI
 
         protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
     }
+
 }

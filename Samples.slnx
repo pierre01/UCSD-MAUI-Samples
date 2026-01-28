@@ -1,0 +1,33 @@
+<Solution>
+  <Folder Name="/Solution Folder/">
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="MauiAnimations/MauiAnimations.csproj" />
+  <Project Path="MauiApplicationModel/MauiApplicationModel.csproj" Id="8d867c5c-6cde-4021-9588-d94e80c07f39" />
+  <Project Path="MauiBiometrics/MauiBiometrics.csproj" />
+  <Project Path="MauiCamera/MauiCamera.csproj" />
+  <Project Path="MauiCollections/MauiCollections.csproj" />
+  <Project Path="MauiCommunications/MauiCommunications.csproj" />
+  <Project Path="MauiControls/MauiControls.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="MauiDataBinding/MauiDataBinding.csproj" />
+  <Project Path="MauiDeviceOutput/MauiDeviceOutput.csproj" />
+  <Project Path="MauiDevices/MauiDevices.csproj" />
+  <Project Path="MauiGeoLocation/MauiGeoLocation.csproj" Id="ea7491d3-c61a-4b21-964c-18bed6c1764a" />
+  <Project Path="MauiGraphics/MauiGraphics.csproj" Id="7c02b0ea-bfb7-43ac-bae1-077d52def94c" />
+  <Project Path="MauiLayouts/MauiLayouts.csproj" Id="4a8b4e8e-d603-44a4-9758-487e61b0f246">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="MauiLocalization/MauiLocalization.csproj" Id="b43f5c8c-2e1f-4fba-bdf6-8bcf09931b84" />
+  <Project Path="MauiMedia/MauiMedia.csproj" Id="636b1374-2056-4595-9fca-2a8880df00bd" />
+  <Project Path="MauiMvvm/MauiMvvm.csproj" Id="77ddcdbd-27ef-48a2-84e3-bd2ff4323eff" />
+  <Project Path="MauiNavigation/MauiNavigation.csproj" Id="ecd0c7cf-96e5-4d35-bc5e-2f2ce7b3a1b9">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="MauiOpenCV/MauiOpenCV.csproj" Id="e67f13ae-f523-4ec2-ab3a-f70be4174d86">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="MauiSensors/MauiSensors.csproj" Id="096f0f63-1470-4b5d-92c5-5645aaf095bd" />
+  <Project Path="MauiStorage/MauiStorage.csproj" Id="4ecc2fd4-dc9a-4fb0-b1cd-61933303a130" />
+</Solution>

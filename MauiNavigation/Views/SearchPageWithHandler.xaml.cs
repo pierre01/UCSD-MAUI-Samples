@@ -17,7 +17,7 @@ public partial class SearchPageWithHandler : ContentPage
 
     }
 
-    private void personSearchHandler_PersonSelected(object sender, Models.Person e)
+    private void PersonSearchHandler_PersonSelected(object sender, Models.Person e)
     {
         TeamCollectionView.SelectedItem = e;
     }

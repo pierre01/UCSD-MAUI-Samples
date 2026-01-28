@@ -1,26 +1,20 @@
 ﻿using System.Windows.Input;
 
-namespace MauiNavigation;
-
-public partial class AppShell : Shell
+namespace MauiNavigation
 {
-    public AppShell()
+    public partial class AppShell : Shell
     {
+        public ICommand NavigateToSettingsCommand { get; private set; }
 
-        InitializeComponent();
-
-
-        NavigateToSettingsCommand = new Command(() =>
+        public AppShell()
         {
-            DisplayAlert("Settings", "Settings Menu Selected", "Ok");
-        });
+            InitializeComponent();
+            NavigateToSettingsCommand = new Command(() =>
+            {
+                DisplayAlertAsync("Settings", "Settings Menu Selected", "Ok");
+            });
 
-        BindingContext = this;
-
-
+            BindingContext = this;
+        }
     }
-
-
-
-    public ICommand NavigateToSettingsCommand { get; private set; }
 }

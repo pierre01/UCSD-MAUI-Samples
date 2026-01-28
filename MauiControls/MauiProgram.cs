@@ -1,4 +1,6 @@
-﻿namespace MauiControls
+﻿using Microsoft.Extensions.Logging;
+
+namespace MauiControls
 {
     public static class MauiProgram
     {
@@ -12,12 +14,11 @@
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
-            builder.ConfigureMauiHandlers(handlers =>
-{
-#if ANDROID
-	// handlers.AddHandler(typeof(TimePicker), typeof(Platforms.Android.SpinTimePickerHandler));
+
+#if DEBUG
+    		builder.Logging.AddDebug();
 #endif
-}) ;
+
             return builder.Build();
         }
     }

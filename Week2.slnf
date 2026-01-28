@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "path": "Samples.slnx",
+    "projects": [
+      "MauiControls\\MauiControls.csproj",
+      "MauiLayouts\\MauiLayouts.csproj",
+      "MauiNavigation\\MauiNavigation.csproj"
+    ]
+  }
+}

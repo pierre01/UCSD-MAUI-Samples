@@ -1,4 +1,6 @@
-﻿namespace MauiGeoLocation
+﻿using Microsoft.Extensions.Logging;
+
+namespace MauiGeoLocation
 {
     public static class MauiProgram
     {
@@ -11,11 +13,11 @@
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                }).ConfigureEssentials(essentials =>
-                {
-                    essentials.UseMapServiceToken("Bing-Maps-API-Token");
-                })
-                .UseMauiMaps(); 
+                });
+
+#if DEBUG
+    		builder.Logging.AddDebug();
+#endif
 
             return builder.Build();
         }

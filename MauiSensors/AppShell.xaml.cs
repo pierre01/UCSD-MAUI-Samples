@@ -1,9 +1,10 @@
-﻿namespace MauiSensors;
-
-public partial class AppShell : Shell
+﻿namespace MauiSensors
 {
-	public AppShell()
-	{
-		InitializeComponent();
-	}
+    public partial class AppShell : Shell
+    {
+        public AppShell()
+        {
+            InitializeComponent();
+        }
+    }
 }

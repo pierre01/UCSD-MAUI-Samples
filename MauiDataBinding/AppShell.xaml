@@ -4,18 +4,11 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiDataBinding"
-    xmlns:views="clr-namespace:MauiDataBinding.Views"
-    Shell.FlyoutBehavior="Flyout">
+    Title="MauiDataBinding">
 
     <ShellContent
-        Title="BasicBinding"
-        ContentTemplate="{DataTemplate views:BasicXamlBindingPage}"
-        Icon="appiconfg.png"
-        Route="BasicXamlBindingPage" />
-    <ShellContent
-        Title="ObjectBinding"
-        Icon="appiconfg.png"
-        ContentTemplate="{DataTemplate views:ObjectBindingPage}"
-        Route="ObjectBindingPage" />
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
 
 </Shell>

@@ -9,9 +9,8 @@
             InitializeComponent();
         }
 
-        private async void OnCounterClicked(object sender, EventArgs e)
+        private void OnCounterClicked(object? sender, EventArgs e)
         {
-            //var result = await IBiometric.AuthenticateAsync("Authenticate to continue");
             count++;
 
             if (count == 1)
@@ -22,5 +21,4 @@
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
     }
-
 }

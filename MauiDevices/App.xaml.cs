@@ -1,26 +1,17 @@
-﻿using Microsoft.Maui;
+﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace MauiDevices;
-
-public partial class App : Application
+namespace MauiDevices
 {
-	public App()
-	{
-		InitializeComponent();
-
-	}
-
-	protected override Window CreateWindow(IActivationState activationState)
+    public partial class App : Application
     {
-        var window = new Window(new AppShell());
+        public App()
+        {
+            InitializeComponent();
+        }
 
-        const int newWidth = 800;
-        const int newHeight = 600;
-        window.X = 500;
-        window.Y = 200;
-        window.Width = newWidth;
-        window.Height = newHeight;
-
-        return window;
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            return new Window(new AppShell());
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace MAUICommunications
+﻿namespace MauiCommunications
 {
     public partial class AppShell : Shell
     {
@@ -6,6 +6,5 @@
         {
             InitializeComponent();
         }
-        
     }
 }

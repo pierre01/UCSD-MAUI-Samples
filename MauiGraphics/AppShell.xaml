@@ -3,41 +3,12 @@
     x:Class="MauiGraphics.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiGraphics.Views"
-    Shell.FlyoutBehavior="Flyout">
+    xmlns:local="clr-namespace:MauiGraphics"
+    Title="MauiGraphics">
 
     <ShellContent
         Title="Home"
-        Icon="appiconfg.png"
-        ContentTemplate="{DataTemplate local:BasicGraphicsPage}"
-        Route="BasicGraphicsPage" />
-    <ShellContent
-        Title="Param"
-        Icon="appiconfg.png"
-        ContentTemplate="{DataTemplate local:ParamerterizedGraphicsPage}"
-        Route="ParamerterizedGraphicsPage" />
-    
-    <ShellContent
-        Title="Clock"
-        Icon="appiconfg.png"
-        ContentTemplate="{DataTemplate local:ClockPage}"
-        Route="ClockPage" />
-    
-    <ShellContent
-        Title="Skia Clock"
-        Icon="appiconfg.png"
-        ContentTemplate="{DataTemplate local:SkiaClockPage}"
-        Route="SkiaClockPage" />
-    
-    <ShellContent
-        Title="Shapes Resources"
-        Icon="appiconfg.png"
-        ContentTemplate="{DataTemplate local:ShapesPage}"
-        Route="ShapesPage" />
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
 
-    <ShellContent
-        Title="Barcode Making"
-        Icon="appiconfg.png"
-        ContentTemplate="{DataTemplate local:BarCodeMakingPage}"
-        Route="BarCodeMakingPage" />
 </Shell>

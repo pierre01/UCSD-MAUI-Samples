@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-	x:Class="MauiAnimations.AppShell"
-	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	xmlns:local="clr-namespace:MauiAnimations"
-	xmlns:views="clr-namespace:MauiAnimations.Views"
-	Shell.FlyoutBehavior="Flyout">
+    x:Class="MauiAnimations.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiAnimations"
+    Title="MauiAnimations">
 
-	<ShellContent
-		Title="Basic Animations"
-		ContentTemplate="{DataTemplate views:BasicAnimationsView}"
-		Route="BasicAnimationsView" />
-	<ShellContent
-		Title="Custom Animation"
-		ContentTemplate="{DataTemplate views:CustomAnimationView}"
-		Route="CustomAnimationView" />
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
 </Shell>
