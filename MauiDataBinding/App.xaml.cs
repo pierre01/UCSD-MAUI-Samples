@@ -1,17 +1,25 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace MauiDataBinding
-{
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
-        }
+namespace MauiDataBinding;
 
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(new AppShell());
-        }
+public partial class App : Application
+{
+    public App()
+    {
+        InitializeComponent();
+    }
+
+    protected override Window CreateWindow(IActivationState? activationState)
+    {
+        var window = new Window(new AppShell());
+
+        const int newWidth = 800;
+        const int newHeight = 600;
+        window.X = 500;
+        window.Y = 200;
+        window.Width = newWidth;
+        window.Height = newHeight;
+
+        return window;
     }
 }

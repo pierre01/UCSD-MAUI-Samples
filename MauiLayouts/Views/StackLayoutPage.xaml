@@ -33,7 +33,7 @@
                 <RoundRectangle WidthRequest="20" HeightRequest="20" Fill="Red" Margin="10" />
             </VerticalStackLayout>
 
-            <StackLayout Background="lightBlue" Orientation="Vertical" Padding="5">
+            <StackLayout Background="lightBlue" Orientation="Horizontal" Padding="5">
                 <Label Text="StackLayout with orientation = Vertical" />
                 <RoundRectangle WidthRequest="20" HeightRequest="20" Fill="Red" Margin="10" />
                 <RoundRectangle WidthRequest="20" HeightRequest="20" Fill="Red" Margin="10" />

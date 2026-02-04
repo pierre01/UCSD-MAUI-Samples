@@ -34,7 +34,7 @@
     </ContentPage.Resources>
 
 
-    <Grid RowDefinitions="50,1*">
+    <Grid RowDefinitions="50,*">
         <SearchBar
             x:Name="SearchBar"
             Placeholder="Enter Team member name"
