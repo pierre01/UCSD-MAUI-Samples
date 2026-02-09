@@ -1,5 +1,3 @@
-using Microsoft.Maui.Storage;
-using System.Runtime.InteropServices;
 namespace MauiStorage.Views;
 
 public partial class PreferencesPage : ContentPage

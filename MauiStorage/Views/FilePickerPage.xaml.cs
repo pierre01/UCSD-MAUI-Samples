@@ -1,11 +1,10 @@
-using Microsoft.Maui.Storage;
 namespace MauiStorage.Views;
 
 public partial class FilePickerPage : ContentPage
 {
 	public FilePickerPage()
 	{
-		InitializeComponent();
+        InitializeComponent();
 	}
 
     public async Task<FileResult> PickAndShow(PickOptions options)
@@ -15,7 +14,7 @@ public partial class FilePickerPage : ContentPage
             var result = await FilePicker.Default.PickAsync(options);
             if (result != null)
             {
-                    ImageToDisplay.Source = ImageSource.FromFile(result.FullPath);
+                ImageToDisplay.Source = ImageSource.FromFile(result.FullPath);
             }
 
             return result;

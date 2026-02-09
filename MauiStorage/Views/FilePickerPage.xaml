@@ -5,8 +5,8 @@
              Title="FilePickerPage">
     <VerticalStackLayout>
         <Image x:Name="ImageToDisplay" 
-			   MinimumHeightRequest="600"
-			   MinimumWidthRequest="400"
+			   MinimumHeightRequest="300"
+			   MinimumWidthRequest="200"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <Button 
