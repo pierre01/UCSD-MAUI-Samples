@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiStorage.Views.PreferencesPage"
+             x:Name="ThisPage"
+             BindingContext="{x:Reference ThisPage}"
+             Title="Preferences">
+    <Grid Padding="16" RowDefinitions="Auto,*">
+        <VerticalStackLayout Spacing="12">
+            <VerticalStackLayout>
+                <Label Text="First Name" FontAttributes="Bold" />
+                <Entry Text="{Binding FirstName}" Placeholder="Enter first name" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Age" FontAttributes="Bold" />
+                <Entry Text="{Binding Age}" Keyboard="Numeric" Placeholder="Enter age" />
+            </VerticalStackLayout>
+
+            <HorizontalStackLayout VerticalOptions="Center">
+                <Label Text="Has Pets" FontAttributes="Bold" VerticalOptions="Center" />
+                <Switch IsToggled="{Binding HasPets}" Margin="8,0,0,0" />
+            </HorizontalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Pet Name" FontAttributes="Bold" />
+                <Entry Text="{Binding PetName}"
+                       IsEnabled="{Binding HasPets}"
+                       Placeholder="Enter pet name" />
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="1" Spacing="10" HorizontalOptions="Center" VerticalOptions="End">
+            <Button Text="Get Preferences" Clicked="OnGetPreferencesClicked" />
+            <Button Text="Clear Preferences" Clicked="OnClearPreferencesClicked" />
+            <Button Text="Forget Pet" Clicked="OnForgetPetClicked" />
+            <Button Text="Save Preferences" Clicked="OnSavePreferencesClicked" />
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>
