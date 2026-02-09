@@ -31,7 +31,6 @@
 			<Label
 				Margin="10,16,0,0"
 				FontSize="Large"
-				IsVisible="{Binding IsAgeVisible}"
 				Text="Age" />
 
 			<Label

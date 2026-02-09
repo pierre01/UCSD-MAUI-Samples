@@ -15,7 +15,6 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Image
-                    Grid.RowSpan="2"
                     Margin="4"
                     Aspect="AspectFit"
                     HeightRequest="40"

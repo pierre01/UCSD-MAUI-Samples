@@ -12,7 +12,6 @@ public partial class ObjectBindingPage : ContentPage
         var p = new Person(new DateTime(1879, 3, 14), "Albert", "Einstein", "Male");
         BindingContext = new PersonViewModel(p);
         InitializeComponent();
-        //BindingContext =  new Person(DateTime.Parse("03/14/1879"), "Albert", "Einstein", "Male");
     }
 
 

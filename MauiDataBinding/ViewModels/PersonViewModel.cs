@@ -10,7 +10,7 @@ partial class PersonViewModel : ObservableValidator
 {
     [ObservableProperty]
     [Required]
-    [MaxLength(30)]
+    [MaxLength(30, ErrorMessage = "Last Name should be 30 char max")]
     public partial string LastName { get; set; }
 
     [ObservableProperty]
@@ -78,12 +78,12 @@ partial class PersonViewModel : ObservableValidator
         }
         Gender = p.Gender;
         _person = p;
-        //Children.Add("Joe");
-        //Children.Add("Jane");
-        //Children.Add("Michael");
-        //Children.Add("George");
-        //Children.Add("Anna");
-        //FavoriteKid = "Jane";
+        Children.Add("Joe");
+        Children.Add("Jane");
+        Children.Add("Michael");
+        Children.Add("George");
+        Children.Add("Anna");
+        FavoriteKid = "Jane";
     }
 
     [RelayCommand]
@@ -91,9 +91,9 @@ partial class PersonViewModel : ObservableValidator
     {
         LastName = "Durand";
         FirstName = "Eddie";
-        //Children.Remove("Michael");
-        //Children.Add("Ringo");
-        //Children.Add("Bastian");
+        Children.Remove("Michael");
+        Children.Add("Ringo");
+        Children.Add("Bastian");
         DateOfBirth = DateTime.Today.AddYears(-25);
 
     }

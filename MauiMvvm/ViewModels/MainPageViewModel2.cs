@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace MauiMvvm.ViewModels;
 
-public partial class MainPageViewModel2 : ObservableValidator
+public partial class MainPageViewModel2 : ObservableObject
 {
     [ObservableProperty]
     private string _myName;
