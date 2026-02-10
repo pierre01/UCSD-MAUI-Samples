@@ -3,6 +3,7 @@
     "path": "Samples.slnx",
     "projects": [
       "MauiAnimations\\MauiAnimations.csproj",
+      "MauiCollections\\MauiCollections.csproj",
       "MauiDataBinding\\MauiDataBinding.csproj",
       "MauiDevices\\MauiDevices.csproj",
       "MauiMvvm\\MauiMvvm.csproj",
