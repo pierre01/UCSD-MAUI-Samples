@@ -31,15 +31,13 @@ Projects are used throughout the class in this order
 - MauiDataBinding
   > **Binding data in your user interface.**
 - MauiCollections
-  > **Views that display collections of items.**
+  > **Views that display collections of items. Editing an Item as you pass it as parameter**
     - CarouselView
 	- CollectionView
 	- IndicatorView
 	- ListView
-	- Picker
-	- TableView
 	- Templates
-	- Dependency Injection
+	- Dependency injection and services
 	- Services
 	- Navigation Parameters
 - MauiMvvm
@@ -47,7 +45,6 @@ Projects are used throughout the class in this order
 	- MVVM Basics
 	- MVVM Library (Microsoft Toolkit)
 	- MVVM Generated with attributes
-	- Dependency injection and services
 - MauiStyles
    > **Customizing the look and feel of your controls and data.**
 - MauiGraphics
