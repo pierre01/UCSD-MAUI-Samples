@@ -6,11 +6,11 @@ public partial class BasicAnimationsView : ContentPage
     {
         InitializeComponent();
         PowLabel.Opacity = 0;
-        ReloadButton.TranslateTo(300, 0, 100, Easing.CubicOut);
+        ReloadButton.TranslateToAsync(300, 0, 100, Easing.CubicOut);
     }
 
     private int _shotTriggered = 0;
-    private async void OnShoot(object sender, EventArgs e)
+    private async Task OnShoot(object sender, EventArgs e)
     {
         ShootButton.IsEnabled = false;
         PowLabel.Opacity = 1;
@@ -22,27 +22,27 @@ public partial class BasicAnimationsView : ContentPage
         else
         {
             var cartridge = BarrelGrid.Children[_shotTriggered] as VisualElement;
-            await cartridge.FadeTo(.5, 400, Easing.CubicIn);
+            await cartridge.FadeToAsync(.5, 400, Easing.CubicIn);
 
         }
         await Task.WhenAll
         (
 
             //TextToSpeech.Default.SpeakAsync(timeLeft),
-            PowLabel.FadeTo(0, 400, Easing.CubicIn),
-            PowLabel.ScaleTo(5, 400, Easing.CubicOut),
-            BarrelGrid.RelRotateTo(45, 600)
+            PowLabel.FadeToAsync(0, 400, Easing.CubicIn),
+            PowLabel.ScaleToAsync(5, 400, Easing.CubicOut),
+            BarrelGrid.RelRotateToAsync(45, 600)
         );
         _shotTriggered++;
         if (_shotTriggered == 8)
         {
             // Animate Reload button
-            await ReloadButton.TranslateTo(0, 0, 500, Easing.CubicIn);
+            await ReloadButton.TranslateToAsync(0, 0, 500, Easing.CubicIn);
 
             ReloadButton.IsEnabled = true;
         }
         ShootButton.IsEnabled = true;
-        await PowLabel.ScaleTo(1, 40);
+        await PowLabel.ScaleToAsync(1, 40);
     }
 
     /// <summary>
@@ -58,9 +58,9 @@ public partial class BasicAnimationsView : ContentPage
         {
             var cartridge = BarrelGrid.Children[i] as VisualElement;
             // Reactivate cartridges
-            cartridge.FadeTo(1, 100, Easing.CubicIn);
+            cartridge.FadeToAsync(1, 100, Easing.CubicIn);
         }
-        ReloadButton.TranslateTo(300, 0, 800, Easing.CubicOut);
+        ReloadButton.TranslateToAsync(300, 0, 800, Easing.CubicInOut);
         PowLabel.Text = "Bang!";
         _shotTriggered = 0;
         ShootButton.IsEnabled = true;

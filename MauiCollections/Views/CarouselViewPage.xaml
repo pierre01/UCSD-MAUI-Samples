@@ -19,7 +19,7 @@
                             HasShadow="True"
                             HeightRequest="300"
                             HorizontalOptions="Center"
-                            VerticalOptions="CenterAndExpand">
+                            >
                             <StackLayout>
                                 <Label
                                     FontAttributes="Bold"

@@ -31,7 +31,7 @@
 	</ContentPage.Resources>
 	<ContentPage.Content>
 		<Grid ColumnDefinitions="*,140">
-			<Grid Margin="8">
+			<Grid Margin="4">
 				<CollectionView
 					ItemTemplate="{StaticResource PersonTemplate}"
 					ItemsSource="{Binding Persons}"
