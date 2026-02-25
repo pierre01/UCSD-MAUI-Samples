@@ -4,8 +4,8 @@ namespace MauiSensors.Views;
 
 public partial class AccelerometerPage : ContentPage
 {
-    private readonly double Sensitivity = 180.0;     // tweak to your liking (pixels per second²)
-    private readonly double Friction = 0.98;         // 1.0 = no friction
+    private readonly double Sensitivity = 350.0;     // tweak to your liking (pixels per second²)
+    private readonly double Friction = 0.99;         // 1.0 = no friction
     private readonly double MaxVelocity = 800.0;
 
     private double posX, posY;      // center of ball in pixels
