@@ -3,12 +3,36 @@
     x:Class="MauiSensors.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiSensors"
-    Title="MauiSensors">
+    xmlns:views="clr-namespace:MauiSensors.Views"
+    Shell.FlyoutBehavior="Flyout">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Accelerometer"
+        ContentTemplate="{DataTemplate views:AccelerometerPage}"
+        Route="AccelerometerPage" />
+    <ShellContent
+        Title="Barometer"
+        ContentTemplate="{DataTemplate views:BarometerPage}"
+        Route="BarometerPage" />
+    <ShellContent
+        Title="Compass"
+        ContentTemplate="{DataTemplate views:CompassPage}"
+        Route="CompassPage" />
+    <ShellContent
+        Title="Gyroscope"
+        ContentTemplate="{DataTemplate views:GyroscopePage}"
+        Route="GyroscopePage" />
+    <ShellContent
+        Title="Magnetometer"
+        ContentTemplate="{DataTemplate views:MagnetometerPage}"
+        Route="MagnetometerPage" />
+    <ShellContent
+        Title="Orientation"
+        ContentTemplate="{DataTemplate views:OrientationPage}"
+        Route="OrientationPage" />
+    <ShellContent
+        Title="Shake"
+        ContentTemplate="{DataTemplate views:ShakePage}"
+        Route="ShakePage" />
 
 </Shell>

@@ -1,0 +1,15 @@
+{
+  "solution": {
+    "path": "Samples.slnx",
+    "projects": [
+      "MauiCamera\\MauiCamera.csproj",
+      "MauiCollections\\MauiCollections.csproj",
+      "MauiDevices\\MauiDevices.csproj",
+      "MauiGraphics\\MauiGraphics.csproj",
+      "MauiMvvm\\MauiMvvm.csproj",
+      "MauiNavigation\\MauiNavigation.csproj",
+      "MauiSensors\\MauiSensors.csproj",
+      "MauiStorage\\MauiStorage.csproj"
+    ]
+  }
+}
