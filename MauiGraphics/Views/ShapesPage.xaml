@@ -41,6 +41,7 @@
 		</Style>
 	</ContentPage.Resources>
 	<VerticalStackLayout>
+        
 		<Path Margin="8" Style="{StaticResource HomeIcon}" />
 		<Path Margin="8" Style="{StaticResource InteractiveIcon}" />
 		<Path

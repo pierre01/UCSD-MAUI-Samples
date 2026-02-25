@@ -12,9 +12,9 @@
 
 
 	<Grid
-		HorizontalOptions="FillAndExpand"
+		
 		RowDefinitions="Auto,400,Auto,Auto,Auto,*"
-		VerticalOptions="FillAndExpand">
+		>
 		<Button
 			Margin="16"
 			Clicked="RefreshButtonClicked"

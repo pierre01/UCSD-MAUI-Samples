@@ -4,7 +4,7 @@
              x:Class="MauiSensors.Views.ShakePage"
              Title="ShakePage">
     <VerticalStackLayout>
-        <Label  x:Name="ShakeLabel"
+        <Label  x:Name="ShakeLabel" TextColor="AntiqueWhite"
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />

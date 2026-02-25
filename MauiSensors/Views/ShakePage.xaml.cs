@@ -16,7 +16,7 @@ public partial class ShakePage : ContentPage
             {
                 // Turn on compass
                 Accelerometer.Default.ShakeDetected += Accelerometer_ShakeDetected;
-                Accelerometer.Default.Start(SensorSpeed.Game);
+                Accelerometer.Default.Start(SensorSpeed.UI);
             }
             else
             {
@@ -30,7 +30,7 @@ public partial class ShakePage : ContentPage
     private void Accelerometer_ShakeDetected(object sender, EventArgs e)
     {
         // Update UI Label with a "shaked detected" notice, in a randomized color
-        ShakeLabel.TextColor = new Color(Random.Shared.Next(256), Random.Shared.Next(256), Random.Shared.Next(256));
+        //ShakeLabel.TextColor = new Color(Random.Shared.Next(256), Random.Shared.Next(256), Random.Shared.Next(256));
         ShakeLabel.Text = $"Shake detected";
     }
 

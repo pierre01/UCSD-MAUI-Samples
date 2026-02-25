@@ -4,20 +4,12 @@
              x:Class="MauiSensors.Views.AccelerometerPage"
              Title="AccelerometerPage"             
              xmlns:graph="clr-namespace:MauiSensors.Views.Graphics">
-        <ContentPage.Resources>
-            <graph:AccelerometerGraphics x:Key="AccelerometerGraphic" />
-        </ContentPage.Resources>    
-    <VerticalStackLayout>
-        <!--Animation here SpringOut - SpringIn-->
-        <GraphicsView
-                x:Name="AccelerometerView"
-                Drawable="{StaticResource AccelerometerGraphic}"
-                HeightRequest="400"
-                HorizontalOptions="End"
-                VerticalOptions="Start"
-                WidthRequest="400" />
-        <Label x:Name="AccelLabel" Text="Welcome to .NET MAUI!"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <AbsoluteLayout x:Name="Layout" BackgroundColor="Black">
+        <!-- The ball -->
+        <Ellipse x:Name="Ball"
+                 AbsoluteLayout.LayoutBounds="0.5,0.5,40,40"
+                 AbsoluteLayout.LayoutFlags="PositionProportional"
+                 Fill="Gold"
+                 WidthRequest="40" HeightRequest="40" />
+    </AbsoluteLayout>
 </ContentPage>

@@ -31,8 +31,8 @@
         </VerticalStackLayout>
 
         <HorizontalStackLayout Grid.Row="1" Spacing="10" HorizontalOptions="Center" VerticalOptions="End">
-            <Button Text="Get Preferences" Clicked="OnGetPreferencesClicked" />
-            <Button Text="Clear Preferences" Clicked="OnClearPreferencesClicked" />
+            <Button Text="Get " Clicked="OnGetPreferencesClicked" />
+            <Button Text="Clear " Clicked="OnClearPreferencesClicked" />
             <Button Text="Forget Pet" Clicked="OnForgetPetClicked" />
             <Button Text="Save Preferences" Clicked="OnSavePreferencesClicked" />
         </HorizontalStackLayout>
