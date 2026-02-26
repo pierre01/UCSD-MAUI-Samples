@@ -4,9 +4,29 @@ namespace MauiSensors.Views;
 
 public partial class AccelerometerPage : ContentPage
 {
-    private readonly double Sensitivity = 350.0;     // tweak to your liking (pixels per second²)
-    private readonly double Friction = 0.99;         // 1.0 = no friction
-    private readonly double MaxVelocity = 800.0;
+
+    private double CurrentSensitivity = 700;     // ACCELERATION (pixels per second²)
+    private double CurrentFriction = 0.998;      // start with slick metal _ 1.0 = no friction
+    private double CurrentBounce = 0.82;         // start with slick metal BOUNCY
+
+    // Add a quick switch method you can call from a button or picker
+    private void SetBallType(bool isMetal)
+    {
+        if (isMetal)
+        {
+            CurrentSensitivity = 700;
+            CurrentFriction = 0.998;   // ultra slick — feels glassy
+            CurrentBounce = 0.82;
+            Ball.Fill = Color.FromArgb("#afafaf"); // visual cue
+        }
+        else // wooden
+        {
+            CurrentSensitivity = 400;
+            CurrentFriction = 0.975;   // nice rough stop
+            CurrentBounce = 0.38;
+            Ball.Fill =Color.FromArgb("#99685a"); 
+        }
+    }
 
     private double posX, posY;      // center of ball in pixels
     private double velX, velY;
@@ -43,41 +63,37 @@ public partial class AccelerometerPage : ContentPage
         lastReading = e.Reading.Acceleration;
     }
 
+    private void Material_Toggled(object sender, ToggledEventArgs e)
+    {
+       SetBallType(e.Value);
+    }
+
     private void GameLoop(object? sender, EventArgs e)
     {
-        double dt = 0.016; // ~60 FPS
+        double dt = 0.016;
 
-        // Apply tilt as acceleration (screen coordinates)
-        double accelX = -lastReading.X * Sensitivity;
-        double accelY = +lastReading.Y * Sensitivity;   // Y is "forward/back" on most phones
+        double accelX = -lastReading.X * CurrentSensitivity;
+        double accelY = +lastReading.Y * CurrentSensitivity;
 
-        // Update velocity with friction
-        velX = velX * Friction + accelX * dt;
-        velY = velY * Friction + accelY * dt;
+        // ←←← Use the current friction
+        velX = velX * CurrentFriction + accelX * dt;
+        velY = velY * CurrentFriction + accelY * dt;
 
-        // Clamp max speed so it doesn't fly off
-        double speed = Math.Sqrt(velX * velX + velY * velY);
-        if (speed > MaxVelocity)
-        {
-            double factor = MaxVelocity / speed;
-            velX *= factor;
-            velY *= factor;
-        }
+        // ... velocity clamp stays exactly the same ...
 
-        // Update position (0..1 range for AbsoluteLayout)
+        // Update position
         posX += (velX * dt) / Width;
         posY += (velY * dt) / Height;
 
-        // Bounce softly on edges
-        if (posX < 0.03) { posX = 0.03; velX = -velX * 0.6; }
-        if (posX > 0.97) { posX = 0.97; velX = -velX * 0.6; }
-        if (posY < 0.03) { posY = 0.03; velY = -velY * 0.6; }
-        if (posY > 0.97) { posY = 0.97; velY = -velY * 0.6; }
+        // ←←← Bounce now uses CurrentBounce
+        if (posX < 0.03) { posX = 0.03; velX = -velX * CurrentBounce; }
+        if (posX > 0.97) { posX = 0.97; velX = -velX * CurrentBounce; }
+        if (posY < 0.03) { posY = 0.03; velY = -velY * CurrentBounce; }
+        if (posY > 0.97) { posY = 0.97; velY = -velY * CurrentBounce; }
 
-        // Move the ball
+        // Move ball
         AbsoluteLayout.SetLayoutBounds(Ball, new Rect(posX, posY, 40, 40));
     }
-
     protected override void OnDisappearing()
     {
         Accelerometer.Default.Stop();
