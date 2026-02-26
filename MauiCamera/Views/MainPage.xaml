@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiCamera.MainPage"  
-	xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-	xmlns:viewModels="clr-namespace:MauiCamera.ViewModels"
-	x:DataType="viewModels:MainPageViewModel"                
+             x:Class="MauiCamera.Views.MainPage"  
+	            xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+	            xmlns:viewModels="clr-namespace:MauiCamera.ViewModels"
+	            x:DataType="viewModels:MainPageViewModel"                
              Title="CameraView"      >
 
     <Grid RowDefinitions="Auto,*,Auto,Auto" ColumnDefinitions="3*,*">
         <toolkit:CameraView
-            x:Name="Camera"
+            x:Name="CamView"
             Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="3"
             CameraFlashMode="{Binding FlashMode}"
             ZoomFactor="{Binding CurrentZoom}"
@@ -26,7 +26,7 @@
                 <Label Text="{Binding ResolutionText}" />
                 <Picker 
                     Title="Available Resolutions"
-                    ItemsSource="{Binding SelectedCamera.SupportedResolutions, FallbackValue='', x:DataType={x:Null}}"
+                    ItemsSource="{Binding SelectedCamera.SupportedResolutions, FallbackValue=''}"
                     SelectedItem="{Binding SelectedResolution}" />
                 <Label x:Name="debugText"/>
 
@@ -48,8 +48,8 @@
             <Slider 
                 x:Name="slider" Grid.Column="1"
                 Value="{Binding CurrentZoom}"
-                Maximum="{Binding SelectedCamera.MaximumZoomFactor, FallbackValue=1, x:DataType={x:Null}}"
-                Minimum="{Binding SelectedCamera.MinimumZoomFactor, FallbackValue=1, x:DataType={x:Null}}"/>
+                Maximum="{Binding SelectedCamera.MaximumZoomFactor, FallbackValue=1}"
+                Minimum="{Binding SelectedCamera.MinimumZoomFactor, FallbackValue=1}"/>
 
             <Button Clicked="ZoomIn" Text="Zoom +" Grid.Column="2"/>
         </Grid>
@@ -61,7 +61,7 @@
                 <Picker 
                     Title="Cameras" 
                     ItemsSource="{Binding Cameras}"
-                    ItemDisplayBinding="{Binding Name, x:DataType={x:Null}}" 
+                    ItemDisplayBinding="{Binding Name}" 
                     SelectedItem="{Binding SelectedCamera}" />
 
                 <Picker 
@@ -70,11 +70,10 @@
                     ItemsSource="{Binding FlashModes}"
                     SelectedItem="{Binding FlashMode}" />
 
-                <Button Command="{Binding StartCameraPreviewCommand, Source={x:Reference Camera}, x:DataType=toolkit:CameraView}"
-                        CommandParameter="{Binding Token}"
+                <Button Clicked="StartCameraPreview"
                         Text="Start Camera Preview" />
 
-                <Button Command="{Binding StopCameraPreviewCommand, Source={x:Reference Camera}, x:DataType=toolkit:CameraView}" 
+                <Button Clicked="StopCameraPreview"
                         Text="Stop Camera Preview" />
 
 
@@ -87,8 +86,7 @@
 
                 <Button Clicked="SaveVideo" Text="Save Video Recording" />
 
-                <Button Command="{Binding CaptureImageCommand, Source={x:Reference Camera}, x:DataType=toolkit:CameraView}" 
-                        CommandParameter="{Binding Token}"
+                <Button Clicked="CaptureImage"
                         Text="Capture Image"/>
 
                 <Button Clicked="SetNightMode" Text="Set Night Mode (Android)" />

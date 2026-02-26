@@ -48,7 +48,7 @@ namespace MauiCamera
 
         public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
         {
-            mauiAppBuilder.Services.AddSingleton<MainPage>();
+            mauiAppBuilder.Services.AddTransient<MainPage>();
             mauiAppBuilder.Services.AddSingleton<SettingsPage>();
             return mauiAppBuilder;
         }
