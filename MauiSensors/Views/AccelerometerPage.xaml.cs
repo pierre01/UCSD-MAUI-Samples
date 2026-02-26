@@ -23,7 +23,7 @@ public partial class AccelerometerPage : ContentPage
         {
             CurrentSensitivity = 400;
             CurrentFriction = 0.975;   // nice rough stop
-            CurrentBounce = 0.38;
+            CurrentBounce = 0.58;
             Ball.Fill =Color.FromArgb("#99685a"); 
         }
     }

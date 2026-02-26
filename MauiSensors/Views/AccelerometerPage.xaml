@@ -5,9 +5,9 @@
              Title="AccelerometerPage"             
              xmlns:graph="clr-namespace:MauiSensors.Views.Graphics">
     <Grid RowDefinitions="Auto,*">
-        <HorizontalStackLayout HorizontalOptions="Center" Margin="0,10">
+        <HorizontalStackLayout HorizontalOptions="Center">
             <Label Text="Wood" FontSize="24" HorizontalOptions="Center" Margin="0,0,10,0"/>
-            <Switch IsToggled="True" Toggled="Material_Toggled" />
+            <Switch IsToggled="True" Toggled="Material_Toggled" OnColor="#afafaf" OffColor="#99685a" />
             <Label Text="Metal" FontSize="24" HorizontalOptions="Center" Margin="10,0,0,0"/>
         </HorizontalStackLayout>
         <AbsoluteLayout Grid.Row="1" x:Name="Layout" BackgroundColor="#1f1f1f">
