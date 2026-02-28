@@ -18,7 +18,7 @@ public partial class MainPage : ContentPage
         InitializeComponent();
 
         this.fileSaver = fileSaver;
-        imagePath = Path.Combine(fileSystem.CacheDirectory, "camera-view-image.jpg");
+        imagePath = Path.Combine(fileSystem.AppDataDirectory, "camera-view-image.jpg");
 
         CamView.MediaCaptured += OnMediaCaptured;
     }
