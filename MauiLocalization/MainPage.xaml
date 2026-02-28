@@ -1,36 +1,43 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiLocalization.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="MauiLocalization.MainPage"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:languages="clr-namespace:MauiLocalization.Resources.Languages">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a submarine number ten" />
+	<ScrollView>
+		<VerticalStackLayout
+			Padding="30,0"
+			Spacing="25"
+			VerticalOptions="Center">
 
-            <Label
-                Text="Hello, World!"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+			<Image
+				HeightRequest="200"
+				HorizontalOptions="Center"
+				SemanticProperties.Description="Cute dot net bot waving hi to you!"
+				Source="dotnet_bot.png" />
 
-            <Label
-                Text="Welcome to &#10;.NET Multi-platform App UI"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+			<Label
+				FontSize="32"
+				HorizontalOptions="Center"
+				SemanticProperties.HeadingLevel="Level1"
+				Text="{x:Static languages:AppResources.HelloWorld}" />
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
-        </VerticalStackLayout>
-    </ScrollView>
+			<Label
+				FontSize="18"
+				HorizontalOptions="Center"
+				SemanticProperties.Description="{x:Static languages:AppResources.WelcomeLabelText}"
+				SemanticProperties.HeadingLevel="Level2"
+				Text="{x:Static languages:AppResources.WelcomeLabelText}" />
+
+			<Button
+				x:Name="CounterBtn"
+				Clicked="OnCounterClicked"
+				HorizontalOptions="Center"
+				SemanticProperties.Hint="{x:Static languages:AppResources.ButtonHintText}"
+				Text="{x:Static languages:AppResources.ClickMe}" />
+
+		</VerticalStackLayout>
+	</ScrollView>
 
 </ContentPage>
