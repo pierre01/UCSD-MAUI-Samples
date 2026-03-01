@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="MauiDeviceOutput.Views.FlashLightPage"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	Title="FlashLightPage">
+	<HorizontalStackLayout Margin="24" VerticalOptions="Start">
+		<Label
+			HorizontalOptions="Center"
+			Text="FlashLight"
+			VerticalOptions="Center" />
+		<Switch
+			x:Name="FlashlightSwitch"
+			Margin="16"
+			Toggled="FlashlightSwitch_Toggled" />
+	</HorizontalStackLayout>
+</ContentPage>
