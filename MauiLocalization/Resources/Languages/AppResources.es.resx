@@ -144,4 +144,7 @@
   <data name="WelcomeLabelText" xml:space="preserve">
     <value>Bienvenido a .NET múltiples aplicaciones UI</value>
   </data>
+  <data name="HelloPolite" xml:space="preserve">
+    <value>Buen día</value>
+  </data>
 </root>

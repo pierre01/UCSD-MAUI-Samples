@@ -7,6 +7,7 @@ public partial class VibrationPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
     private void VibrateStartButton_Clicked(object sender, EventArgs e)
     {
         int secondsToVibrate = Random.Shared.Next(1, 7);

@@ -88,6 +88,15 @@ namespace MauiLocalization.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Good Day.
+        /// </summary>
+        internal static string HelloPolite {
+            get {
+                return ResourceManager.GetString("HelloPolite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hello World!.
         /// </summary>
         internal static string HelloWorld {

@@ -2,13 +2,15 @@
   "solution": {
     "path": "Samples.slnx",
     "projects": [
+      "MauiBiometrics\\MauiBiometrics.csproj",
+      "MauiDeviceOutput\\MauiDeviceOutput.csproj",
       "MauiDevices\\MauiDevices.csproj",
+      "MauiGeoLocation\\MauiGeoLocation.csproj",
       "MauiGraphics\\MauiGraphics.csproj",
       "MauiLocalization\\MauiLocalization.csproj",
       "MauiMvvm\\MauiMvvm.csproj",
       "MauiNavigation\\MauiNavigation.csproj",
-      "MauiSensors\\MauiSensors.csproj",
-      "MauiStorage\\MauiStorage.csproj"
+      "MauiSensors\\MauiSensors.csproj"
     ]
   }
 }
